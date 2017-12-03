@@ -37,9 +37,9 @@
             this.panelContext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContext.Location = new System.Drawing.Point(0, 114);
+            this.panelContext.Location = new System.Drawing.Point(0, 76);
             this.panelContext.Name = "panelContext";
-            this.panelContext.Size = new System.Drawing.Size(1217, 621);
+            this.panelContext.Size = new System.Drawing.Size(1003, 662);
             this.panelContext.TabIndex = 1;
             // 
             // navigatePanelHead
@@ -48,7 +48,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.navigatePanelHead.Location = new System.Drawing.Point(0, 0);
             this.navigatePanelHead.Name = "navigatePanelHead";
-            this.navigatePanelHead.Size = new System.Drawing.Size(1196, 108);
+            this.navigatePanelHead.Size = new System.Drawing.Size(1003, 76);
             this.navigatePanelHead.TabIndex = 0;
             this.navigatePanelHead.NavigateEvent += new phoenix.NavigatePanel.NavigateEventHandler(this.navigatePanelHead_NavigateEvent);
             // 
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 736);
+            this.ClientSize = new System.Drawing.Size(1003, 736);
             this.Controls.Add(this.panelContext);
             this.Controls.Add(this.navigatePanelHead);
             this.Name = "MainForm";

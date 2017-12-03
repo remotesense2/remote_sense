@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchProcessPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BatchProcessPanel.Designer.cs">
+      <DependentUpon>BatchProcessPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeometryPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeometryPanel.Designer.cs">
+      <DependentUpon>GeometryPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfraredPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InfraredPanel.Designer.cs">
+      <DependentUpon>InfraredPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +85,41 @@
     <Compile Include="PreprocessPanel.Designer.cs">
       <DependentUpon>PreprocessPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProcessPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProcessPanel.Designer.cs">
+      <DependentUpon>ProcessPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpectrumPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpectrumPanel.Designer.cs">
+      <DependentUpon>SpectrumPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemManagerPanel.Designer.cs">
+      <DependentUpon>SystemManagerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UncertaintyAnalysisPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UncertaintyAnalysisPanel.Designer.cs">
+      <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BatchProcessPanel.resx">
+      <DependentUpon>BatchProcessPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeometryPanel.resx">
+      <DependentUpon>GeometryPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfraredPanel.resx">
+      <DependentUpon>InfraredPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PreprocessPanel.resx">
       <DependentUpon>PreprocessPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessPanel.resx">
+      <DependentUpon>ProcessPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +141,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SpectrumPanel.resx">
+      <DependentUpon>SpectrumPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagerPanel.resx">
+      <DependentUpon>SystemManagerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UncertaintyAnalysisPanel.resx">
+      <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

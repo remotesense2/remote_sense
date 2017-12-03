@@ -98,5 +98,10 @@ namespace phoenix
             strPath = Directory.GetParent(strPath).FullName;
             MessageBox.Show(strPath);
         }
+
+        private void PreprocessPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

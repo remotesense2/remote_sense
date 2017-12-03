@@ -33,11 +33,11 @@ namespace phoenix
             {
                 if (button == c)
                 {
-                    c.BackColor = System.Drawing.Color.AntiqueWhite;
+                    c.BackColor = this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
                 }
                 else
                 {
-                    c.BackColor = System.Drawing.Color.LightBlue;
+                    c.BackColor = System.Drawing.Color.Gray;
                 }
             }
 
@@ -51,9 +51,12 @@ namespace phoenix
         {
             NavigateButton btnNew = new NavigateButton(container);
             btnNew.Location = new System.Drawing.Point(buttonLeftPos, 0);
-            btnNew.Size = new System.Drawing.Size(132, this.Height);
+            btnNew.Size = new System.Drawing.Size(100, this.Height);
+            btnNew.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             btnNew.Text = text;
-            btnNew.BackColor = System.Drawing.Color.LightBlue;
+            btnNew.BackColor = System.Drawing.Color.Gray;
+            btnNew.FlatAppearance.BorderSize = 0;
+            btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnNew.Click += new System.EventHandler(this.btnNavigate_Click);
             this.Controls.Add(btnNew);
             buttonLeftPos += btnNew.Width;
