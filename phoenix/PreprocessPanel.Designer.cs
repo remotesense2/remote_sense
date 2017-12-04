@@ -42,8 +42,7 @@
             this.btnSavePendingForAngle = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxAngle = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBoxView = new System.Windows.Forms.TextBox();
+            this.pictureBoxView = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnPlaceInfo = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,11 +63,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panelViewer = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxView)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panelViewer.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSaveReferForAngle
@@ -155,14 +157,14 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.AutoSize = true;
             this.groupBox5.Controls.Add(this.textBoxAngle);
             this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.Location = new System.Drawing.Point(580, 280);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(305, 95);
+            this.groupBox5.Size = new System.Drawing.Size(326, 122);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "角度信息";
@@ -172,45 +174,35 @@
             this.textBoxAngle.BackColor = System.Drawing.Color.White;
             this.textBoxAngle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAngle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAngle.Enabled = false;
             this.textBoxAngle.Location = new System.Drawing.Point(3, 19);
             this.textBoxAngle.Multiline = true;
             this.textBoxAngle.Name = "textBoxAngle";
-            this.textBoxAngle.Size = new System.Drawing.Size(299, 73);
+            this.textBoxAngle.ReadOnly = true;
+            this.textBoxAngle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxAngle.Size = new System.Drawing.Size(320, 100);
             this.textBoxAngle.TabIndex = 1;
             // 
-            // groupBox4
+            // pictureBoxView
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.textBoxView);
-            this.groupBox4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(580, 13);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(305, 230);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "快视图";
-            // 
-            // textBoxView
-            // 
-            this.textBoxView.BackColor = System.Drawing.Color.White;
-            this.textBoxView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxView.Enabled = false;
-            this.textBoxView.Location = new System.Drawing.Point(3, 19);
-            this.textBoxView.Multiline = true;
-            this.textBoxView.Name = "textBoxView";
-            this.textBoxView.Size = new System.Drawing.Size(299, 208);
-            this.textBoxView.TabIndex = 0;
+            this.pictureBoxView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxView.Location = new System.Drawing.Point(16, 18);
+            this.pictureBoxView.Name = "pictureBoxView";
+            this.pictureBoxView.Size = new System.Drawing.Size(282, 195);
+            this.pictureBoxView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxView.TabIndex = 0;
+            this.pictureBoxView.TabStop = false;
+            this.pictureBoxView.Click += new System.EventHandler(this.pictureBoxView_Click);
+            this.pictureBoxView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseDown);
+            this.pictureBoxView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseMove);
+            this.pictureBoxView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseUp);
+            this.pictureBoxView.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseWheel);
             // 
             // btnHelp
             // 
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Location = new System.Drawing.Point(715, 395);
+            this.btnHelp.Location = new System.Drawing.Point(715, 408);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(81, 42);
             this.btnHelp.TabIndex = 20;
@@ -219,10 +211,10 @@
             // 
             // btnPlaceInfo
             // 
-            this.btnPlaceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPlaceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPlaceInfo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceInfo.Location = new System.Drawing.Point(383, 395);
+            this.btnPlaceInfo.Location = new System.Drawing.Point(383, 408);
             this.btnPlaceInfo.Name = "btnPlaceInfo";
             this.btnPlaceInfo.Size = new System.Drawing.Size(123, 42);
             this.btnPlaceInfo.TabIndex = 19;
@@ -242,7 +234,7 @@
             // 
             this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceImage.Location = new System.Drawing.Point(70, 395);
+            this.btnPlaceImage.Location = new System.Drawing.Point(70, 408);
             this.btnPlaceImage.Name = "btnPlaceImage";
             this.btnPlaceImage.Size = new System.Drawing.Size(132, 42);
             this.btnPlaceImage.TabIndex = 18;
@@ -426,13 +418,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "场地影像";
             // 
+            // panelViewer
+            // 
+            this.panelViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelViewer.Controls.Add(this.pictureBoxView);
+            this.panelViewer.Location = new System.Drawing.Point(584, 28);
+            this.panelViewer.Name = "panelViewer";
+            this.panelViewer.Size = new System.Drawing.Size(322, 246);
+            this.panelViewer.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(582, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "快视图";
+            // 
             // PreprocessPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.panelViewer);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnPlaceInfo);
             this.Controls.Add(this.btnPlaceImage);
@@ -446,14 +460,14 @@
             this.Load += new System.EventHandler(this.PreprocessPanel_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxView)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panelViewer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,8 +486,6 @@
         private System.Windows.Forms.Button btnSavePendingForAngle;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBoxAngle;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBoxView;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnPlaceInfo;
         private System.Windows.Forms.Label label10;
@@ -494,5 +506,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBoxView;
+        private System.Windows.Forms.Panel panelViewer;
+        private System.Windows.Forms.Label label9;
     }
 }

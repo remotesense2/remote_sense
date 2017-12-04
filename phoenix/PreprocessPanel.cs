@@ -13,6 +13,11 @@ namespace phoenix
 {
     public partial class PreprocessPanel : UserControl
     {
+        private Bitmap bmpViewer;
+        private int zoomStep = 20;
+        private Point pointStart;
+        private bool isDragged = false;
+
         public PreprocessPanel()
         {
             InitializeComponent();
@@ -26,6 +31,23 @@ namespace phoenix
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBoxPending.Text = dialog.FileName;
+                string imgPath = Path.ChangeExtension(dialog.FileName, "jpg");
+                bmpViewer = new Bitmap(imgPath);
+                if (bmpViewer == null)
+                {
+                    MessageBox.Show("读取文件失败");
+                }
+                else
+                {
+                    this.pictureBoxView.Image = bmpViewer;
+
+                    int newWidth = Math.Min(this.panelViewer.Width, bmpViewer.Width);
+                    int newHeight = Math.Min(this.panelViewer.Height, bmpViewer.Height);
+                    this.pictureBoxView.Width = newWidth;
+                    this.pictureBoxView.Height = newHeight;
+                    this.pictureBoxView.Location = new System.Drawing.Point((this.panelViewer.Size.Width - this.pictureBoxView.Size.Width) / 2,
+                                                                            (this.panelViewer.Size.Height - this.pictureBoxView.Size.Height) / 2);
+                }
             }
         }
 
@@ -139,6 +161,25 @@ namespace phoenix
                 //触发界面做出响应
                 //btnPlaceImage.Enabled = true;
                 //读取角度txt在角度信息进行显示  在此调用显示角度信息
+
+                try
+                {
+                    this.textBoxAngle.Clear();
+                    string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+                    strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"11.txt");
+                    textBoxAngle.AppendText(@"11.txt" + Environment.NewLine);
+                    textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
+                    textBoxAngle.AppendText(File.ReadAllText(strPath));
+
+                    textBoxAngle.AppendText(Environment.NewLine);
+                    strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"12.txt");
+                    textBoxAngle.AppendText(@"12.txt" + Environment.NewLine);
+                    textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
+                    textBoxAngle.AppendText(File.ReadAllText(strPath));
+                }
+                catch (System.IO.FileNotFoundException exc)
+                {
+                }
             }
         }
 
@@ -177,6 +218,68 @@ namespace phoenix
         private void PreprocessPanel_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBoxView_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBoxView_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                pointStart = Cursor.Position;
+                isDragged = true;
+            }
+            this.pictureBoxView.Focus();
+        }
+
+        private void pictureBoxView_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (bmpViewer == null)
+                return;
+
+            int original_width = this.pictureBoxView.Width;
+            int original_height = this.pictureBoxView.Height;
+            float percent = (float)bmpViewer.Height / bmpViewer.Width;
+            if (e.Delta > 0)
+            {
+                if (this.pictureBoxView.Width >= bmpViewer.Width * 2)
+                    return;
+
+                this.pictureBoxView.Width += (int)(zoomStep * percent);
+                this.pictureBoxView.Height += zoomStep;
+            }
+            if (e.Delta < 0)
+            {
+                if (this.pictureBoxView.Width < bmpViewer.Width / 10)
+                    return;
+
+                this.pictureBoxView.Width -= (int)(zoomStep * percent);
+                this.pictureBoxView.Height -= zoomStep;
+            }
+            int new_x = (int)((double)e.Location.X * (original_width - this.pictureBoxView.Width) / original_width);
+            int new_y = (int)((double)e.Location.Y * (original_height - this.pictureBoxView.Height) / original_height);
+            this.pictureBoxView.Location = new Point(this.pictureBoxView.Location.X + new_x, this.pictureBoxView.Location.Y + new_y);
+        }
+
+        private void pictureBoxView_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragged)
+            {
+                int x = this.pictureBoxView.Location.X + Cursor.Position.X - pointStart.X;
+                int y = this.pictureBoxView.Location.Y + Cursor.Position.Y - pointStart.Y;
+                this.pictureBoxView.Location = new Point(x, y);
+                pointStart = Cursor.Position;
+            }
+        }
+
+        private void pictureBoxView_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragged = false;
+            }
         }
     }
 }
