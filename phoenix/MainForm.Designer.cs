@@ -34,9 +34,9 @@
             // 
             // panelContext
             // 
-            this.panelContext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContext.Location = new System.Drawing.Point(0, 76);
             this.panelContext.Name = "panelContext";
             this.panelContext.Size = new System.Drawing.Size(899, 450);
@@ -44,8 +44,8 @@
             // 
             // navigatePanelHead
             // 
-            this.navigatePanelHead.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.navigatePanelHead.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.navigatePanelHead.Location = new System.Drawing.Point(0, 0);
             this.navigatePanelHead.Name = "navigatePanelHead";
             this.navigatePanelHead.Size = new System.Drawing.Size(899, 76);
@@ -61,7 +61,7 @@
             this.Controls.Add(this.navigatePanelHead);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "**定标系统";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 

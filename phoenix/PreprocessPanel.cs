@@ -106,6 +106,7 @@ namespace phoenix
             string progresspath = strPath + @"\" + @"progress.txt";
             IDLProgress = progresspath;
             DeleteFile(progresspath);
+            /*
             FileStream fs = new FileStream(idlsavinputpath, FileMode.Create);
             byte[] data = System.Text.Encoding.Default.GetBytes(textBoxPending.Text + "\r\n");
             fs.Write(data, 0, data.Length);
@@ -126,6 +127,7 @@ namespace phoenix
             fs.Write(data, 0, data.Length);
             fs.Flush();
             fs.Close();
+             * */
             if (RUtimer != null)
             {
                 RUtimer.Stop();
@@ -203,6 +205,8 @@ namespace phoenix
             string idlsavinputpath = strPath + @"\PreProccess_input.txt";
             string idlsavpath = strPath + @"\preproccess.sav";
             GenerateIdlPath(idlsavpath, idlsavinputpath, @"preproccess", @"PreProccess_input");
+            idlsavpath = @"E:\remote1\remote_sense\phoenix\bin\Debug\PreProccess.sav";
+            idlsavinputpath = @"E:\remote1\remote_sense\phoenix\bin\Debug\PreProccess_input.txt";
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
 
         }
