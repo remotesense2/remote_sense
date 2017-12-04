@@ -278,6 +278,7 @@
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(308, 25);
             this.comboBoxPosition.TabIndex = 9;
+            this.comboBoxPosition.SelectedIndex = 0;
             // 
             // btnOpenRefer
             // 
