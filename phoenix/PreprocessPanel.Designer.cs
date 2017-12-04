@@ -20,6 +20,9 @@
             base.Dispose(disposing);
         }
 
+        private static System.Timers.Timer RUtimer;
+        private string IDLProgress;
+
         #region 组件设计器生成的代码
 
         /// <summary> 
@@ -92,6 +95,7 @@
             // 
             this.textBoxSaveRefer.Location = new System.Drawing.Point(104, 62);
             this.textBoxSaveRefer.Name = "textBoxSaveRefer";
+            this.textBoxSaveRefer.ReadOnly = true;
             this.textBoxSaveRefer.Size = new System.Drawing.Size(309, 23);
             this.textBoxSaveRefer.TabIndex = 8;
             // 
@@ -99,6 +103,7 @@
             // 
             this.textBoxSavePendingForAngle.Location = new System.Drawing.Point(105, 25);
             this.textBoxSavePendingForAngle.Name = "textBoxSavePendingForAngle";
+            this.textBoxSavePendingForAngle.ReadOnly = true;
             this.textBoxSavePendingForAngle.Size = new System.Drawing.Size(308, 23);
             this.textBoxSavePendingForAngle.TabIndex = 6;
             // 
@@ -116,6 +121,7 @@
             // 
             this.textBoxSaveReferForAngle.Location = new System.Drawing.Point(105, 60);
             this.textBoxSaveReferForAngle.Name = "textBoxSaveReferForAngle";
+            this.textBoxSaveReferForAngle.ReadOnly = true;
             this.textBoxSaveReferForAngle.Size = new System.Drawing.Size(308, 23);
             this.textBoxSaveReferForAngle.TabIndex = 8;
             // 
@@ -123,6 +129,7 @@
             // 
             this.textBoxSavePending.Location = new System.Drawing.Point(104, 28);
             this.textBoxSavePending.Name = "textBoxSavePending";
+            this.textBoxSavePending.ReadOnly = true;
             this.textBoxSavePending.Size = new System.Drawing.Size(309, 23);
             this.textBoxSavePending.TabIndex = 6;
             // 
@@ -148,9 +155,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.textBoxAngle);
             this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.Location = new System.Drawing.Point(580, 280);
@@ -174,9 +181,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.textBoxView);
             this.groupBox4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox4.Location = new System.Drawing.Point(580, 13);
@@ -212,8 +219,8 @@
             // 
             // btnPlaceInfo
             // 
-            this.btnPlaceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPlaceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPlaceInfo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPlaceInfo.Location = new System.Drawing.Point(383, 395);
             this.btnPlaceInfo.Name = "btnPlaceInfo";
@@ -281,6 +288,15 @@
             // comboBoxPosition
             // 
             this.comboBoxPosition.FormattingEnabled = true;
+            this.comboBoxPosition.Items.AddRange(new object[] {
+            "敦煌",
+            "酒泉",
+            "格尔木",
+            "二连浩特",
+            "民勤",
+            "民丰",
+            "若羌",
+            "和田"});
             this.comboBoxPosition.Location = new System.Drawing.Point(105, 98);
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(308, 25);
@@ -300,6 +316,7 @@
             // 
             this.textBoxRefer.Location = new System.Drawing.Point(104, 64);
             this.textBoxRefer.Name = "textBoxRefer";
+            this.textBoxRefer.ReadOnly = true;
             this.textBoxRefer.Size = new System.Drawing.Size(309, 23);
             this.textBoxRefer.TabIndex = 8;
             // 
@@ -316,6 +333,7 @@
             // 
             this.textBoxPending.Location = new System.Drawing.Point(104, 29);
             this.textBoxPending.Name = "textBoxPending";
+            this.textBoxPending.ReadOnly = true;
             this.textBoxPending.Size = new System.Drawing.Size(309, 23);
             this.textBoxPending.TabIndex = 6;
             // 
