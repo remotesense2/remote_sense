@@ -176,8 +176,10 @@ namespace phoenix
                     textBoxAngle.AppendText(@"12.txt" + Environment.NewLine);
                     textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
                     textBoxAngle.AppendText(File.ReadAllText(strPath));
+                    textBoxAngle.Select(0, 1);
+                    textBoxAngle.ScrollToCaret();
                 }
-                catch (System.IO.FileNotFoundException exc)
+                catch (System.IO.FileNotFoundException)
                 {
                 }
             }
@@ -222,6 +224,7 @@ namespace phoenix
 
         private void pictureBoxView_Click(object sender, EventArgs e)
         {
+
         }
 
         private void pictureBoxView_MouseDown(object sender, MouseEventArgs e)
