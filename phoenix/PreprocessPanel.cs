@@ -143,6 +143,8 @@ namespace phoenix
             RUtimer.Start();
         }
 
+        public delegate void UpdateTextDelegate(); 
+
         void OnTimedUEvent(object sender, ElapsedEventArgs e)
         {
             if (File.Exists(IDLProgress))
@@ -152,26 +154,33 @@ namespace phoenix
                 //btnPlaceImage.Enabled = true;
                 //读取角度txt在角度信息进行显示  在此调用显示角度信息
 
-                try
+                UpdateTextDelegate updateProcess = delegate()
                 {
-                    this.textBoxAngle.Clear();
-                    string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
-                    strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"11.txt");
-                    textBoxAngle.AppendText(@"11.txt" + Environment.NewLine);
-                    textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
-                    textBoxAngle.AppendText(File.ReadAllText(strPath));
 
-                    textBoxAngle.AppendText(Environment.NewLine);
-                    strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"12.txt");
-                    textBoxAngle.AppendText(@"12.txt" + Environment.NewLine);
-                    textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
-                    textBoxAngle.AppendText(File.ReadAllText(strPath));
-                    textBoxAngle.Select(0, 1);
-                    textBoxAngle.ScrollToCaret();
-                }
-                catch (System.IO.FileNotFoundException)
-                {
-                }
+                    try
+                    {
+                        this.textBoxAngle.Clear();
+                        string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+                        strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"11.txt");
+                        textBoxAngle.AppendText(@"11.txt" + Environment.NewLine);
+                        textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
+                        textBoxAngle.AppendText(File.ReadAllText(strPath));
+
+                        textBoxAngle.AppendText(Environment.NewLine);
+                        strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"12.txt");
+                        textBoxAngle.AppendText(@"12.txt" + Environment.NewLine);
+                        textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
+                        textBoxAngle.AppendText(File.ReadAllText(strPath));
+                        textBoxAngle.Select(0, 1);
+                        textBoxAngle.ScrollToCaret();
+                    }
+                    catch (System.IO.FileNotFoundException)
+                    {
+                    }
+
+                };
+
+                textBoxAngle.Invoke(updateProcess);
             }
         }
 
