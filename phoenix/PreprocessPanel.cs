@@ -14,9 +14,6 @@ namespace phoenix
     public partial class PreprocessPanel : UserControl
     {
         private Bitmap bmpViewer;
-        private int zoomStep = 20;
-        private Point pointStart;
-        private bool isDragged = false;
 
         public PreprocessPanel()
         {
@@ -39,14 +36,7 @@ namespace phoenix
                 }
                 else
                 {
-                    this.pictureBoxView.Image = bmpViewer;
-
-                    int newWidth = Math.Min(this.panelViewer.Width, bmpViewer.Width);
-                    int newHeight = Math.Min(this.panelViewer.Height, bmpViewer.Height);
-                    this.pictureBoxView.Width = newWidth;
-                    this.pictureBoxView.Height = newHeight;
-                    this.pictureBoxView.Location = new System.Drawing.Point((this.panelViewer.Size.Width - this.pictureBoxView.Size.Width) / 2,
-                                                                            (this.panelViewer.Size.Height - this.pictureBoxView.Size.Height) / 2);
+                    this.imageViewer.SetBitmap(bmpViewer);
                 }
             }
         }
@@ -222,67 +212,18 @@ namespace phoenix
 
         }
 
-        private void pictureBoxView_Click(object sender, EventArgs e)
+        private void imageViewer_Load(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void pictureBoxView_MouseDown(object sender, MouseEventArgs e)
+        private void imageViewer_DoubleClick(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (bmpViewer != null)
             {
-                pointStart = Cursor.Position;
-                isDragged = true;
-            }
-            this.pictureBoxView.Focus();
-        }
-
-        private void pictureBoxView_MouseWheel(object sender, MouseEventArgs e)
-        {
-            if (bmpViewer == null)
-                return;
-
-            int original_width = this.pictureBoxView.Width;
-            int original_height = this.pictureBoxView.Height;
-            float percent = (float)bmpViewer.Height / bmpViewer.Width;
-            if (e.Delta > 0)
-            {
-                if (this.pictureBoxView.Width >= bmpViewer.Width * 2)
-                    return;
-
-                this.pictureBoxView.Width += (int)(zoomStep * percent);
-                this.pictureBoxView.Height += zoomStep;
-            }
-            if (e.Delta < 0)
-            {
-                if (this.pictureBoxView.Width < bmpViewer.Width / 10)
-                    return;
-
-                this.pictureBoxView.Width -= (int)(zoomStep * percent);
-                this.pictureBoxView.Height -= zoomStep;
-            }
-            int new_x = (int)((double)e.Location.X * (original_width - this.pictureBoxView.Width) / original_width);
-            int new_y = (int)((double)e.Location.Y * (original_height - this.pictureBoxView.Height) / original_height);
-            this.pictureBoxView.Location = new Point(this.pictureBoxView.Location.X + new_x, this.pictureBoxView.Location.Y + new_y);
-        }
-
-        private void pictureBoxView_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragged)
-            {
-                int x = this.pictureBoxView.Location.X + Cursor.Position.X - pointStart.X;
-                int y = this.pictureBoxView.Location.Y + Cursor.Position.Y - pointStart.Y;
-                this.pictureBoxView.Location = new Point(x, y);
-                pointStart = Cursor.Position;
-            }
-        }
-
-        private void pictureBoxView_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDragged = false;
-            }
+                ImageViewForm viewer = new ImageViewForm(labelViewer.Text, bmpViewer, this.imageViewer.PercentShow);
+                viewer.Show(this);
+            } 
         }
     }
 }

@@ -58,6 +58,18 @@
     <Compile Include="GeometryPanel.Designer.cs">
       <DependentUpon>GeometryPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageViewForm.Designer.cs">
+      <DependentUpon>ImageViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfraredPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeometryPanel.resx">
       <DependentUpon>GeometryPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewForm.resx">
+      <DependentUpon>ImageViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfraredPanel.resx">
       <DependentUpon>InfraredPanel.cs</DependentUpon>

@@ -42,7 +42,6 @@
             this.btnSavePendingForAngle = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxAngle = new System.Windows.Forms.TextBox();
-            this.pictureBoxView = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnPlaceInfo = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,9 +63,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelViewer = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelViewer = new System.Windows.Forms.Label();
+            this.imageViewer = new phoenix.ImageViewer();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxView)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -157,7 +156,8 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.AutoSize = true;
             this.groupBox5.Controls.Add(this.textBoxAngle);
@@ -181,21 +181,6 @@
             this.textBoxAngle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxAngle.Size = new System.Drawing.Size(320, 100);
             this.textBoxAngle.TabIndex = 1;
-            // 
-            // pictureBoxView
-            // 
-            this.pictureBoxView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxView.Location = new System.Drawing.Point(16, 18);
-            this.pictureBoxView.Name = "pictureBoxView";
-            this.pictureBoxView.Size = new System.Drawing.Size(282, 195);
-            this.pictureBoxView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxView.TabIndex = 0;
-            this.pictureBoxView.TabStop = false;
-            this.pictureBoxView.Click += new System.EventHandler(this.pictureBoxView_Click);
-            this.pictureBoxView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseDown);
-            this.pictureBoxView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseMove);
-            this.pictureBoxView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseUp);
-            this.pictureBoxView.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.pictureBoxView_MouseWheel);
             // 
             // btnHelp
             // 
@@ -420,31 +405,40 @@
             // 
             // panelViewer
             // 
-            this.panelViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelViewer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelViewer.Controls.Add(this.pictureBoxView);
+            this.panelViewer.Controls.Add(this.imageViewer);
             this.panelViewer.Location = new System.Drawing.Point(584, 28);
             this.panelViewer.Name = "panelViewer";
             this.panelViewer.Size = new System.Drawing.Size(322, 246);
             this.panelViewer.TabIndex = 23;
             // 
-            // label9
+            // labelViewer
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(582, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 12);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "快视图";
+            this.labelViewer.AutoSize = true;
+            this.labelViewer.Location = new System.Drawing.Point(582, 13);
+            this.labelViewer.Name = "labelViewer";
+            this.labelViewer.Size = new System.Drawing.Size(41, 12);
+            this.labelViewer.TabIndex = 24;
+            this.labelViewer.Text = "快视图";
+            // 
+            // imageViewer
+            // 
+            this.imageViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageViewer.Location = new System.Drawing.Point(0, 0);
+            this.imageViewer.Name = "imageViewer";
+            this.imageViewer.Size = new System.Drawing.Size(320, 244);
+            this.imageViewer.TabIndex = 0;
+            this.imageViewer.Load += new System.EventHandler(this.imageViewer_Load);
+            this.imageViewer.DoubleClick += new System.EventHandler(this.imageViewer_DoubleClick);
             // 
             // PreprocessPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelViewer);
             this.Controls.Add(this.panelViewer);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.btnHelp);
@@ -460,7 +454,6 @@
             this.Load += new System.EventHandler(this.PreprocessPanel_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxView)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -506,8 +499,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBoxView;
         private System.Windows.Forms.Panel panelViewer;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelViewer;
+        private ImageViewer imageViewer;
     }
 }
