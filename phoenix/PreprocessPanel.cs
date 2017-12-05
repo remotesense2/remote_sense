@@ -156,20 +156,11 @@ namespace phoenix
 
                 UpdateTextDelegate updateProcess = delegate()
                 {
-
                     try
                     {
                         this.textBoxAngle.Clear();
-                        //string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
-                        //strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"11.txt");
-                        //textBoxAngle.AppendText(@"11.txt" + Environment.NewLine);
-                        //textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
                         textBoxAngle.AppendText(File.ReadAllText(textBoxSavePendingForAngle.Text));
-
                         textBoxAngle.AppendText(Environment.NewLine);
-                        //strPath = Path.Combine(Directory.GetParent(strPath).FullName, @"12.txt");
-                        //textBoxAngle.AppendText(@"12.txt" + Environment.NewLine);
-                        //textBoxAngle.AppendText(@"------------------------------------" + Environment.NewLine);
                         textBoxAngle.AppendText(File.ReadAllText(textBoxSaveReferForAngle.Text));
                         textBoxAngle.Select(0, 1);
                         textBoxAngle.ScrollToCaret();
@@ -179,7 +170,6 @@ namespace phoenix
                     }
 
                 };
-
                 textBoxAngle.Invoke(updateProcess);
             }
         }
@@ -235,6 +225,11 @@ namespace phoenix
                 ImageViewForm viewer = new ImageViewForm(labelViewer.Text, bmpViewer, this.imageViewer.PercentShow);
                 viewer.Show(this);
             } 
+        }
+
+        private void textBoxAngle_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

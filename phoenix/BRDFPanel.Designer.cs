@@ -20,6 +20,9 @@
             base.Dispose(disposing);
         }
 
+        private static System.Timers.Timer RUtimer;
+        private string IDLProgress;
+
         #region 组件设计器生成的代码
 
         /// <summary> 
@@ -51,11 +54,12 @@
             // 
             // textBoxReferGeometry
             // 
-            this.textBoxReferGeometry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxReferGeometry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxReferGeometry.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxReferGeometry.Location = new System.Drawing.Point(183, 63);
             this.textBoxReferGeometry.Name = "textBoxReferGeometry";
+            this.textBoxReferGeometry.ReadOnly = true;
             this.textBoxReferGeometry.Size = new System.Drawing.Size(429, 26);
             this.textBoxReferGeometry.TabIndex = 22;
             // 
@@ -73,11 +77,12 @@
             // 
             // textBoxTargetGeometry
             // 
-            this.textBoxTargetGeometry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTargetGeometry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTargetGeometry.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxTargetGeometry.Location = new System.Drawing.Point(183, 28);
             this.textBoxTargetGeometry.Name = "textBoxTargetGeometry";
+            this.textBoxTargetGeometry.ReadOnly = true;
             this.textBoxTargetGeometry.Size = new System.Drawing.Size(429, 26);
             this.textBoxTargetGeometry.TabIndex = 20;
             // 
@@ -124,11 +129,12 @@
             // 
             // textBoxCorrectParams
             // 
-            this.textBoxCorrectParams.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCorrectParams.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCorrectParams.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxCorrectParams.Location = new System.Drawing.Point(183, 140);
             this.textBoxCorrectParams.Name = "textBoxCorrectParams";
+            this.textBoxCorrectParams.ReadOnly = true;
             this.textBoxCorrectParams.Size = new System.Drawing.Size(429, 26);
             this.textBoxCorrectParams.TabIndex = 29;
             // 
@@ -146,11 +152,12 @@
             // 
             // textBoxModel
             // 
-            this.textBoxModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxModel.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxModel.Location = new System.Drawing.Point(183, 105);
             this.textBoxModel.Name = "textBoxModel";
+            this.textBoxModel.ReadOnly = true;
             this.textBoxModel.Size = new System.Drawing.Size(429, 26);
             this.textBoxModel.TabIndex = 27;
             // 
@@ -207,9 +214,9 @@
             // 
             // textBoxResult
             // 
-            this.textBoxResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -243,6 +250,7 @@
             this.btnCompute.TabIndex = 32;
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
             // 
             // btnExit
             // 
