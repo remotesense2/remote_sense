@@ -186,22 +186,21 @@
             // 
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Location = new System.Drawing.Point(715, 408);
+            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHelp.Location = new System.Drawing.Point(819, 408);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(81, 42);
+            this.btnHelp.Size = new System.Drawing.Size(70, 42);
             this.btnHelp.TabIndex = 20;
             this.btnHelp.Text = "帮助";
             this.btnHelp.UseVisualStyleBackColor = true;
             // 
             // btnPlaceInfo
             // 
-            this.btnPlaceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPlaceInfo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceInfo.Location = new System.Drawing.Point(383, 408);
+            this.btnPlaceInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnPlaceInfo.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceInfo.Location = new System.Drawing.Point(429, 408);
             this.btnPlaceInfo.Name = "btnPlaceInfo";
-            this.btnPlaceInfo.Size = new System.Drawing.Size(123, 42);
+            this.btnPlaceInfo.Size = new System.Drawing.Size(92, 42);
             this.btnPlaceInfo.TabIndex = 19;
             this.btnPlaceInfo.Text = "场地信息";
             this.btnPlaceInfo.UseVisualStyleBackColor = true;
@@ -218,10 +217,10 @@
             // btnPlaceImage
             // 
             this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPlaceImage.Location = new System.Drawing.Point(70, 408);
             this.btnPlaceImage.Name = "btnPlaceImage";
-            this.btnPlaceImage.Size = new System.Drawing.Size(132, 42);
+            this.btnPlaceImage.Size = new System.Drawing.Size(101, 42);
             this.btnPlaceImage.TabIndex = 18;
             this.btnPlaceImage.Text = "场地图像";
             this.btnPlaceImage.UseVisualStyleBackColor = true;
@@ -278,7 +277,7 @@
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(308, 25);
             this.comboBoxPosition.TabIndex = 9;
-            this.comboBoxPosition.SelectedIndex = 0;
+            this.comboBoxPosition.Text = "敦煌";
             // 
             // btnOpenRefer
             // 

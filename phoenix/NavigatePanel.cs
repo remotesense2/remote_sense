@@ -37,7 +37,7 @@ namespace phoenix
                 }
                 else
                 {
-                    c.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(185)))), ((int)(((byte)(205)))));
+                    c.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(118)))), ((int)(((byte)(205)))));
                 }
             }
 
@@ -49,12 +49,14 @@ namespace phoenix
 
         public void AddPanel(string text, ContainerControl container)
         {
+            int button_width = (text.Length < 8) ? 85 : 100;
             NavigateButton btnNew = new NavigateButton(container);
             btnNew.Location = new System.Drawing.Point(buttonLeftPos, 0);
-            btnNew.Size = new System.Drawing.Size(100, this.Height);
-            btnNew.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            btnNew.Size = new System.Drawing.Size(button_width, this.Height);
+            btnNew.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             btnNew.Text = text;
-            btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(185)))), ((int)(((byte)(205)))));
+            btnNew.ForeColor = System.Drawing.Color.White;
+            btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(118)))), ((int)(((byte)(205)))));
             btnNew.FlatAppearance.BorderSize = 0;
             btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnNew.Click += new System.EventHandler(this.btnNavigate_Click);
