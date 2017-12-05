@@ -51,6 +51,7 @@
             this.navigatePanelHead.Size = new System.Drawing.Size(840, 76);
             this.navigatePanelHead.TabIndex = 0;
             this.navigatePanelHead.NavigateEvent += new phoenix.NavigatePanel.NavigateEventHandler(this.navigatePanelHead_NavigateEvent);
+            this.navigatePanelHead.Load += new System.EventHandler(this.navigatePanelHead_Load);
             // 
             // MainForm
             // 

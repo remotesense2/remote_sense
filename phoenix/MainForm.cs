@@ -34,6 +34,7 @@ namespace phoenix
             panelContext.Controls.Clear();
             if (container != null)
             {
+                container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
                 container.Dock = System.Windows.Forms.DockStyle.Fill;
                 panelContext.Controls.Add(container);
             }
@@ -41,6 +42,11 @@ namespace phoenix
             {
                 this.Close();
             }
+        }
+
+        private void navigatePanelHead_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
