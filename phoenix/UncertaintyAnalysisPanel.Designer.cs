@@ -43,16 +43,21 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(247, 96);
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox7.Location = new System.Drawing.Point(156, 78);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(309, 21);
+            this.textBox7.Size = new System.Drawing.Size(393, 26);
             this.textBox7.TabIndex = 98;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(572, 96);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(573, 78);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 23);
+            this.button1.Size = new System.Drawing.Size(53, 29);
             this.button1.TabIndex = 96;
             this.button1.Text = "打开";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,9 +65,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(131, 96);
+            this.label9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(29, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 12);
+            this.label9.Size = new System.Drawing.Size(121, 20);
             this.label9.TabIndex = 97;
             this.label9.Text = "场地参考卫星图像";
             // 
@@ -70,22 +76,21 @@
             // 
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Location = new System.Drawing.Point(528, 454);
+            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHelp.Location = new System.Drawing.Point(552, 375);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(81, 42);
+            this.btnHelp.Size = new System.Drawing.Size(74, 42);
             this.btnHelp.TabIndex = 85;
             this.btnHelp.Text = "帮助";
             this.btnHelp.UseVisualStyleBackColor = true;
             // 
             // btnPlaceInfo
             // 
-            this.btnPlaceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPlaceInfo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceInfo.Location = new System.Drawing.Point(330, 454);
+            this.btnPlaceInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnPlaceInfo.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceInfo.Location = new System.Drawing.Point(348, 375);
             this.btnPlaceInfo.Name = "btnPlaceInfo";
-            this.btnPlaceInfo.Size = new System.Drawing.Size(98, 42);
+            this.btnPlaceInfo.Size = new System.Drawing.Size(83, 42);
             this.btnPlaceInfo.TabIndex = 84;
             this.btnPlaceInfo.Text = "保存";
             this.btnPlaceInfo.UseVisualStyleBackColor = true;
@@ -93,34 +98,43 @@
             // btnPlaceImage
             // 
             this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceImage.Location = new System.Drawing.Point(154, 454);
+            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceImage.Location = new System.Drawing.Point(156, 375);
             this.btnPlaceImage.Name = "btnPlaceImage";
-            this.btnPlaceImage.Size = new System.Drawing.Size(95, 42);
+            this.btnPlaceImage.Size = new System.Drawing.Size(74, 42);
             this.btnPlaceImage.TabIndex = 83;
             this.btnPlaceImage.Text = "计算";
             this.btnPlaceImage.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(247, 139);
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox3.Location = new System.Drawing.Point(156, 125);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(309, 163);
+            this.textBox3.Size = new System.Drawing.Size(470, 217);
             this.textBox3.TabIndex = 82;
             // 
             // textBoxPending
             // 
-            this.textBoxPending.Location = new System.Drawing.Point(247, 53);
+            this.textBoxPending.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPending.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxPending.Location = new System.Drawing.Point(156, 30);
             this.textBoxPending.Name = "textBoxPending";
-            this.textBoxPending.Size = new System.Drawing.Size(309, 21);
+            this.textBoxPending.Size = new System.Drawing.Size(393, 26);
             this.textBoxPending.TabIndex = 79;
             // 
             // btnOpenPending
             // 
-            this.btnOpenPending.Location = new System.Drawing.Point(572, 53);
+            this.btnOpenPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOpenPending.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOpenPending.Location = new System.Drawing.Point(573, 26);
             this.btnOpenPending.Name = "btnOpenPending";
-            this.btnOpenPending.Size = new System.Drawing.Size(53, 23);
+            this.btnOpenPending.Size = new System.Drawing.Size(53, 29);
             this.btnOpenPending.TabIndex = 76;
             this.btnOpenPending.Text = "打开";
             this.btnOpenPending.UseVisualStyleBackColor = true;
@@ -128,18 +142,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 153);
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(29, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 12);
+            this.label4.Size = new System.Drawing.Size(121, 20);
             this.label4.TabIndex = 78;
             this.label4.Text = "图像噪声不确定度";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 53);
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(29, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.Size = new System.Drawing.Size(121, 20);
             this.label3.TabIndex = 77;
             this.label3.Text = "待定标传感器图像";
             // 
@@ -160,7 +176,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "UncertaintyAnalysisPanel";
-            this.Size = new System.Drawing.Size(743, 548);
+            this.Size = new System.Drawing.Size(644, 440);
             this.ResumeLayout(false);
             this.PerformLayout();
 
