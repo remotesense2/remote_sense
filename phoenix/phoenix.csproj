@@ -52,6 +52,12 @@
     <Compile Include="BatchProcessPanel.Designer.cs">
       <DependentUpon>BatchProcessPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="BRDFPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BRDFPanel.Designer.cs">
+      <DependentUpon>BRDFPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeometryPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="BatchProcessPanel.resx">
       <DependentUpon>BatchProcessPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BRDFPanel.resx">
+      <DependentUpon>BRDFPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeometryPanel.resx">
       <DependentUpon>GeometryPanel.cs</DependentUpon>

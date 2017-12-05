@@ -40,6 +40,7 @@ namespace phoenix
             this.pictureBoxView.Height = (int)(bmpViewer.Height * PercentShow / 100);
             this.pictureBoxView.Location = new System.Drawing.Point((this.Size.Width - this.pictureBoxView.Size.Width) / 2,
                                                                     (this.Size.Height - this.pictureBoxView.Size.Height) / 2);
+            this.pictureBoxView.Focus();
         }
 
         private void pictureBoxView_MouseDown(object sender, MouseEventArgs e)
