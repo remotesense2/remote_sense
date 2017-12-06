@@ -121,7 +121,25 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
+                        textBoxResult.AppendText("                       观测天顶角 / 观测方位角 / 太阳天顶角 / 太阳方位角");
+                        StreamReader sr = new StreamReader(textBoxCorrectParams.Text, Encoding.Default);
+                        String line;
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxResult.AppendText("\r\n参考传感器      ");
+                            textBoxResult.AppendText(line.ToString());
+                        }
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxResult.AppendText("\r\n待定标传感器     ");
+                            textBoxResult.AppendText(line.ToString());
+                        }
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxResult.AppendText("\r\n四波段BRDF校正系数 ");
+                            textBoxResult.AppendText(line.ToString());
+                        }
+                        //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
                     }
