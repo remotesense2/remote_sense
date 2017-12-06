@@ -146,7 +146,17 @@ namespace phoenix
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 
+        private void btnPlaceInfo_Click(object sender, EventArgs e)
+        {
+            GeometryPanel geometryPanel = new GeometryPanel();
+            geometryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 
-
+            Form popupForm = new Form();
+            popupForm.Text = @"交叉定标观测几何校正";
+            popupForm.Controls.Add(geometryPanel);
+            popupForm.Size = new System.Drawing.Size(728, 451);
+            popupForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            popupForm.Show(this);
+        }
     }
 }

@@ -19,7 +19,8 @@ namespace phoenix
         private void MainForm_Load(object sender, EventArgs e)
         {
             navigatePanelHead.AddPanel("交叉定标数据预处理", new PreprocessPanel());
-            navigatePanelHead.AddPanel("交叉定标观测几何校正", new GeometryPanel());
+            navigatePanelHead.AddPanel("定标场地方向归一化模型构建", new BRDFPanel());
+            navigatePanelHead.AddPanel("反射率模拟与光谱匹配因子计算", new SBAFCorrectionPanel());
             navigatePanelHead.AddPanel("交叉定标光谱匹配校正", new SpectrumPanel());
             navigatePanelHead.AddPanel("交叉定标处理", new ProcessPanel());
             navigatePanelHead.AddPanel("交叉定标批处理", new BatchProcessPanel());
