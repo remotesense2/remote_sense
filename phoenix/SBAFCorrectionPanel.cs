@@ -59,5 +59,17 @@ namespace phoenix
                 textBoxReferAngle.Text = dialog.FileName;
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SBAFCorrectionPanel_Load(object sender, EventArgs e)
+        {
+            this.comboBoxSiteName.SelectedIndex = 0;
+            this.comboBoxAtmModel.SelectedIndex = 0;
+            this.comboBoxAeroModel.SelectedIndex = 0;
+        }
     }
 }

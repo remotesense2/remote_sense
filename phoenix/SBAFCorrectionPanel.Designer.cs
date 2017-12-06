@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxThickness = new System.Windows.Forms.TextBox();
-            this.textBoxPlace = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnOpenSpectra = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,9 +42,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxVapor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxAirosolType = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxAirType = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxSpectra = new System.Windows.Forms.TextBox();
             this.textBoxPendingAngle = new System.Windows.Forms.TextBox();
@@ -56,6 +53,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.btnCompute = new System.Windows.Forms.Button();
+            this.comboBoxSiteName = new System.Windows.Forms.ComboBox();
+            this.comboBoxAeroModel = new System.Windows.Forms.ComboBox();
+            this.comboBoxAtmModel = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,9 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBoxAtmModel);
+            this.groupBox1.Controls.Add(this.comboBoxAeroModel);
+            this.groupBox1.Controls.Add(this.comboBoxSiteName);
             this.groupBox1.Controls.Add(this.textBoxReferAngle);
             this.groupBox1.Controls.Add(this.btnOpenReferAngle);
             this.groupBox1.Controls.Add(this.label11);
@@ -71,15 +74,12 @@
             this.groupBox1.Controls.Add(this.btnOpenPendingAngle);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.textBoxSpectra);
-            this.groupBox1.Controls.Add(this.textBoxAirosolType);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnOpenSpectra);
-            this.groupBox1.Controls.Add(this.textBoxAirType);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBoxVapor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxThickness);
-            this.groupBox1.Controls.Add(this.textBoxPlace);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -91,22 +91,14 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "输入参数";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBoxThickness
             // 
             this.textBoxThickness.Location = new System.Drawing.Point(80, 64);
             this.textBoxThickness.Name = "textBoxThickness";
-            this.textBoxThickness.Size = new System.Drawing.Size(184, 23);
+            this.textBoxThickness.Size = new System.Drawing.Size(239, 23);
             this.textBoxThickness.TabIndex = 8;
-            // 
-            // textBoxPlace
-            // 
-            this.textBoxPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPlace.Location = new System.Drawing.Point(80, 29);
-            this.textBoxPlace.Name = "textBoxPlace";
-            this.textBoxPlace.Size = new System.Drawing.Size(560, 23);
-            this.textBoxPlace.TabIndex = 6;
             // 
             // label5
             // 
@@ -215,44 +207,28 @@
             // 
             this.textBoxVapor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxVapor.Location = new System.Drawing.Point(387, 64);
+            this.textBoxVapor.Location = new System.Drawing.Point(403, 64);
             this.textBoxVapor.Name = "textBoxVapor";
-            this.textBoxVapor.Size = new System.Drawing.Size(253, 23);
+            this.textBoxVapor.Size = new System.Drawing.Size(237, 23);
             this.textBoxVapor.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(292, 64);
+            this.label1.Location = new System.Drawing.Point(337, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "水汽含量";
             // 
-            // textBoxAirosolType
-            // 
-            this.textBoxAirosolType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAirosolType.Location = new System.Drawing.Point(387, 93);
-            this.textBoxAirosolType.Name = "textBoxAirosolType";
-            this.textBoxAirosolType.Size = new System.Drawing.Size(253, 23);
-            this.textBoxAirosolType.TabIndex = 14;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(292, 93);
+            this.label6.Location = new System.Drawing.Point(325, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "气溶胶类型";
-            // 
-            // textBoxAirType
-            // 
-            this.textBoxAirType.Location = new System.Drawing.Point(80, 93);
-            this.textBoxAirType.Name = "textBoxAirType";
-            this.textBoxAirType.Size = new System.Drawing.Size(184, 23);
-            this.textBoxAirType.TabIndex = 12;
             // 
             // label9
             // 
@@ -354,6 +330,59 @@
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
             // 
+            // comboBoxSiteName
+            // 
+            this.comboBoxSiteName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxSiteName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSiteName.FormattingEnabled = true;
+            this.comboBoxSiteName.Items.AddRange(new object[] {
+            "敦煌",
+            "酒泉",
+            "格尔木",
+            "二连浩特",
+            "民勤",
+            "民丰",
+            "若羌",
+            "和田",
+            "其他"});
+            this.comboBoxSiteName.Location = new System.Drawing.Point(80, 26);
+            this.comboBoxSiteName.Name = "comboBoxSiteName";
+            this.comboBoxSiteName.Size = new System.Drawing.Size(560, 25);
+            this.comboBoxSiteName.TabIndex = 22;
+            // 
+            // comboBoxAeroModel
+            // 
+            this.comboBoxAeroModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxAeroModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAeroModel.FormattingEnabled = true;
+            this.comboBoxAeroModel.Items.AddRange(new object[] {
+            "乡村型气溶胶",
+            "沙漠型气溶胶",
+            "城市型气溶胶",
+            "海洋型气溶胶"});
+            this.comboBoxAeroModel.Location = new System.Drawing.Point(403, 94);
+            this.comboBoxAeroModel.Name = "comboBoxAeroModel";
+            this.comboBoxAeroModel.Size = new System.Drawing.Size(237, 25);
+            this.comboBoxAeroModel.TabIndex = 23;
+            // 
+            // comboBoxAtmModel
+            // 
+            this.comboBoxAtmModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAtmModel.FormattingEnabled = true;
+            this.comboBoxAtmModel.Items.AddRange(new object[] {
+            "热带大气",
+            "中纬度夏季",
+            "中纬度冬季",
+            "极地夏季",
+            "极地冬季",
+            "美国1962标准大气"});
+            this.comboBoxAtmModel.Location = new System.Drawing.Point(80, 94);
+            this.comboBoxAtmModel.Name = "comboBoxAtmModel";
+            this.comboBoxAtmModel.Size = new System.Drawing.Size(239, 25);
+            this.comboBoxAtmModel.TabIndex = 24;
+            // 
             // SBAFCorrectionPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -364,6 +393,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "SBAFCorrectionPanel";
             this.Size = new System.Drawing.Size(698, 494);
+            this.Load += new System.EventHandler(this.SBAFCorrectionPanel_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -376,15 +406,12 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxSpectra;
-        private System.Windows.Forms.TextBox textBoxAirosolType;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnOpenSpectra;
-        private System.Windows.Forms.TextBox textBoxAirType;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxVapor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxThickness;
-        private System.Windows.Forms.TextBox textBoxPlace;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -402,5 +429,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.Button btnCompute;
+        private System.Windows.Forms.ComboBox comboBoxSiteName;
+        private System.Windows.Forms.ComboBox comboBoxAtmModel;
+        private System.Windows.Forms.ComboBox comboBoxAeroModel;
     }
 }
