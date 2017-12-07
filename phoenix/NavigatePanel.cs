@@ -51,11 +51,11 @@ namespace phoenix
 
         public void AddPanel(string text, ContainerControl container)
         {
-            int button_width = (text.Length < 8) ? 80 : 90;
+            int button_width = (text.Length < 8) ? 75 : 80;
             NavigateButton btnNew = new NavigateButton(container);
             btnNew.Location = new System.Drawing.Point(buttonLeftPos, 0);
             btnNew.Size = new System.Drawing.Size(button_width, this.Height);
-            btnNew.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            btnNew.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             btnNew.Text = text;
             btnNew.ForeColor = System.Drawing.Color.White;
             btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
