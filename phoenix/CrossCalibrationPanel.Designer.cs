@@ -20,6 +20,9 @@
             base.Dispose(disposing);
         }
 
+        private static System.Timers.Timer RUtimer;
+        private string IDLProgress;
+
         #region 组件设计器生成的代码
 
         /// <summary> 
@@ -51,11 +54,12 @@
             // 
             // textBoxRefer
             // 
-            this.textBoxRefer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRefer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRefer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxRefer.Location = new System.Drawing.Point(121, 70);
             this.textBoxRefer.Name = "textBoxRefer";
+            this.textBoxRefer.ReadOnly = true;
             this.textBoxRefer.Size = new System.Drawing.Size(569, 23);
             this.textBoxRefer.TabIndex = 24;
             // 
@@ -73,11 +77,12 @@
             // 
             // textBoxPending
             // 
-            this.textBoxPending.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPending.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPending.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxPending.Location = new System.Drawing.Point(121, 27);
             this.textBoxPending.Name = "textBoxPending";
+            this.textBoxPending.ReadOnly = true;
             this.textBoxPending.Size = new System.Drawing.Size(569, 23);
             this.textBoxPending.TabIndex = 21;
             // 
@@ -125,11 +130,12 @@
             // 
             // textBoxBRDFCoeff
             // 
-            this.textBoxBRDFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBRDFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBRDFCoeff.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxBRDFCoeff.Location = new System.Drawing.Point(121, 117);
             this.textBoxBRDFCoeff.Name = "textBoxBRDFCoeff";
+            this.textBoxBRDFCoeff.ReadOnly = true;
             this.textBoxBRDFCoeff.Size = new System.Drawing.Size(569, 23);
             this.textBoxBRDFCoeff.TabIndex = 27;
             // 
@@ -157,11 +163,12 @@
             // 
             // textBoxSBAFCoeff
             // 
-            this.textBoxSBAFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSBAFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSBAFCoeff.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxSBAFCoeff.Location = new System.Drawing.Point(121, 157);
             this.textBoxSBAFCoeff.Name = "textBoxSBAFCoeff";
+            this.textBoxSBAFCoeff.ReadOnly = true;
             this.textBoxSBAFCoeff.Size = new System.Drawing.Size(569, 23);
             this.textBoxSBAFCoeff.TabIndex = 30;
             // 
@@ -189,8 +196,8 @@
             // 
             // textBoxCoefficient
             // 
-            this.textBoxCoefficient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCoefficient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCoefficient.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxCoefficient.Location = new System.Drawing.Point(121, 200);
             this.textBoxCoefficient.Name = "textBoxCoefficient";
@@ -222,9 +229,9 @@
             // 
             // textBoxResult
             // 
-            this.textBoxResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -246,6 +253,7 @@
             this.btnCompute.TabIndex = 37;
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
             // 
             // btnHelp
             // 
