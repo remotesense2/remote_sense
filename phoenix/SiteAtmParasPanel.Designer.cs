@@ -51,7 +51,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(134, 290);
+            this.label4.Location = new System.Drawing.Point(134, 240);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 31);
@@ -63,8 +63,8 @@
             this.textBoxsave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxsave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxsave.Location = new System.Drawing.Point(258, 290);
-            this.textBoxsave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxsave.Location = new System.Drawing.Point(258, 240);
+            this.textBoxsave.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxsave.Name = "textBoxsave";
             this.textBoxsave.ReadOnly = true;
             this.textBoxsave.Size = new System.Drawing.Size(1134, 39);
@@ -74,8 +74,8 @@
             // 
             this.btnsave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnsave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnsave.Location = new System.Drawing.Point(1408, 286);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnsave.Location = new System.Drawing.Point(1408, 236);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(6);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(106, 52);
             this.btnsave.TabIndex = 47;
@@ -87,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(30, 126);
+            this.label1.Location = new System.Drawing.Point(28, 108);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 31);
@@ -99,8 +99,8 @@
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(258, 120);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Location = new System.Drawing.Point(258, 108);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(1134, 39);
@@ -110,8 +110,8 @@
             // 
             this.btnOpen2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpen2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOpen2.Location = new System.Drawing.Point(1408, 118);
-            this.btnOpen2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnOpen2.Location = new System.Drawing.Point(1408, 100);
+            this.btnOpen2.Margin = new System.Windows.Forms.Padding(6);
             this.btnOpen2.Name = "btnOpen2";
             this.btnOpen2.Size = new System.Drawing.Size(106, 52);
             this.btnOpen2.TabIndex = 38;
@@ -125,7 +125,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPending.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxPending.Location = new System.Drawing.Point(258, 34);
-            this.textBoxPending.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxPending.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxPending.Name = "textBoxPending";
             this.textBoxPending.ReadOnly = true;
             this.textBoxPending.Size = new System.Drawing.Size(1134, 39);
@@ -135,8 +135,8 @@
             // 
             this.btnOpen1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpen1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOpen1.Location = new System.Drawing.Point(1408, 32);
-            this.btnOpen1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnOpen1.Location = new System.Drawing.Point(1408, 26);
+            this.btnOpen1.Margin = new System.Windows.Forms.Padding(6);
             this.btnOpen1.Name = "btnOpen1";
             this.btnOpen1.Size = new System.Drawing.Size(106, 52);
             this.btnOpen1.TabIndex = 35;
@@ -157,6 +157,8 @@
             // 
             // comboBoxPosition
             // 
+            this.comboBoxPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPosition.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBoxPosition.FormattingEnabled = true;
@@ -169,17 +171,17 @@
             "民丰",
             "若羌",
             "和田"});
-            this.comboBoxPosition.Location = new System.Drawing.Point(258, 202);
-            this.comboBoxPosition.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBoxPosition.Location = new System.Drawing.Point(258, 174);
+            this.comboBoxPosition.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(612, 39);
+            this.comboBoxPosition.Size = new System.Drawing.Size(1134, 39);
             this.comboBoxPosition.TabIndex = 51;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(140, 208);
+            this.label2.Location = new System.Drawing.Point(140, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 31);
@@ -193,20 +195,21 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxResult.Location = new System.Drawing.Point(258, 388);
-            this.textBoxResult.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxResult.Location = new System.Drawing.Point(258, 300);
+            this.textBoxResult.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(1256, 434);
+            this.textBoxResult.Size = new System.Drawing.Size(1256, 394);
             this.textBoxResult.TabIndex = 53;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(134, 388);
+            this.label7.Location = new System.Drawing.Point(134, 300);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 31);
@@ -216,9 +219,9 @@
             // btnCompute
             // 
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCompute.Location = new System.Drawing.Point(1332, 876);
-            this.btnCompute.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCompute.Location = new System.Drawing.Point(1332, 706);
+            this.btnCompute.Margin = new System.Windows.Forms.Padding(6);
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Size = new System.Drawing.Size(182, 68);
             this.btnCompute.TabIndex = 54;
@@ -245,9 +248,9 @@
             this.Controls.Add(this.textBoxPending);
             this.Controls.Add(this.btnOpen1);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SiteAtmParasPanel";
-            this.Size = new System.Drawing.Size(1564, 996);
+            this.Size = new System.Drawing.Size(1564, 792);
             this.Load += new System.EventHandler(this.SiteAtmParasPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

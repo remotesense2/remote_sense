@@ -474,7 +474,7 @@
             this.textBoxResult.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.Size = new System.Drawing.Size(1418, 262);
+            this.textBoxResult.Size = new System.Drawing.Size(1418, 276);
             this.textBoxResult.TabIndex = 103;
             // 
             // label17
@@ -579,10 +579,10 @@
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Location = new System.Drawing.Point(1460, 1066);
+            this.btnHelp.Location = new System.Drawing.Point(1460, 1080);
             this.btnHelp.Margin = new System.Windows.Forms.Padding(6);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(148, 84);
+            this.btnHelp.Size = new System.Drawing.Size(148, 52);
             this.btnHelp.TabIndex = 109;
             this.btnHelp.Text = "帮助";
             this.btnHelp.UseVisualStyleBackColor = true;
@@ -591,10 +591,10 @@
             // 
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCompute.Location = new System.Drawing.Point(190, 1066);
+            this.btnCompute.Location = new System.Drawing.Point(190, 1080);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(6);
             this.btnCompute.Name = "btnCompute";
-            this.btnCompute.Size = new System.Drawing.Size(148, 84);
+            this.btnCompute.Size = new System.Drawing.Size(142, 56);
             this.btnCompute.TabIndex = 108;
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
@@ -615,7 +615,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "SBAFUncertaintyPanel";
-            this.Size = new System.Drawing.Size(1708, 1162);
+            this.Size = new System.Drawing.Size(1708, 1148);
             this.Load += new System.EventHandler(this.SBAFUncertaintyPanel_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

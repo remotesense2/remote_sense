@@ -11,6 +11,8 @@ namespace phoenix
 {
     public partial class MainForm : Form
     {
+        private int baseHeight;
+
         public MainForm()
         {
             InitializeComponent();
@@ -32,6 +34,8 @@ namespace phoenix
             navigatePanelHead.AddPanel("SBAFUncertainty", new SBAFUncertaintyPanel());
             navigatePanelHead.AddPanel("TotalUncertainty", new TotalUncertaintyPanel());
             navigatePanelHead.AddPanel("退出", null);
+
+            baseHeight = this.Size.Height - panelContext.Size.Height;
         }
 
         private void navigatePanelHead_NavigateEvent(ContainerControl container)
@@ -39,7 +43,7 @@ namespace phoenix
             panelContext.Controls.Clear();
             if (container != null)
             {
-                this.Size = new System.Drawing.Size(this.Size.Width, container.Size.Height);
+                this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + container.Size.Height);
                 container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
                 container.Dock = System.Windows.Forms.DockStyle.Fill;
                 panelContext.Controls.Add(container);

@@ -62,9 +62,9 @@
             // btnPlaceImage
             // 
             this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceImage.Location = new System.Drawing.Point(1334, 870);
-            this.btnPlaceImage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceImage.Location = new System.Drawing.Point(1334, 828);
+            this.btnPlaceImage.Margin = new System.Windows.Forms.Padding(6);
             this.btnPlaceImage.Name = "btnPlaceImage";
             this.btnPlaceImage.Size = new System.Drawing.Size(182, 70);
             this.btnPlaceImage.TabIndex = 25;
@@ -74,6 +74,8 @@
             // 
             // comboBoxPosition
             // 
+            this.comboBoxPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPosition.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBoxPosition.FormattingEnabled = true;
@@ -87,9 +89,9 @@
             "若羌",
             "和田"});
             this.comboBoxPosition.Location = new System.Drawing.Point(262, 148);
-            this.comboBoxPosition.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBoxPosition.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(766, 39);
+            this.comboBoxPosition.Size = new System.Drawing.Size(1132, 39);
             this.comboBoxPosition.TabIndex = 29;
             // 
             // textBoxPending
@@ -98,7 +100,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPending.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxPending.Location = new System.Drawing.Point(262, 58);
-            this.textBoxPending.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxPending.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxPending.Name = "textBoxPending";
             this.textBoxPending.ReadOnly = true;
             this.textBoxPending.Size = new System.Drawing.Size(1132, 39);
@@ -108,8 +110,8 @@
             // 
             this.openbtn1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.openbtn1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.openbtn1.Location = new System.Drawing.Point(1410, 56);
-            this.openbtn1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.openbtn1.Location = new System.Drawing.Point(1410, 50);
+            this.openbtn1.Margin = new System.Windows.Forms.Padding(6);
             this.openbtn1.Name = "openbtn1";
             this.openbtn1.Size = new System.Drawing.Size(106, 52);
             this.openbtn1.TabIndex = 30;
@@ -134,7 +136,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox1.Location = new System.Drawing.Point(262, 228);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(1132, 39);
@@ -144,8 +146,8 @@
             // 
             this.openbtn2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.openbtn2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.openbtn2.Location = new System.Drawing.Point(1410, 226);
-            this.openbtn2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.openbtn2.Location = new System.Drawing.Point(1406, 220);
+            this.openbtn2.Margin = new System.Windows.Forms.Padding(6);
             this.openbtn2.Name = "openbtn2";
             this.openbtn2.Size = new System.Drawing.Size(106, 52);
             this.openbtn2.TabIndex = 34;
@@ -170,7 +172,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox2.Location = new System.Drawing.Point(262, 312);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(1132, 39);
@@ -180,8 +182,8 @@
             // 
             this.savebtn1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.savebtn1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.savebtn1.Location = new System.Drawing.Point(1410, 308);
-            this.savebtn1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.savebtn1.Location = new System.Drawing.Point(1406, 304);
+            this.savebtn1.Margin = new System.Windows.Forms.Padding(6);
             this.savebtn1.Name = "savebtn1";
             this.savebtn1.Size = new System.Drawing.Size(106, 52);
             this.savebtn1.TabIndex = 37;
@@ -202,10 +204,13 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(262, 400);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1134, 420);
+            this.pictureBox1.Size = new System.Drawing.Size(1250, 420);
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
@@ -239,9 +244,9 @@
             this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.btnPlaceImage);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SiteReflectancePanel";
-            this.Size = new System.Drawing.Size(1564, 980);
+            this.Size = new System.Drawing.Size(1564, 920);
             this.Load += new System.EventHandler(this.SiteReflectancePanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

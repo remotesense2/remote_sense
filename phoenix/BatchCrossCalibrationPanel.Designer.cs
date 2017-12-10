@@ -83,7 +83,7 @@
             this.comboBox3.Location = new System.Drawing.Point(860, 184);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(476, 39);
+            this.comboBox3.Size = new System.Drawing.Size(436, 39);
             this.comboBox3.TabIndex = 43;
             // 
             // comboBoxSiteName
@@ -106,7 +106,7 @@
             this.comboBoxSiteName.Location = new System.Drawing.Point(214, 110);
             this.comboBoxSiteName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxSiteName.Name = "comboBoxSiteName";
-            this.comboBoxSiteName.Size = new System.Drawing.Size(1122, 39);
+            this.comboBoxSiteName.Size = new System.Drawing.Size(1082, 39);
             this.comboBoxSiteName.TabIndex = 42;
             // 
             // textBoxPendingAngle
@@ -118,14 +118,14 @@
             this.textBoxPendingAngle.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBoxPendingAngle.Name = "textBoxPendingAngle";
             this.textBoxPendingAngle.ReadOnly = true;
-            this.textBoxPendingAngle.Size = new System.Drawing.Size(998, 39);
+            this.textBoxPendingAngle.Size = new System.Drawing.Size(958, 39);
             this.textBoxPendingAngle.TabIndex = 38;
             // 
             // btnOpenPendingAngle
             // 
             this.btnOpenPendingAngle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenPendingAngle.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOpenPendingAngle.Location = new System.Drawing.Point(1234, 33);
+            this.btnOpenPendingAngle.Location = new System.Drawing.Point(1194, 33);
             this.btnOpenPendingAngle.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnOpenPendingAngle.Name = "btnOpenPendingAngle";
             this.btnOpenPendingAngle.Size = new System.Drawing.Size(106, 46);
@@ -196,14 +196,14 @@
             this.textBoxOutput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
-            this.textBoxOutput.Size = new System.Drawing.Size(992, 39);
+            this.textBoxOutput.Size = new System.Drawing.Size(952, 39);
             this.textBoxOutput.TabIndex = 47;
             // 
             // btnSaveOutput
             // 
             this.btnSaveOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveOutput.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSaveOutput.Location = new System.Drawing.Point(1228, 248);
+            this.btnSaveOutput.Location = new System.Drawing.Point(1188, 248);
             this.btnSaveOutput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSaveOutput.Name = "btnSaveOutput";
             this.btnSaveOutput.Size = new System.Drawing.Size(112, 48);
@@ -237,7 +237,7 @@
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(1126, 334);
+            this.textBoxResult.Size = new System.Drawing.Size(1086, 336);
             this.textBoxResult.TabIndex = 49;
             // 
             // label7
@@ -255,7 +255,7 @@
             // 
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCompute.Location = new System.Drawing.Point(1158, 672);
+            this.btnCompute.Location = new System.Drawing.Point(1118, 674);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Size = new System.Drawing.Size(182, 62);
@@ -287,7 +287,7 @@
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "BatchCrossCalibrationPanel";
-            this.Size = new System.Drawing.Size(1396, 758);
+            this.Size = new System.Drawing.Size(1356, 760);
             this.Load += new System.EventHandler(this.BatchCrossCalibrationPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
