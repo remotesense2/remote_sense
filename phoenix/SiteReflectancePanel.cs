@@ -32,7 +32,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
+            dialog.Filter = "所有文件(*.tif)|*.tif";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBoxPending.Text = dialog.FileName;

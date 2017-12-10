@@ -11,54 +11,39 @@ using System.Timers;
 
 namespace phoenix
 {
-    public partial class BRDFUncertaintyPanel : UserControl
+    public partial class TIRCrossCalibrationPanel : UserControl
     {
-        public BRDFUncertaintyPanel()
+        public TIRCrossCalibrationPanel()
         {
             InitializeComponent();
         }
 
-        private void btnOpenTargetFile_Click(object sender, EventArgs e)
+        private void TIRCrossCalibrationPanel_Load(object sender, EventArgs e)
+        {
+            comboBoxSiteName.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
+        }
+
+        private void btnOpenPendingAngle_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
+            dialog.Filter = "所有文件(*.*)|*.*";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxTargetFile.Text = dialog.FileName;
+                textBoxPendingAngle.Text = dialog.FileName;
             }
         }
 
-        private void btnOpenReferFile_Click(object sender, EventArgs e)
+        private void btnSaveOutput_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
+            SaveFileDialog dialog = new SaveFileDialog();
             dialog.Title = "请选择文件夹";
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxReferFile.Text = dialog.FileName;
-            }
-        }
-
-        private void btnOpenBRDFOrigin_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                textBoxBRDFOrigin.Text = dialog.FileName;
-            }
-        }
-
-        private void btnBRDFNew_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                textBoxBRDFNew.Text = dialog.FileName;
+                textBoxOutput.Text = dialog.FileName;
             }
         }
 
@@ -80,13 +65,19 @@ namespace phoenix
             IDLProgress = progresspath;
             DeleteFile(IDLProgress);
             FileStream fs = new FileStream(idlsavinputpath, FileMode.Create);
-            byte[] data = System.Text.Encoding.Default.GetBytes(textBoxTargetFile.Text + "\r\n");
+            byte[] data = System.Text.Encoding.Default.GetBytes(textBoxPendingAngle.Text + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxReferFile.Text + "\r\n");
+
+            int index = comboBoxSiteName.SelectedIndex + 1;
+            data = System.Text.Encoding.Default.GetBytes(index.ToString() + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxBRDFOrigin.Text + "\r\n");
+            index = comboBox2.SelectedIndex + 1;
+            data = System.Text.Encoding.Default.GetBytes(index.ToString() + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxBRDFNew.Text + "\r\n");
+            index = comboBox3.SelectedIndex + 1;
+            data = System.Text.Encoding.Default.GetBytes(index.ToString() + "\r\n");
+            fs.Write(data, 0, data.Length);
+            data = System.Text.Encoding.Default.GetBytes(textBoxOutput.Text + "\r\n");
             fs.Write(data, 0, data.Length);
             data = System.Text.Encoding.Default.GetBytes(progresspath + "\r\n");
             fs.Write(data, 0, data.Length);
@@ -116,7 +107,8 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        StreamReader sr = new StreamReader(textBoxBRDFNew.Text, Encoding.Default);
+                        //textBoxResult.AppendText("                       观测天顶角 / 观测方位角 / 太阳天顶角 / 太阳方位角");
+                        StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {
@@ -153,9 +145,9 @@ namespace phoenix
         {
             string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
             strPath = Directory.GetParent(strPath).FullName;
-            string idlsavinputpath = strPath + @"\BRDFUncertainty_input.txt";
-            string idlsavpath = strPath + @"\BRDFUncertainty.sav";
-            GenerateIdlPath(idlsavpath, idlsavinputpath, @"BRDFUncertainty", @"BRDFUncertainty_input");
+            string idlsavinputpath = strPath + @"\TIRCrossCalibration_input.txt";
+            string idlsavpath = strPath + @"\TIRCrossCalibration.sav";
+            GenerateIdlPath(idlsavpath, idlsavinputpath, @"TIRCrossCalibration", @"TIRCrossCalibration_input");
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 

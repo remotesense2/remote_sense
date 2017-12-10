@@ -26,8 +26,8 @@ namespace phoenix
             navigatePanelHead.AddPanel("SiteAtmParas", new SiteAtmParasPanel());
             navigatePanelHead.AddPanel("BRDFModel", new BRDFModelPanel());
             navigatePanelHead.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
-            navigatePanelHead.AddPanel("热红外传感器交叉定标", new InfraredPanel());
-            navigatePanelHead.AddPanel("ImageUncertainty", new UncertaintyAnalysisPanel());
+            navigatePanelHead.AddPanel("TIRCrossCalibration", new TIRCrossCalibrationPanel());
+            navigatePanelHead.AddPanel("ImageUncertainty", new ImageUncertaintyPanel());
             navigatePanelHead.AddPanel("BRDFUncertainty", new BRDFUncertaintyPanel());
             navigatePanelHead.AddPanel("SBAFUncertainty", new SBAFUncertaintyPanel());
             navigatePanelHead.AddPanel("TotalUncertainty", new TotalUncertaintyPanel());
@@ -39,6 +39,7 @@ namespace phoenix
             panelContext.Controls.Clear();
             if (container != null)
             {
+                this.Size = new System.Drawing.Size(this.Size.Width, container.Size.Height);
                 container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
                 container.Dock = System.Windows.Forms.DockStyle.Fill;
                 panelContext.Controls.Add(container);

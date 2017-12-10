@@ -88,11 +88,11 @@
     <Compile Include="ImageViewForm.Designer.cs">
       <DependentUpon>ImageViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfraredPanel.cs">
+    <Compile Include="TIRCrossCalibrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InfraredPanel.Designer.cs">
-      <DependentUpon>InfraredPanel.cs</DependentUpon>
+    <Compile Include="TIRCrossCalibrationPanel.Designer.cs">
+      <DependentUpon>TIRCrossCalibrationPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -153,11 +153,11 @@
     <Compile Include="TotalUncertaintyPanel.Designer.cs">
       <DependentUpon>TotalUncertaintyPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UncertaintyAnalysisPanel.cs">
+    <Compile Include="ImageUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UncertaintyAnalysisPanel.Designer.cs">
-      <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
+    <Compile Include="ImageUncertaintyPanel.Designer.cs">
+      <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BatchCrossCalibrationPanel.resx">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="ImageViewForm.resx">
       <DependentUpon>ImageViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfraredPanel.resx">
-      <DependentUpon>InfraredPanel.cs</DependentUpon>
+    <EmbeddedResource Include="TIRCrossCalibrationPanel.resx">
+      <DependentUpon>TIRCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="TotalUncertaintyPanel.resx">
       <DependentUpon>TotalUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UncertaintyAnalysisPanel.resx">
-      <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
+    <EmbeddedResource Include="ImageUncertaintyPanel.resx">
+      <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
