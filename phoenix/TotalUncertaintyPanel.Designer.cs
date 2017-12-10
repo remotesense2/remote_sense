@@ -20,6 +20,9 @@
             base.Dispose(disposing);
         }
 
+        private static System.Timers.Timer RUtimer;
+        private string IDLProgress;
+
         #region 组件设计器生成的代码
 
         /// <summary> 
@@ -28,7 +31,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHelp = new System.Windows.Forms.Button();
             this.btnCompute = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,18 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnHelp
-            // 
-            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Location = new System.Drawing.Point(1207, 730);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(6);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(152, 62);
-            this.btnHelp.TabIndex = 53;
-            this.btnHelp.Text = "帮助";
-            this.btnHelp.UseVisualStyleBackColor = true;
+
             // 
             // btnCompute
             // 
@@ -68,10 +59,11 @@
             this.btnCompute.Location = new System.Drawing.Point(293, 720);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(6);
             this.btnCompute.Name = "btnCompute";
-            this.btnCompute.Size = new System.Drawing.Size(168, 60);
+            this.btnCompute.Size = new System.Drawing.Size(84, 30);
             this.btnCompute.TabIndex = 52;
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
             // 
             // textBoxResult
             // 
@@ -87,7 +79,7 @@
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(1082, 370);
+            this.textBoxResult.Size = new System.Drawing.Size(541, 185);
             this.textBoxResult.TabIndex = 51;
             // 
             // label7
@@ -96,7 +88,7 @@
             this.label7.Location = new System.Drawing.Point(27, 338);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(239, 56);
+            this.label7.Size = new System.Drawing.Size(120, 28);
             this.label7.TabIndex = 50;
             this.label7.Text = "不确定度计算结果";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -120,7 +112,7 @@
             this.btnSaveTotalUncertainty.Location = new System.Drawing.Point(1269, 252);
             this.btnSaveTotalUncertainty.Margin = new System.Windows.Forms.Padding(6);
             this.btnSaveTotalUncertainty.Name = "btnSaveTotalUncertainty";
-            this.btnSaveTotalUncertainty.Size = new System.Drawing.Size(106, 50);
+            this.btnSaveTotalUncertainty.Size = new System.Drawing.Size(53, 25);
             this.btnSaveTotalUncertainty.TabIndex = 48;
             this.btnSaveTotalUncertainty.Text = "保存";
             this.btnSaveTotalUncertainty.UseVisualStyleBackColor = true;
@@ -145,7 +137,7 @@
             this.btnOpenSBAFUncertainty.Location = new System.Drawing.Point(1269, 174);
             this.btnOpenSBAFUncertainty.Margin = new System.Windows.Forms.Padding(6);
             this.btnOpenSBAFUncertainty.Name = "btnOpenSBAFUncertainty";
-            this.btnOpenSBAFUncertainty.Size = new System.Drawing.Size(106, 50);
+            this.btnOpenSBAFUncertainty.Size = new System.Drawing.Size(53, 25);
             this.btnOpenSBAFUncertainty.TabIndex = 43;
             this.btnOpenSBAFUncertainty.Text = "打开";
             this.btnOpenSBAFUncertainty.UseVisualStyleBackColor = true;
@@ -202,7 +194,7 @@
             this.btnOpenBRDFUncertainty.Location = new System.Drawing.Point(1269, 96);
             this.btnOpenBRDFUncertainty.Margin = new System.Windows.Forms.Padding(6);
             this.btnOpenBRDFUncertainty.Name = "btnOpenBRDFUncertainty";
-            this.btnOpenBRDFUncertainty.Size = new System.Drawing.Size(106, 50);
+            this.btnOpenBRDFUncertainty.Size = new System.Drawing.Size(53, 25);
             this.btnOpenBRDFUncertainty.TabIndex = 41;
             this.btnOpenBRDFUncertainty.Text = "打开";
             this.btnOpenBRDFUncertainty.UseVisualStyleBackColor = true;
@@ -227,7 +219,7 @@
             this.btnOpenImageUncertainty.Location = new System.Drawing.Point(1269, 26);
             this.btnOpenImageUncertainty.Margin = new System.Windows.Forms.Padding(6);
             this.btnOpenImageUncertainty.Name = "btnOpenImageUncertainty";
-            this.btnOpenImageUncertainty.Size = new System.Drawing.Size(106, 50);
+            this.btnOpenImageUncertainty.Size = new System.Drawing.Size(53, 25);
             this.btnOpenImageUncertainty.TabIndex = 36;
             this.btnOpenImageUncertainty.Text = "打开";
             this.btnOpenImageUncertainty.UseVisualStyleBackColor = true;
@@ -241,6 +233,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(206, 31);
+
             this.label4.TabIndex = 39;
             this.label4.Text = "观测几何不确定性";
             // 
@@ -267,10 +260,9 @@
             // 
             // TotalUncertaintyPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnCompute);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.label7);
@@ -288,8 +280,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TotalUncertaintyPanel";
-            this.Size = new System.Drawing.Size(1404, 812);
+            this.Size = new System.Drawing.Size(702, 406);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +290,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnCompute;
         private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.Label label7;
