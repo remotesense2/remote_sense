@@ -26,14 +26,9 @@ namespace phoenix
             navigatePanelHead.AddPanel("SiteAtmParas", new SiteAtmParasPanel());
             navigatePanelHead.AddPanel("BRDFModel", new BRDFModelPanel());
             navigatePanelHead.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
-<<<<<<< HEAD
-            navigatePanelHead.AddPanel("热红外传感器交叉定标", new InfraredPanel());
+            navigatePanelHead.AddPanel("TIRCrossCalibration", new TIRCrossCalibrationPanel());
             navigatePanelHead.AddPanel("ImageUncertainty", new UncertaintyAnalysisPanel());
             navigatePanelHead.AddPanel("BRDFUncertainty", new BRDFUncertaintyPanel());
-=======
-            navigatePanelHead.AddPanel("TIRCrossCalibration", new TIRCrossCalibrationPanel());
-            navigatePanelHead.AddPanel("交叉定标不确定性分析", new UncertaintyAnalysisPanel());
->>>>>>> add tircrosscalibration
             navigatePanelHead.AddPanel("退出", null);
         }
 
