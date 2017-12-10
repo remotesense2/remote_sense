@@ -9,43 +9,54 @@ using System.Windows.Forms;
 
 namespace phoenix
 {
-    public partial class UncertaintyAnalysisPanel : UserControl
+    public partial class BRDFUncertaintyPanel : UserControl
     {
-        public UncertaintyAnalysisPanel()
+        public BRDFUncertaintyPanel()
         {
             InitializeComponent();
         }
 
-        private void btnOpenPending_Click(object sender, EventArgs e)
+        private void btnOpenTargetFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxPending.Text = dialog.FileName;
+                textBoxTargetFile.Text = dialog.FileName;
             }
         }
 
-        private void btnOpenRefer_Click(object sender, EventArgs e)
+        private void btnOpenReferFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxRefer.Text = dialog.FileName;
+                textBoxReferFile.Text = dialog.FileName;
             }
         }
 
-        private void btnSaveImageUncertainty_Click(object sender, EventArgs e)
+        private void btnOpenBRDFOrigin_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
+            OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxImageUncertainty.Text = dialog.FileName;
+                textBoxBRDFOrigin.Text = dialog.FileName;
+            }
+        }
+
+        private void btnBRDFNew_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBoxBRDFNew.Text = dialog.FileName;
             }
         }
     }

@@ -150,5 +150,10 @@ namespace phoenix
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 
+        private void SiteAtmParasPanel_Load(object sender, EventArgs e)
+        {
+            comboBoxPosition.SelectedIndex = 0;
+        }
+
     }
 }

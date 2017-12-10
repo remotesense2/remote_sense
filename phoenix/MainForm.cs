@@ -27,7 +27,8 @@ namespace phoenix
             navigatePanelHead.AddPanel("BRDFModel", new BRDFModelPanel());
             navigatePanelHead.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
             navigatePanelHead.AddPanel("热红外传感器交叉定标", new InfraredPanel());
-            navigatePanelHead.AddPanel("交叉定标不确定性分析", new UncertaintyAnalysisPanel());
+            navigatePanelHead.AddPanel("ImageUncertainty", new UncertaintyAnalysisPanel());
+            navigatePanelHead.AddPanel("BRDFUncertainty", new BRDFUncertaintyPanel());
             navigatePanelHead.AddPanel("退出", null);
         }
 

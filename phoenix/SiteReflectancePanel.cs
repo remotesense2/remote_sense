@@ -25,7 +25,7 @@ namespace phoenix
 
         private void SiteReflectancePanel_Load(object sender, EventArgs e)
         {
-
+            comboBoxPosition.SelectedIndex = 0;
         }
 
         private void openbtn1_Click(object sender, EventArgs e)

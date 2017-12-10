@@ -210,7 +210,7 @@ namespace phoenix
 
         private void PreprocessPanel_Load(object sender, EventArgs e)
         {
-
+            comboBoxPosition.SelectedIndex = 0;
         }
 
         private void imageViewer_Load(object sender, EventArgs e)
