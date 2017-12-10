@@ -49,6 +49,12 @@ namespace phoenix
             }
         }
 
+        public Control AddGroup()
+        {
+            Panel panel = new Panel();
+            return panel;
+        }
+
         public void AddPanel(string text, ContainerControl container)
         {
             int button_width = (text.Length < 8) ? 75 : 80;

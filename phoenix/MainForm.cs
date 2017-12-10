@@ -20,6 +20,7 @@ namespace phoenix
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            baseHeight = this.navigatePanelHead.Height + 20;
             navigatePanelHead.AddPanel("PreProccess", new PreprocessPanel());
             navigatePanelHead.AddPanel("BRDFCorrection", new BRDFPanel());
             navigatePanelHead.AddPanel("SBAFCorrection", new SBAFCorrectionPanel());
@@ -34,8 +35,6 @@ namespace phoenix
             navigatePanelHead.AddPanel("SBAFUncertainty", new SBAFUncertaintyPanel());
             navigatePanelHead.AddPanel("TotalUncertainty", new TotalUncertaintyPanel());
             navigatePanelHead.AddPanel("退出", null);
-
-            baseHeight = this.Size.Height - panelContext.Size.Height;
         }
 
         private void navigatePanelHead_NavigateEvent(ContainerControl container)

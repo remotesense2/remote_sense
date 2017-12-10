@@ -171,6 +171,21 @@ namespace phoenix
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 
+        private void textBoxResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrossCalibrationPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

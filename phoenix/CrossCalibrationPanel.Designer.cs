@@ -57,7 +57,7 @@
             this.textBoxRefer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRefer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxRefer.Location = new System.Drawing.Point(121, 70);
+            this.textBoxRefer.Location = new System.Drawing.Point(121, 46);
             this.textBoxRefer.Name = "textBoxRefer";
             this.textBoxRefer.ReadOnly = true;
             this.textBoxRefer.Size = new System.Drawing.Size(569, 23);
@@ -67,7 +67,7 @@
             // 
             this.btnOpenRefer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenRefer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOpenRefer.Location = new System.Drawing.Point(696, 69);
+            this.btnOpenRefer.Location = new System.Drawing.Point(696, 45);
             this.btnOpenRefer.Name = "btnOpenRefer";
             this.btnOpenRefer.Size = new System.Drawing.Size(53, 26);
             this.btnOpenRefer.TabIndex = 22;
@@ -80,7 +80,7 @@
             this.textBoxPending.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPending.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxPending.Location = new System.Drawing.Point(121, 27);
+            this.textBoxPending.Location = new System.Drawing.Point(121, 14);
             this.textBoxPending.Name = "textBoxPending";
             this.textBoxPending.ReadOnly = true;
             this.textBoxPending.Size = new System.Drawing.Size(569, 23);
@@ -90,7 +90,7 @@
             // 
             this.btnOpenPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenPending.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOpenPending.Location = new System.Drawing.Point(696, 26);
+            this.btnOpenPending.Location = new System.Drawing.Point(696, 13);
             this.btnOpenPending.Name = "btnOpenPending";
             this.btnOpenPending.Size = new System.Drawing.Size(53, 26);
             this.btnOpenPending.TabIndex = 19;
@@ -102,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(14, 30);
+            this.label5.Location = new System.Drawing.Point(14, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 17);
             this.label5.TabIndex = 20;
@@ -112,7 +112,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(14, 73);
+            this.label1.Location = new System.Drawing.Point(14, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 17);
             this.label1.TabIndex = 25;
@@ -122,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(14, 120);
+            this.label2.Location = new System.Drawing.Point(14, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 17);
             this.label2.TabIndex = 28;
@@ -133,7 +133,7 @@
             this.textBoxBRDFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBRDFCoeff.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxBRDFCoeff.Location = new System.Drawing.Point(121, 117);
+            this.textBoxBRDFCoeff.Location = new System.Drawing.Point(121, 81);
             this.textBoxBRDFCoeff.Name = "textBoxBRDFCoeff";
             this.textBoxBRDFCoeff.ReadOnly = true;
             this.textBoxBRDFCoeff.Size = new System.Drawing.Size(569, 23);
@@ -143,7 +143,7 @@
             // 
             this.btnBRDFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBRDFCoeff.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnBRDFCoeff.Location = new System.Drawing.Point(696, 115);
+            this.btnBRDFCoeff.Location = new System.Drawing.Point(696, 79);
             this.btnBRDFCoeff.Name = "btnBRDFCoeff";
             this.btnBRDFCoeff.Size = new System.Drawing.Size(53, 26);
             this.btnBRDFCoeff.TabIndex = 26;
@@ -155,7 +155,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(14, 160);
+            this.label3.Location = new System.Drawing.Point(14, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 17);
             this.label3.TabIndex = 31;
@@ -166,7 +166,7 @@
             this.textBoxSBAFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSBAFCoeff.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxSBAFCoeff.Location = new System.Drawing.Point(121, 157);
+            this.textBoxSBAFCoeff.Location = new System.Drawing.Point(121, 113);
             this.textBoxSBAFCoeff.Name = "textBoxSBAFCoeff";
             this.textBoxSBAFCoeff.ReadOnly = true;
             this.textBoxSBAFCoeff.Size = new System.Drawing.Size(569, 23);
@@ -176,7 +176,7 @@
             // 
             this.btnSBAFCoeff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSBAFCoeff.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSBAFCoeff.Location = new System.Drawing.Point(696, 155);
+            this.btnSBAFCoeff.Location = new System.Drawing.Point(696, 111);
             this.btnSBAFCoeff.Name = "btnSBAFCoeff";
             this.btnSBAFCoeff.Size = new System.Drawing.Size(53, 26);
             this.btnSBAFCoeff.TabIndex = 29;
@@ -188,7 +188,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(35, 203);
+            this.label4.Location = new System.Drawing.Point(35, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 34;
@@ -199,7 +199,7 @@
             this.textBoxCoefficient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCoefficient.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxCoefficient.Location = new System.Drawing.Point(121, 200);
+            this.textBoxCoefficient.Location = new System.Drawing.Point(121, 147);
             this.textBoxCoefficient.Name = "textBoxCoefficient";
             this.textBoxCoefficient.ReadOnly = true;
             this.textBoxCoefficient.Size = new System.Drawing.Size(569, 23);
@@ -209,7 +209,7 @@
             // 
             this.btnCoefficient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCoefficient.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCoefficient.Location = new System.Drawing.Point(696, 198);
+            this.btnCoefficient.Location = new System.Drawing.Point(696, 145);
             this.btnCoefficient.Name = "btnCoefficient";
             this.btnCoefficient.Size = new System.Drawing.Size(53, 26);
             this.btnCoefficient.TabIndex = 32;
@@ -221,11 +221,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(35, 246);
+            this.label6.Location = new System.Drawing.Point(35, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 35;
             this.label6.Text = "交叉定标结果";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBoxResult
             // 
@@ -235,21 +236,22 @@
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxResult.Location = new System.Drawing.Point(121, 246);
+            this.textBoxResult.Location = new System.Drawing.Point(121, 183);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(628, 175);
+            this.textBoxResult.Size = new System.Drawing.Size(628, 151);
             this.textBoxResult.TabIndex = 36;
+            this.textBoxResult.TextChanged += new System.EventHandler(this.textBoxResult_TextChanged);
             // 
             // btnCompute
             // 
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCompute.Location = new System.Drawing.Point(129, 440);
+            this.btnCompute.Location = new System.Drawing.Point(121, 340);
             this.btnCompute.Name = "btnCompute";
-            this.btnCompute.Size = new System.Drawing.Size(91, 42);
+            this.btnCompute.Size = new System.Drawing.Size(91, 32);
             this.btnCompute.TabIndex = 37;
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
@@ -259,9 +261,9 @@
             // 
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Location = new System.Drawing.Point(658, 440);
+            this.btnHelp.Location = new System.Drawing.Point(658, 340);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(91, 42);
+            this.btnHelp.Size = new System.Drawing.Size(91, 32);
             this.btnHelp.TabIndex = 38;
             this.btnHelp.Text = "帮助";
             this.btnHelp.UseVisualStyleBackColor = true;
@@ -291,7 +293,8 @@
             this.Controls.Add(this.btnOpenPending);
             this.Controls.Add(this.label5);
             this.Name = "CrossCalibrationPanel";
-            this.Size = new System.Drawing.Size(782, 498);
+            this.Size = new System.Drawing.Size(782, 384);
+            this.Load += new System.EventHandler(this.CrossCalibrationPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
