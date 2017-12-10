@@ -21,19 +21,19 @@ namespace phoenix
         private void MainForm_Load(object sender, EventArgs e)
         {
             baseHeight = this.navigatePanelHead.Height + 20;
-            navigatePanelHead.AddPanel("PreProccess", new PreprocessPanel());
-            navigatePanelHead.AddPanel("BRDFCorrection", new BRDFPanel());
-            navigatePanelHead.AddPanel("SBAFCorrection", new SBAFCorrectionPanel());
-            navigatePanelHead.AddPanel("CrossCalibration", new CrossCalibrationPanel());
-            navigatePanelHead.AddPanel("SiteReflectance", new SiteReflectancePanel());
-            navigatePanelHead.AddPanel("SiteAtmParas", new SiteAtmParasPanel());
-            navigatePanelHead.AddPanel("BRDFModel", new BRDFModelPanel());
-            navigatePanelHead.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
-            navigatePanelHead.AddPanel("TIRCrossCalibration", new TIRCrossCalibrationPanel());
-            navigatePanelHead.AddPanel("ImageUncertainty", new ImageUncertaintyPanel());
-            navigatePanelHead.AddPanel("BRDFUncertainty", new BRDFUncertaintyPanel());
-            navigatePanelHead.AddPanel("SBAFUncertainty", new SBAFUncertaintyPanel());
-            navigatePanelHead.AddPanel("TotalUncertainty", new TotalUncertaintyPanel());
+            navigatePanelHead.AddPanel("交叉定标数据预处理", new PreprocessPanel());
+            navigatePanelHead.AddPanel("定标场地BRDF模型", new BRDFModelPanel());
+            navigatePanelHead.AddPanel("观测几何校正因子计算", new BRDFPanel());
+            navigatePanelHead.AddPanel("场地光谱信息提取", new SiteReflectancePanel());
+            navigatePanelHead.AddPanel("场地大气参数提取", new SiteAtmParasPanel());
+            navigatePanelHead.AddPanel("光谱匹配校正因子计算", new SBAFCorrectionPanel());
+            navigatePanelHead.AddPanel("交叉定标", new CrossCalibrationPanel());
+            navigatePanelHead.AddPanel("可见近红外全过程交叉定标", new BatchCrossCalibrationPanel());
+            navigatePanelHead.AddPanel("热红外全过程交叉定标", new TIRCrossCalibrationPanel());
+            navigatePanelHead.AddPanel("图像噪声不确定性分析", new ImageUncertaintyPanel());
+            navigatePanelHead.AddPanel("观测几何不确定性分析", new BRDFUncertaintyPanel());
+            navigatePanelHead.AddPanel("光谱匹配不确定性分析", new SBAFUncertaintyPanel());
+            navigatePanelHead.AddPanel("总的不确定性分析", new TotalUncertaintyPanel());
             navigatePanelHead.AddPanel("退出", null);
         }
 
