@@ -21,20 +21,21 @@ namespace phoenix
         private void MainForm_Load(object sender, EventArgs e)
         {
             baseHeight = this.navigatePanelHead.Height + 20;
-            navigatePanelHead.AddPanel("PreProccess", new PreprocessPanel());
-            navigatePanelHead.AddPanel("BRDFCorrection", new BRDFPanel());
-            navigatePanelHead.AddPanel("SBAFCorrection", new SBAFCorrectionPanel());
-            navigatePanelHead.AddPanel("CrossCalibration", new CrossCalibrationPanel());
-            navigatePanelHead.AddPanel("SiteReflectance", new SiteReflectancePanel());
-            navigatePanelHead.AddPanel("SiteAtmParas", new SiteAtmParasPanel());
-            navigatePanelHead.AddPanel("BRDFModel", new BRDFModelPanel());
-            navigatePanelHead.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
-            navigatePanelHead.AddPanel("TIRCrossCalibration", new TIRCrossCalibrationPanel());
-            navigatePanelHead.AddPanel("ImageUncertainty", new ImageUncertaintyPanel());
-            navigatePanelHead.AddPanel("BRDFUncertainty", new BRDFUncertaintyPanel());
-            navigatePanelHead.AddPanel("SBAFUncertainty", new SBAFUncertaintyPanel());
-            navigatePanelHead.AddPanel("TotalUncertainty", new TotalUncertaintyPanel());
-            navigatePanelHead.AddPanel("退出", null);
+            NavigateTabGroup tabFirst = navigatePanelHead.AddGroup();
+            tabFirst.AddPanel("PreProccess", new PreprocessPanel());
+            tabFirst.AddPanel("BRDFCorrection", new BRDFPanel());
+            tabFirst.AddPanel("SBAFCorrection", new SBAFCorrectionPanel());
+            tabFirst.AddPanel("CrossCalibration", new CrossCalibrationPanel());
+            tabFirst.AddPanel("SiteReflectance", new SiteReflectancePanel());
+            tabFirst.AddPanel("SiteAtmParas", new SiteAtmParasPanel());
+            tabFirst.AddPanel("BRDFModel", new BRDFModelPanel());
+            NavigateTabGroup tabSecond = navigatePanelHead.AddGroup();
+            tabSecond.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
+            tabSecond.AddPanel("TIRCrossCalibration", new TIRCrossCalibrationPanel());
+            tabSecond.AddPanel("ImageUncertainty", new ImageUncertaintyPanel());
+            tabSecond.AddPanel("BRDFUncertainty", new BRDFUncertaintyPanel());
+            tabSecond.AddPanel("SBAFUncertainty", new SBAFUncertaintyPanel());
+            tabSecond.AddPanel("TotalUncertainty", new TotalUncertaintyPanel());
         }
 
         private void navigatePanelHead_NavigateEvent(ContainerControl container)
@@ -46,10 +47,6 @@ namespace phoenix
                 container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
                 container.Dock = System.Windows.Forms.DockStyle.Fill;
                 panelContext.Controls.Add(container);
-            }
-            else
-            {
-                this.Close();
             }
         }
 

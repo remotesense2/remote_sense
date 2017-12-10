@@ -11,9 +11,6 @@ namespace phoenix
 {
     public partial class NavigatePanel : UserControl
     {
-        private int buttonLeftPos = 0;
-        private bool hasActive = false;
-
         public NavigatePanel()
         {
             InitializeComponent();
@@ -24,7 +21,6 @@ namespace phoenix
 
         private void NavigatePanel_Load(object sender, EventArgs e)
         {
-
         }
 
         private void SetButtonActive(NavigateButton button)
@@ -49,38 +45,41 @@ namespace phoenix
             }
         }
 
-        public Control AddGroup()
+        public NavigateTabGroup AddGroup()
         {
-            Panel panel = new Panel();
-            return panel;
+            NavigateTabGroup tab = new NavigateTabGroup();
+            tab.Size = new System.Drawing.Size(0, 30);
+            tab.Dock = System.Windows.Forms.DockStyle.Bottom;
+            tab.NavigateTabEvent += new phoenix.NavigateTabGroup.NavigateTabEventHandler(this.TabNavigate_Click);
+            panelContainer.Controls.Add(tab);
+            return tab;
         }
 
-        public void AddPanel(string text, ContainerControl container)
+        private void TabNavigate_Click(NavigateTabGroup sender, ContainerControl container)
         {
-            int button_width = (text.Length < 8) ? 75 : 80;
-            NavigateButton btnNew = new NavigateButton(container);
-            btnNew.Location = new System.Drawing.Point(buttonLeftPos, 0);
-            btnNew.Size = new System.Drawing.Size(button_width, this.Height);
-            btnNew.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            btnNew.Text = text;
-            btnNew.ForeColor = System.Drawing.Color.White;
-            btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
-            btnNew.FlatAppearance.BorderSize = 0;
-            btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnNew.Click += new System.EventHandler(this.btnNavigate_Click);
-            this.Controls.Add(btnNew);
-            buttonLeftPos += btnNew.Width;
+           panelContainer.Controls.Remove(sender);
+           foreach (Control c in panelContainer.Controls)
+           {
+               NavigateTabGroup tabGroup = (NavigateTabGroup)c;
+               if (tabGroup != null)
+               {
+                   tabGroup.SetInactive();
+               }
+           }
 
-            if (!hasActive)
-            {
-                hasActive = true;
-                SetButtonActive(btnNew);
-            }
+           sender.Size = new System.Drawing.Size(0, 30);
+           sender.Dock = System.Windows.Forms.DockStyle.Bottom;
+           panelContainer.Controls.Add(sender);
+
+           if (NavigateEvent != null)
+           {
+               NavigateEvent(container);
+           }
         }
 
-        private void btnNavigate_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            SetButtonActive((NavigateButton)sender);
+            this.ParentForm.Close();
         }
     }
 }
