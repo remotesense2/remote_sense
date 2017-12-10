@@ -129,6 +129,12 @@
     <Compile Include="SBAFCorrectionPanel.Designer.cs">
       <DependentUpon>SBAFCorrectionPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SBAFUncertaintyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SBAFUncertaintyPanel.Designer.cs">
+      <DependentUpon>SBAFUncertaintyPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="SiteReflectancePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,12 @@
     </Compile>
     <Compile Include="SiteAtmParasPanel.Designer.cs">
       <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalUncertaintyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TotalUncertaintyPanel.Designer.cs">
+      <DependentUpon>TotalUncertaintyPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UncertaintyAnalysisPanel.cs">
       <SubType>UserControl</SubType>
@@ -195,11 +207,17 @@
     <EmbeddedResource Include="SBAFCorrectionPanel.resx">
       <DependentUpon>SBAFCorrectionPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SBAFUncertaintyPanel.resx">
+      <DependentUpon>SBAFUncertaintyPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SiteReflectancePanel.resx">
       <DependentUpon>SiteReflectancePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SiteAtmParasPanel.resx">
       <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalUncertaintyPanel.resx">
+      <DependentUpon>TotalUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UncertaintyAnalysisPanel.resx">
       <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
