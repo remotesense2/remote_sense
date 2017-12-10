@@ -11,54 +11,43 @@ using System.Timers;
 
 namespace phoenix
 {
-    public partial class BRDFUncertaintyPanel : UserControl
+    public partial class ImageUncertaintyPanel : UserControl
     {
-        public BRDFUncertaintyPanel()
+        public ImageUncertaintyPanel()
         {
             InitializeComponent();
         }
 
-        private void btnOpenTargetFile_Click(object sender, EventArgs e)
+        private void btnOpenPending_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
+            dialog.Filter = "所有文件(*.tif)|*.tif";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxTargetFile.Text = dialog.FileName;
+                textBoxPending.Text = dialog.FileName;
             }
         }
 
-        private void btnOpenReferFile_Click(object sender, EventArgs e)
+        private void btnOpenRefer_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
+            dialog.Filter = "所有文件(*.tif)|*.tif";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxReferFile.Text = dialog.FileName;
+                textBoxRefer.Text = dialog.FileName;
             }
         }
 
-        private void btnOpenBRDFOrigin_Click(object sender, EventArgs e)
+        private void btnSaveImageUncertainty_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
+            SaveFileDialog dialog = new SaveFileDialog();
             dialog.Title = "请选择文件夹";
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxBRDFOrigin.Text = dialog.FileName;
-            }
-        }
-
-        private void btnBRDFNew_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                textBoxBRDFNew.Text = dialog.FileName;
+                textBoxImageUncertainty.Text = dialog.FileName;
             }
         }
 
@@ -80,13 +69,11 @@ namespace phoenix
             IDLProgress = progresspath;
             DeleteFile(IDLProgress);
             FileStream fs = new FileStream(idlsavinputpath, FileMode.Create);
-            byte[] data = System.Text.Encoding.Default.GetBytes(textBoxTargetFile.Text + "\r\n");
+            byte[] data = System.Text.Encoding.Default.GetBytes(textBoxPending.Text + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxReferFile.Text + "\r\n");
+            data = System.Text.Encoding.Default.GetBytes(textBoxRefer.Text + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxBRDFOrigin.Text + "\r\n");
-            fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxBRDFNew.Text + "\r\n");
+            data = System.Text.Encoding.Default.GetBytes(textBoxImageUncertainty.Text + "\r\n");
             fs.Write(data, 0, data.Length);
             data = System.Text.Encoding.Default.GetBytes(progresspath + "\r\n");
             fs.Write(data, 0, data.Length);
@@ -116,7 +103,7 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        StreamReader sr = new StreamReader(textBoxBRDFNew.Text, Encoding.Default);
+                        StreamReader sr = new StreamReader(textBoxImageUncertainty.Text, Encoding.Default);
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {
@@ -153,11 +140,10 @@ namespace phoenix
         {
             string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
             strPath = Directory.GetParent(strPath).FullName;
-            string idlsavinputpath = strPath + @"\BRDFUncertainty_input.txt";
-            string idlsavpath = strPath + @"\BRDFUncertainty.sav";
-            GenerateIdlPath(idlsavpath, idlsavinputpath, @"BRDFUncertainty", @"BRDFUncertainty_input");
+            string idlsavinputpath = strPath + @"\ImageUncertainty_input.txt";
+            string idlsavpath = strPath + @"\ImageUncertainty.sav";
+            GenerateIdlPath(idlsavpath, idlsavinputpath, @"ImageUncertainty", @"ImageUncertainty_input");
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
-
     }
 }

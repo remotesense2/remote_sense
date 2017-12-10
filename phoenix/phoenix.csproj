@@ -141,11 +141,11 @@
     <Compile Include="SiteAtmParasPanel.Designer.cs">
       <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UncertaintyAnalysisPanel.cs">
+    <Compile Include="ImageUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UncertaintyAnalysisPanel.Designer.cs">
-      <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
+    <Compile Include="ImageUncertaintyPanel.Designer.cs">
+      <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BatchCrossCalibrationPanel.resx">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
@@ -201,8 +201,8 @@
     <EmbeddedResource Include="SiteAtmParasPanel.resx">
       <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UncertaintyAnalysisPanel.resx">
-      <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
+    <EmbeddedResource Include="ImageUncertaintyPanel.resx">
+      <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
