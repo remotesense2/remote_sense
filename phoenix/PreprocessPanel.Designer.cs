@@ -63,8 +63,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelViewer = new System.Windows.Forms.Panel();
-            this.imageViewer = new phoenix.ImageViewer();
             this.labelViewer = new System.Windows.Forms.Label();
+            this.imageViewer = new phoenix.ImageViewer();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -415,6 +415,15 @@
             this.panelViewer.Size = new System.Drawing.Size(322, 246);
             this.panelViewer.TabIndex = 23;
             // 
+            // labelViewer
+            // 
+            this.labelViewer.AutoSize = true;
+            this.labelViewer.Location = new System.Drawing.Point(582, 13);
+            this.labelViewer.Name = "labelViewer";
+            this.labelViewer.Size = new System.Drawing.Size(41, 12);
+            this.labelViewer.TabIndex = 24;
+            this.labelViewer.Text = "快视图";
+            // 
             // imageViewer
             // 
             this.imageViewer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -425,20 +434,11 @@
             this.imageViewer.Load += new System.EventHandler(this.imageViewer_Load);
             this.imageViewer.DoubleClick += new System.EventHandler(this.imageViewer_DoubleClick);
             // 
-            // labelViewer
-            // 
-            this.labelViewer.AutoSize = true;
-            this.labelViewer.Location = new System.Drawing.Point(582, 13);
-            this.labelViewer.Name = "labelViewer";
-            this.labelViewer.Size = new System.Drawing.Size(41, 12);
-            this.labelViewer.TabIndex = 24;
-            this.labelViewer.Text = "快视图";
-            // 
             // PreprocessPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.labelViewer);
             this.Controls.Add(this.panelViewer);
             this.Controls.Add(this.groupBox5);

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BatchProcessPanel.cs">
+    <Compile Include="BatchCrossCalibrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BatchProcessPanel.Designer.cs">
-      <DependentUpon>BatchProcessPanel.cs</DependentUpon>
+    <Compile Include="BatchCrossCalibrationPanel.Designer.cs">
+      <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="BRDFPanel.cs">
       <SubType>UserControl</SubType>
@@ -109,11 +109,11 @@
     <Compile Include="PreprocessPanel.Designer.cs">
       <DependentUpon>PreprocessPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcessPanel.cs">
+    <Compile Include="BRDFModelPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProcessPanel.Designer.cs">
-      <DependentUpon>ProcessPanel.cs</DependentUpon>
+    <Compile Include="BRDFModelPanel.Designer.cs">
+      <DependentUpon>BRDFModelPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,17 +123,17 @@
     <Compile Include="SBAFCorrectionPanel.Designer.cs">
       <DependentUpon>SBAFCorrectionPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SpectrumPanel.cs">
+    <Compile Include="SiteReflectancePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SpectrumPanel.Designer.cs">
-      <DependentUpon>SpectrumPanel.cs</DependentUpon>
+    <Compile Include="SiteReflectancePanel.Designer.cs">
+      <DependentUpon>SiteReflectancePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemManagerPanel.cs">
+    <Compile Include="SiteAtmParasPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SystemManagerPanel.Designer.cs">
-      <DependentUpon>SystemManagerPanel.cs</DependentUpon>
+    <Compile Include="SiteAtmParasPanel.Designer.cs">
+      <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UncertaintyAnalysisPanel.cs">
       <SubType>UserControl</SubType>
@@ -141,8 +141,8 @@
     <Compile Include="UncertaintyAnalysisPanel.Designer.cs">
       <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BatchProcessPanel.resx">
-      <DependentUpon>BatchProcessPanel.cs</DependentUpon>
+    <EmbeddedResource Include="BatchCrossCalibrationPanel.resx">
+      <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BRDFPanel.resx">
       <DependentUpon>BRDFPanel.cs</DependentUpon>
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="PreprocessPanel.resx">
       <DependentUpon>PreprocessPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcessPanel.resx">
-      <DependentUpon>ProcessPanel.cs</DependentUpon>
+    <EmbeddedResource Include="BRDFModelPanel.resx">
+      <DependentUpon>BRDFModelPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,11 +186,11 @@
     <EmbeddedResource Include="SBAFCorrectionPanel.resx">
       <DependentUpon>SBAFCorrectionPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SpectrumPanel.resx">
-      <DependentUpon>SpectrumPanel.cs</DependentUpon>
+    <EmbeddedResource Include="SiteReflectancePanel.resx">
+      <DependentUpon>SiteReflectancePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SystemManagerPanel.resx">
-      <DependentUpon>SystemManagerPanel.cs</DependentUpon>
+    <EmbeddedResource Include="SiteAtmParasPanel.resx">
+      <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UncertaintyAnalysisPanel.resx">
       <DependentUpon>UncertaintyAnalysisPanel.cs</DependentUpon>

@@ -18,16 +18,16 @@ namespace phoenix
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            navigatePanelHead.AddPanel("交叉定标数据预处理", new PreprocessPanel());
-            navigatePanelHead.AddPanel("定标场地方向归一化模型构建", new BRDFPanel());
-            navigatePanelHead.AddPanel("反射率模拟与光谱匹配因子计算", new SBAFCorrectionPanel());
-            navigatePanelHead.AddPanel("交叉定标计算", new CrossCalibrationPanel());
-            navigatePanelHead.AddPanel("交叉定标光谱匹配校正", new SpectrumPanel());
-            navigatePanelHead.AddPanel("交叉定标处理", new ProcessPanel());
-            navigatePanelHead.AddPanel("交叉定标批处理", new BatchProcessPanel());
+            navigatePanelHead.AddPanel("PreProccess", new PreprocessPanel());
+            navigatePanelHead.AddPanel("BRDFCorrection", new BRDFPanel());
+            navigatePanelHead.AddPanel("SBAFCorrection", new SBAFCorrectionPanel());
+            navigatePanelHead.AddPanel("CrossCalibration", new CrossCalibrationPanel());
+            navigatePanelHead.AddPanel("SiteReflectance", new SiteReflectancePanel());
+            navigatePanelHead.AddPanel("SiteAtmParas", new SiteAtmParasPanel());
+            navigatePanelHead.AddPanel("BRDFModel", new BRDFModelPanel());
+            navigatePanelHead.AddPanel("BatchCrossCalibration", new BatchCrossCalibrationPanel());
             navigatePanelHead.AddPanel("热红外传感器交叉定标", new InfraredPanel());
             navigatePanelHead.AddPanel("交叉定标不确定性分析", new UncertaintyAnalysisPanel());
-            navigatePanelHead.AddPanel("系统管理", new SystemManagerPanel());
             navigatePanelHead.AddPanel("退出", null);
         }
 
