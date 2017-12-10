@@ -50,6 +50,7 @@ namespace phoenix
             NavigateTabGroup tab = new NavigateTabGroup();
             tab.Size = new System.Drawing.Size(0, 30);
             tab.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Margin = new System.Windows.Forms.Padding(0);
             tab.NavigateTabEvent += new phoenix.NavigateTabGroup.NavigateTabEventHandler(this.TabNavigate_Click);
             panelContainer.Controls.Add(tab);
             return tab;

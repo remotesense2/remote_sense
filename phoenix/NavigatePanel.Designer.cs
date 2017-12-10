@@ -54,8 +54,9 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(724, 60);
+            this.panelContainer.Size = new System.Drawing.Size(724, 63);
             this.panelContainer.TabIndex = 1;
             // 
             // NavigatePanel
@@ -65,6 +66,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.btnExit);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "NavigatePanel";
             this.Size = new System.Drawing.Size(805, 63);
             this.Load += new System.EventHandler(this.NavigatePanel_Load);

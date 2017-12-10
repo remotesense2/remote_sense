@@ -45,8 +45,9 @@
             // 
             // navigatePanelHead
             // 
+            this.navigatePanelHead.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.navigatePanelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
-            this.navigatePanelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.navigatePanelHead.Location = new System.Drawing.Point(0, 0);
             this.navigatePanelHead.Margin = new System.Windows.Forms.Padding(16, 19, 16, 19);
             this.navigatePanelHead.Name = "navigatePanelHead";

@@ -22,7 +22,7 @@ namespace phoenix
         {
             baseHeight = this.navigatePanelHead.Height + 20;
             NavigateTabGroup tabFirst = navigatePanelHead.AddGroup();
-            tabFirst.AddPanel("PreProccess", new PreprocessPanel());
+            tabFirst.AddPanel("PreProccess", new PreprocessPanel(), true);
             tabFirst.AddPanel("BRDFCorrection", new BRDFPanel());
             tabFirst.AddPanel("SBAFCorrection", new SBAFCorrectionPanel());
             tabFirst.AddPanel("CrossCalibration", new CrossCalibrationPanel());

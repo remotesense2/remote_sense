@@ -20,11 +20,17 @@ namespace phoenix
     {
         private int buttonLeftPos = 0;
 
+        private System.Windows.Forms.Timer timerExec;
+        private NavigateButton activeButton = null;
+
         public delegate void NavigateTabEventHandler(NavigateTabGroup sender, ContainerControl container);
         public event NavigateTabEventHandler NavigateTabEvent;
 
         public NavigateTabGroup()
         {
+            timerExec = new System.Windows.Forms.Timer();
+            timerExec.Tick += new EventHandler(this.timerExec_Tick);
+            timerExec.Start();
         }
 
         public void AddPanel(string text, ContainerControl container, bool active = false)
@@ -47,8 +53,17 @@ namespace phoenix
 
             if (active)
             {
-                SetButtonActive(btnNew);
+                activeButton = btnNew;
             }
+        }
+
+        private void timerExec_Tick(object sender, EventArgs e)
+        {
+            if (activeButton != null)
+            {
+                SetButtonActive(activeButton);
+            }
+            timerExec.Stop();
         }
 
         public void SetInactive()
