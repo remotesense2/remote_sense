@@ -88,11 +88,11 @@
     <Compile Include="ImageViewForm.Designer.cs">
       <DependentUpon>ImageViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfraredPanel.cs">
+    <Compile Include="TIRCrossCalibrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InfraredPanel.Designer.cs">
-      <DependentUpon>InfraredPanel.cs</DependentUpon>
+    <Compile Include="TIRCrossCalibrationPanel.Designer.cs">
+      <DependentUpon>TIRCrossCalibrationPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="ImageViewForm.resx">
       <DependentUpon>ImageViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfraredPanel.resx">
-      <DependentUpon>InfraredPanel.cs</DependentUpon>
+    <EmbeddedResource Include="TIRCrossCalibrationPanel.resx">
+      <DependentUpon>TIRCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
