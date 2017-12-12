@@ -36,6 +36,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\System.Data.SQLite\2010\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,153 +50,173 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BatchCrossCalibrationPanel.cs">
+    <Compile Include="SQLiteExecutor.cs" />
+    <Compile Include="UserPrivilege.cs" />
+    <Compile Include="views\BatchCrossCalibrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BatchCrossCalibrationPanel.Designer.cs">
+    <Compile Include="views\BatchCrossCalibrationPanel.Designer.cs">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="BRDFPanel.cs">
+    <Compile Include="views\BRDFPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BRDFPanel.Designer.cs">
+    <Compile Include="views\BRDFPanel.Designer.cs">
       <DependentUpon>BRDFPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="BRDFUncertaintyPanel.cs">
+    <Compile Include="views\BRDFUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BRDFUncertaintyPanel.Designer.cs">
+    <Compile Include="views\BRDFUncertaintyPanel.Designer.cs">
       <DependentUpon>BRDFUncertaintyPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrossCalibrationPanel.cs">
+    <Compile Include="views\CrossCalibrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CrossCalibrationPanel.Designer.cs">
+    <Compile Include="views\CrossCalibrationPanel.Designer.cs">
       <DependentUpon>CrossCalibrationPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeometryPanel.cs">
+    <Compile Include="views\GeometryPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GeometryPanel.Designer.cs">
+    <Compile Include="views\GeometryPanel.Designer.cs">
       <DependentUpon>GeometryPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageViewer.cs">
+    <Compile Include="views\ImageViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ImageViewer.Designer.cs">
+    <Compile Include="views\ImageViewer.Designer.cs">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageViewForm.cs">
+    <Compile Include="views\ImageViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ImageViewForm.Designer.cs">
+    <Compile Include="views\ImageViewForm.Designer.cs">
       <DependentUpon>ImageViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TIRCrossCalibrationPanel.cs">
+    <Compile Include="views\LoginPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TIRCrossCalibrationPanel.Designer.cs">
+    <Compile Include="views\LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\SettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\SettingPanel.Designer.cs">
+      <DependentUpon>SettingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TIRCrossCalibrationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\TIRCrossCalibrationPanel.Designer.cs">
       <DependentUpon>TIRCrossCalibrationPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavigateButton.cs">
+    <Compile Include="views\NavigateButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="NavigatePanel.cs">
+    <Compile Include="views\NavigatePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigatePanel.Designer.cs">
+    <Compile Include="views\NavigatePanel.Designer.cs">
       <DependentUpon>NavigatePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreprocessPanel.cs">
+    <Compile Include="views\PreprocessPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PreprocessPanel.Designer.cs">
+    <Compile Include="views\PreprocessPanel.Designer.cs">
       <DependentUpon>PreprocessPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="BRDFModelPanel.cs">
+    <Compile Include="views\BRDFModelPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BRDFModelPanel.Designer.cs">
+    <Compile Include="views\BRDFModelPanel.Designer.cs">
       <DependentUpon>BRDFModelPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SBAFCorrectionPanel.cs">
+    <Compile Include="views\SBAFCorrectionPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SBAFCorrectionPanel.Designer.cs">
+    <Compile Include="views\SBAFCorrectionPanel.Designer.cs">
       <DependentUpon>SBAFCorrectionPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SBAFUncertaintyPanel.cs">
+    <Compile Include="views\SBAFUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SBAFUncertaintyPanel.Designer.cs">
+    <Compile Include="views\SBAFUncertaintyPanel.Designer.cs">
       <DependentUpon>SBAFUncertaintyPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SiteReflectancePanel.cs">
+    <Compile Include="views\SiteReflectancePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SiteReflectancePanel.Designer.cs">
+    <Compile Include="views\SiteReflectancePanel.Designer.cs">
       <DependentUpon>SiteReflectancePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SiteAtmParasPanel.cs">
+    <Compile Include="views\SiteAtmParasPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SiteAtmParasPanel.Designer.cs">
+    <Compile Include="views\SiteAtmParasPanel.Designer.cs">
       <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="TotalUncertaintyPanel.cs">
+    <Compile Include="views\TotalUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TotalUncertaintyPanel.Designer.cs">
+    <Compile Include="views\TotalUncertaintyPanel.Designer.cs">
       <DependentUpon>TotalUncertaintyPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageUncertaintyPanel.cs">
+    <Compile Include="views\ImageUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ImageUncertaintyPanel.Designer.cs">
+    <Compile Include="views\ImageUncertaintyPanel.Designer.cs">
       <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BatchCrossCalibrationPanel.resx">
+    <EmbeddedResource Include="views\BatchCrossCalibrationPanel.resx">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BRDFPanel.resx">
+    <EmbeddedResource Include="views\BRDFPanel.resx">
       <DependentUpon>BRDFPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BRDFUncertaintyPanel.resx">
+    <EmbeddedResource Include="views\BRDFUncertaintyPanel.resx">
       <DependentUpon>BRDFUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrossCalibrationPanel.resx">
+    <EmbeddedResource Include="views\CrossCalibrationPanel.resx">
       <DependentUpon>CrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeometryPanel.resx">
+    <EmbeddedResource Include="views\GeometryPanel.resx">
       <DependentUpon>GeometryPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageViewer.resx">
+    <EmbeddedResource Include="views\ImageViewer.resx">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageViewForm.resx">
+    <EmbeddedResource Include="views\ImageViewForm.resx">
       <DependentUpon>ImageViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TIRCrossCalibrationPanel.resx">
+    <EmbeddedResource Include="views\LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\SettingPanel.resx">
+      <DependentUpon>SettingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TIRCrossCalibrationPanel.resx">
       <DependentUpon>TIRCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigatePanel.resx">
+    <EmbeddedResource Include="views\NavigatePanel.resx">
       <DependentUpon>NavigatePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreprocessPanel.resx">
+    <EmbeddedResource Include="views\PreprocessPanel.resx">
       <DependentUpon>PreprocessPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BRDFModelPanel.resx">
+    <EmbeddedResource Include="views\BRDFModelPanel.resx">
       <DependentUpon>BRDFModelPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -204,22 +228,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SBAFCorrectionPanel.resx">
+    <EmbeddedResource Include="views\SBAFCorrectionPanel.resx">
       <DependentUpon>SBAFCorrectionPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SBAFUncertaintyPanel.resx">
+    <EmbeddedResource Include="views\SBAFUncertaintyPanel.resx">
       <DependentUpon>SBAFUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SiteReflectancePanel.resx">
+    <EmbeddedResource Include="views\SiteReflectancePanel.resx">
       <DependentUpon>SiteReflectancePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SiteAtmParasPanel.resx">
+    <EmbeddedResource Include="views\SiteAtmParasPanel.resx">
       <DependentUpon>SiteAtmParasPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TotalUncertaintyPanel.resx">
+    <EmbeddedResource Include="views\TotalUncertaintyPanel.resx">
       <DependentUpon>TotalUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageUncertaintyPanel.resx">
+    <EmbeddedResource Include="views\ImageUncertaintyPanel.resx">
       <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -231,6 +255,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

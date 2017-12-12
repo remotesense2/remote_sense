@@ -231,5 +231,10 @@ namespace phoenix
         {
 
         }
+
+        private void btnPlaceInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

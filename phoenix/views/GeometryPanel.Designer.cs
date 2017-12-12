@@ -210,7 +210,7 @@
             // btnHelp
             // 
             this.btnHelp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHelp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnHelp.Location = new System.Drawing.Point(318, 361);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(81, 42);
@@ -221,7 +221,7 @@
             // btnPlaceImage
             // 
             this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPlaceImage.Location = new System.Drawing.Point(25, 361);
             this.btnPlaceImage.Name = "btnPlaceImage";
             this.btnPlaceImage.Size = new System.Drawing.Size(132, 42);
@@ -233,7 +233,7 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.Location = new System.Drawing.Point(579, 361);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(81, 42);

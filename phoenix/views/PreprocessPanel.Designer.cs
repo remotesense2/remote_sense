@@ -63,8 +63,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelViewer = new System.Windows.Forms.Panel();
-            this.labelViewer = new System.Windows.Forms.Label();
             this.imageViewer = new phoenix.ImageViewer();
+            this.labelViewer = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -165,9 +165,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.AutoSize = true;
             this.groupBox5.Controls.Add(this.textBoxAngle);
             this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -215,6 +215,7 @@
             this.btnPlaceInfo.TabIndex = 19;
             this.btnPlaceInfo.Text = "场地信息";
             this.btnPlaceInfo.UseVisualStyleBackColor = true;
+            this.btnPlaceInfo.Click += new System.EventHandler(this.btnPlaceInfo_Click);
             // 
             // label10
             // 
@@ -428,8 +429,8 @@
             // 
             // panelViewer
             // 
-            this.panelViewer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelViewer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelViewer.Controls.Add(this.imageViewer);
             this.panelViewer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -437,16 +438,6 @@
             this.panelViewer.Name = "panelViewer";
             this.panelViewer.Size = new System.Drawing.Size(322, 246);
             this.panelViewer.TabIndex = 23;
-            // 
-            // labelViewer
-            // 
-            this.labelViewer.AutoSize = true;
-            this.labelViewer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelViewer.Location = new System.Drawing.Point(581, 8);
-            this.labelViewer.Name = "labelViewer";
-            this.labelViewer.Size = new System.Drawing.Size(44, 17);
-            this.labelViewer.TabIndex = 24;
-            this.labelViewer.Text = "快视图";
             // 
             // imageViewer
             // 
@@ -459,6 +450,16 @@
             this.imageViewer.TabIndex = 0;
             this.imageViewer.Load += new System.EventHandler(this.imageViewer_Load);
             this.imageViewer.DoubleClick += new System.EventHandler(this.imageViewer_DoubleClick);
+            // 
+            // labelViewer
+            // 
+            this.labelViewer.AutoSize = true;
+            this.labelViewer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelViewer.Location = new System.Drawing.Point(581, 8);
+            this.labelViewer.Name = "labelViewer";
+            this.labelViewer.Size = new System.Drawing.Size(44, 17);
+            this.labelViewer.TabIndex = 24;
+            this.labelViewer.Text = "快视图";
             // 
             // PreprocessPanel
             // 
