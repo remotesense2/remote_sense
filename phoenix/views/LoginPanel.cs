@@ -17,6 +17,8 @@ namespace phoenix.views
         public LoginPanel()
         {
             InitializeComponent();
+            textBoxUserName.Text = "admin";
+            textBoxPassword.Text = "qaz123";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

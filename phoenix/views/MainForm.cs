@@ -61,9 +61,7 @@ namespace phoenix
 
             if (loginPanel.IsAdmin)
             {
-                if (tabGroup == null)
-                    tabGroup = navigatePanelHead.AddGroup();
-                tabGroup.AddPanel(@"系统管理", new SettingPanel());
+                navigatePanelHead.AddNoGroupPanel(@"系统管理", new SettingPanel(privilegeManager));
             }
         }
 

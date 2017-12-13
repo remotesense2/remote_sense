@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="SQLiteExecutor.cs" />
     <Compile Include="UserPrivilege.cs" />
+    <Compile Include="views\AddAccountPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\AddAccountPanel.Designer.cs">
+      <DependentUpon>AddAccountPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\BatchCrossCalibrationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     <Compile Include="views\ImageUncertaintyPanel.Designer.cs">
       <DependentUpon>ImageUncertaintyPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\AddAccountPanel.resx">
+      <DependentUpon>AddAccountPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\BatchCrossCalibrationPanel.resx">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
