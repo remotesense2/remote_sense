@@ -13,10 +13,12 @@ namespace phoenix.views
     {
         public Privilege Privileges = Privilege.ALL;
         public bool IsAdmin = false;
+        private PrivilegeManager privilegeManager = null;
 
-        public LoginPanel()
+        public LoginPanel(PrivilegeManager privilege)
         {
             InitializeComponent();
+            privilegeManager = privilege;
             textBoxUserName.Text = "admin";
             textBoxPassword.Text = "qaz123";
         }
@@ -37,8 +39,9 @@ namespace phoenix.views
             {
                 // 需要数据库验证
                 IsAdmin = false;
-                Privileges = Privilege.BATCHCROSSCALIBRATION | Privilege.BRDFMODEL | Privilege.PREPROCESS | Privilege.SITEATMPARAS;
-                valid = true;
+                UserPrivilege privilege = privilegeManager.GetUser(userName, userPwd);
+                valid = (privilege != null);
+                Privileges = privilege.Privileges;
             }
 
             if (valid)

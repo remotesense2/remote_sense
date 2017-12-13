@@ -117,6 +117,7 @@
             this.checkedListBoxPrivilege.Name = "checkedListBoxPrivilege";
             this.checkedListBoxPrivilege.Size = new System.Drawing.Size(316, 490);
             this.checkedListBoxPrivilege.TabIndex = 0;
+            this.checkedListBoxPrivilege.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxPrivilege_ItemCheck);
             // 
             // SettingPanel
             // 

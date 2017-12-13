@@ -22,7 +22,7 @@ namespace phoenix
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LoginPanel loginPanel = new LoginPanel();
+            LoginPanel loginPanel = new LoginPanel(privilegeManager);
             loginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 
             Form loginForm = new Form();

@@ -2,13 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace phoenix
 {
     public enum Privilege
     {
+        NON                   =  0,
         PREPROCESS            =  1 << 0,
         BRDFMODEL             =  1 << 1,
         BRDF                  =  1 << 2,
@@ -37,10 +40,28 @@ namespace phoenix
             PrivilegeText = text;
             Container = container;
         }
+
+        public override string ToString()
+        {
+            return PrivilegeText;
+        }
+    }
+
+    public class UserPrivilege
+    {
+        public string UserName;
+        public string UserPwd; // MD5
+        public Privilege Privileges = Privilege.ALL;
+
+        public override string ToString()
+        {
+            return UserName;
+        }
     }
 
     public class PrivilegeManager
     {
+        private DBExecutor dbExecutor;
         public ArrayList Privileges = new ArrayList();
 
         public PrivilegeManager()
@@ -58,12 +79,71 @@ namespace phoenix
             Privileges.Add(new PrivilegeData(Privilege.BRDFUNCERTAINTY, @"观测几何不确定性分析", new BRDFUncertaintyPanel()));
             Privileges.Add(new PrivilegeData(Privilege.SBAFUNCERTAINTY, @"光谱匹配不确定性分析", new SBAFUncertaintyPanel()));
             Privileges.Add(new PrivilegeData(Privilege.TOTALUNCERTAINTY, @"总的不确定性分析", new TotalUncertaintyPanel()));
-        }       
-    }
 
-    public class UserPrivilege
-    {
-        public string UserName;
-        public Privilege Privileges = Privilege.ALL;
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+            strPath = Directory.GetParent(strPath).FullName + "\\dat";
+            dbExecutor = new DBExecutor(strPath);
+            if (dbExecutor.NewCreated)
+            {
+                // 创建表
+                string sql = "CREATE TABLE user(name varchar(20), pwd varchar(32), privileges int)";
+                dbExecutor.ExecuteSQL(sql);
+            }
+        }
+
+        public bool AddUser(UserPrivilege privilege)
+        {
+            string sql = String.Format("INSERT INTO user(name, pwd, privileges) VALUES('{0}','{1}',{2})", privilege.UserName, privilege.UserPwd, (int)privilege.Privileges);
+            return dbExecutor.ExecuteSQL(sql);
+        }
+
+        public UserPrivilege GetUser(string userName, string userPwd)
+        {
+            UserPrivilege privilege = null;
+            string sql = String.Format("SELECT privileges FROM user WHERE name='{0}' and pwd = '{1}'", userName, userPwd);
+            SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
+            while (reader.Read())
+            {
+                privilege = new UserPrivilege();
+                privilege.UserName = userName;
+                privilege.UserPwd = userPwd;
+                privilege.Privileges = (Privilege)reader["privileges"];
+            }
+            return privilege;
+        }
+
+        public bool UpdateUser(UserPrivilege privilege)
+        {
+            string sql = String.Format("UPDATE user SET pwd='{0}', privileges={1} WHERE name='{2}'", privilege.UserPwd, (int)privilege.Privileges, privilege.UserName);
+            return dbExecutor.ExecuteSQL(sql);
+        }
+
+        public bool DeleteUser(string userName)
+        {
+            string sql = String.Format("DELETE FROM user WHERE name='{0}'", userName);
+            return dbExecutor.ExecuteSQL(sql);
+        }
+
+        public ArrayList GetAllUsers()
+        {
+            ArrayList results = new ArrayList();
+
+            string sql = "SELECT name,pwd,privileges FROM user";
+            SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
+            while (reader.Read())
+            {
+                UserPrivilege privilege = new UserPrivilege();
+                privilege.UserName = reader["name"].ToString();
+                privilege.UserPwd = reader["pwd"].ToString();
+                privilege.Privileges = (Privilege)reader["privileges"];
+                results.Add(privilege);
+            }
+            return results;
+        }
     }
 }
