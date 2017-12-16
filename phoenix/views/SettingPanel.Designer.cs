@@ -30,8 +30,8 @@
         {
             this.listBoxUsers = new System.Windows.Forms.ListBox();
             this.账户 = new System.Windows.Forms.GroupBox();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnAdd = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBoxPrivilege = new System.Windows.Forms.GroupBox();
             this.checkedListBoxPrivilege = new System.Windows.Forms.CheckedListBox();
             this.账户.SuspendLayout();
@@ -139,8 +139,8 @@
 
         private System.Windows.Forms.ListBox listBoxUsers;
         private System.Windows.Forms.GroupBox 账户;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnAdd;
+        private MaterialSkin.Controls.MaterialRaisedButton btnRemove;
+        private MaterialSkin.Controls.MaterialRaisedButton btnAdd;
         private System.Windows.Forms.GroupBox groupBoxPrivilege;
         private System.Windows.Forms.CheckedListBox checkedListBoxPrivilege;
     }

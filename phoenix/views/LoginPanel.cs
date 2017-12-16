@@ -53,5 +53,10 @@ namespace phoenix.views
                 MessageBox.Show(@"账号密码错误，请重新输入");
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

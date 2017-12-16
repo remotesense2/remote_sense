@@ -27,13 +27,10 @@ namespace phoenix.views
             AddAccountPanel addPanel = new AddAccountPanel();
             addPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 
-            Form addForm = new Form();
-            addForm.Text = @"添加账户";
-            addForm.Controls.Add(addPanel);
-            addForm.Size = new System.Drawing.Size(332, 213);
+            TemplateForm addForm = new TemplateForm(@"添加账户", addPanel.Size);
+            addForm.AddContent(addPanel);
             addForm.MaximizeBox = false;
             addForm.MinimizeBox = false;
-            addForm.FormBorderStyle = FormBorderStyle.FixedSingle;
             addForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             DialogResult result = addForm.ShowDialog();
             if (result == DialogResult.OK)

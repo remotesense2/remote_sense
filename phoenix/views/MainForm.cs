@@ -6,18 +6,27 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using phoenix.views;
 
 namespace phoenix
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
         private int baseHeight;
         private PrivilegeManager privilegeManager = new PrivilegeManager();
+        private readonly MaterialSkinManager materialSkinManager;
+        private MaterialRaisedButton btnSwitch;
 
         public MainForm()
         {
             InitializeComponent();
+
+            materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -25,13 +34,10 @@ namespace phoenix
             LoginPanel loginPanel = new LoginPanel(privilegeManager);
             loginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 
-            Form loginForm = new Form();
-            loginForm.Text = @"登录";
-            loginForm.Controls.Add(loginPanel);
-            loginForm.Size = new System.Drawing.Size(332, 203);
+            TemplateForm loginForm = new TemplateForm(@"登录", loginPanel.Size);
+            loginForm.AddContent(loginPanel);
             loginForm.MaximizeBox = false;
             loginForm.MinimizeBox = false;
-            loginForm.FormBorderStyle = FormBorderStyle.FixedSingle;
             loginForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             DialogResult result = loginForm.ShowDialog();
             if (result != DialogResult.OK)
@@ -40,46 +46,85 @@ namespace phoenix
                 return;
             }
 
-            baseHeight = this.navigatePanelHead.Height + 20;
+            baseHeight = 64;
 
-            int added = 0;
-            bool firstPinned = true;
-            NavigateTabGroup tabGroup = null;
+            PrivilegeData first_data = null;
             Privilege privileges = loginPanel.Privileges;
             foreach (PrivilegeData data in privilegeManager.Privileges)
             {
                 if ((privileges & data.PrivilegeName) == data.PrivilegeName)
                 {
-                    if (added++ % 7 == 0)
-                    {
-                        tabGroup = navigatePanelHead.AddGroup();
-                    }
-                    tabGroup.AddPanel(data.PrivilegeText, data.Container, firstPinned);
-                    firstPinned = false;
+                    if (first_data == null)
+                        first_data = data;
+
+                    ToolStripMenuItem menuItem = new ToolStripMenuItem();
+                    menuItem.Text = data.PrivilegeText;
+                    menuItem.Click += new EventHandler(contextMenuStrip_Hitted);
+                    menuItem.Tag = data;
+                    contextMenuStripModules.Items.Add(menuItem);
                 }
             }
 
+            SwitchPanel(first_data);
+
+            btnSwitch = new MaterialRaisedButton();
+            btnSwitch.Text = @"切换";
+            btnSwitch.Dock = DockStyle.Right;
+            btnSwitch.Click += this.btnSwitchModuel_Click;
+            
+            panelTool.Controls.Add(btnSwitch);
+
+
             if (loginPanel.IsAdmin)
             {
-                navigatePanelHead.AddNoGroupPanel(@"系统管理", new SettingPanel(privilegeManager));
+                MaterialRaisedButton btnSetting = new MaterialRaisedButton();
+                btnSetting.Text = @"设置";
+                btnSetting.Dock = DockStyle.Right;
+                btnSetting.Click += this.btnSetting_Click;
+                panelTool.Controls.Add(btnSetting);
             }
         }
 
-        private void navigatePanelHead_NavigateEvent(ContainerControl container)
+        void btnSetting_Click(object sender, EventArgs e)
         {
+            this.Text = @"定标系统  -  系统管理";
+            this.Refresh();
+
             panelContext.Controls.Clear();
-            if (container != null)
+            Control ctrl = new SettingPanel(privilegeManager);
+            this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + ctrl.Size.Height);
+            ctrl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            ctrl.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelContext.Controls.Add(ctrl);
+        }
+
+        private void btnSwitchModuel_Click(object sender, EventArgs e)
+        {
+            contextMenuStripModules.Show(btnSwitch, new System.Drawing.Point(0, btnSwitch.Height));
+        }
+
+        private void SwitchPanel(PrivilegeData data)
+        {
+            this.Text = @"定标系统  -  " + data.PrivilegeText;
+            this.Refresh();
+
+            Control ctrl = data.Container;
+            if ((ctrl != null) && !panelContext.Controls.Contains(ctrl))
             {
-                this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + container.Size.Height);
-                container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-                container.Dock = System.Windows.Forms.DockStyle.Fill;
-                panelContext.Controls.Add(container);
+                panelContext.Controls.Clear();
+                this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + ctrl.Size.Height);
+                ctrl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+                ctrl.Dock = System.Windows.Forms.DockStyle.Fill;
+                panelContext.Controls.Add(ctrl);
             }
         }
 
-        private void navigatePanelHead_Load(object sender, EventArgs e)
+        private void contextMenuStrip_Hitted(object sender, EventArgs e)
         {
+            ToolStripMenuItem menu = sender as ToolStripMenuItem;
 
+            PrivilegeData data = menu.Tag as PrivilegeData;
+            SwitchPanel(data);
         }
     }
 }
