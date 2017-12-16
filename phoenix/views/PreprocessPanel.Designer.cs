@@ -76,7 +76,7 @@
             // 
             this.btnSaveReferForAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSaveReferForAngle.Depth = 0;
-            this.btnSaveReferForAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveReferForAngle.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnSaveReferForAngle.Icon = null;
             this.btnSaveReferForAngle.Location = new System.Drawing.Point(429, 60);
             this.btnSaveReferForAngle.MouseState = MaterialSkin.MouseState.HOVER;
@@ -92,7 +92,7 @@
             // 
             this.btnOpenPending.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenPending.Depth = 0;
-            this.btnOpenPending.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOpenPending.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnOpenPending.Icon = null;
             this.btnOpenPending.Location = new System.Drawing.Point(429, 29);
             this.btnOpenPending.MouseState = MaterialSkin.MouseState.HOVER;
@@ -106,27 +106,27 @@
             // 
             // textBoxSaveRefer
             // 
-            this.textBoxSaveRefer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxSaveRefer.Font = new System.Drawing.Font("Roboto", 11F);
             this.textBoxSaveRefer.Location = new System.Drawing.Point(135, 62);
             this.textBoxSaveRefer.Name = "textBoxSaveRefer";
             this.textBoxSaveRefer.ReadOnly = true;
-            this.textBoxSaveRefer.Size = new System.Drawing.Size(278, 23);
+            this.textBoxSaveRefer.Size = new System.Drawing.Size(278, 25);
             this.textBoxSaveRefer.TabIndex = 8;
             // 
             // textBoxSavePendingForAngle
             // 
-            this.textBoxSavePendingForAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxSavePendingForAngle.Font = new System.Drawing.Font("Roboto", 11F);
             this.textBoxSavePendingForAngle.Location = new System.Drawing.Point(135, 25);
             this.textBoxSavePendingForAngle.Name = "textBoxSavePendingForAngle";
             this.textBoxSavePendingForAngle.ReadOnly = true;
-            this.textBoxSavePendingForAngle.Size = new System.Drawing.Size(278, 23);
+            this.textBoxSavePendingForAngle.Size = new System.Drawing.Size(278, 25);
             this.textBoxSavePendingForAngle.TabIndex = 6;
             // 
             // btnSaveRefer
             // 
             this.btnSaveRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSaveRefer.Depth = 0;
-            this.btnSaveRefer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveRefer.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnSaveRefer.Icon = null;
             this.btnSaveRefer.Location = new System.Drawing.Point(429, 60);
             this.btnSaveRefer.MouseState = MaterialSkin.MouseState.HOVER;
@@ -140,27 +140,27 @@
             // 
             // textBoxSaveReferForAngle
             // 
-            this.textBoxSaveReferForAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxSaveReferForAngle.Font = new System.Drawing.Font("Roboto", 11F);
             this.textBoxSaveReferForAngle.Location = new System.Drawing.Point(135, 60);
             this.textBoxSaveReferForAngle.Name = "textBoxSaveReferForAngle";
             this.textBoxSaveReferForAngle.ReadOnly = true;
-            this.textBoxSaveReferForAngle.Size = new System.Drawing.Size(278, 23);
+            this.textBoxSaveReferForAngle.Size = new System.Drawing.Size(278, 25);
             this.textBoxSaveReferForAngle.TabIndex = 8;
             // 
             // textBoxSavePending
             // 
-            this.textBoxSavePending.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxSavePending.Font = new System.Drawing.Font("Roboto", 11F);
             this.textBoxSavePending.Location = new System.Drawing.Point(135, 28);
             this.textBoxSavePending.Name = "textBoxSavePending";
             this.textBoxSavePending.ReadOnly = true;
-            this.textBoxSavePending.Size = new System.Drawing.Size(278, 23);
+            this.textBoxSavePending.Size = new System.Drawing.Size(278, 25);
             this.textBoxSavePending.TabIndex = 6;
             // 
             // btnSavePending
             // 
             this.btnSavePending.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSavePending.Depth = 0;
-            this.btnSavePending.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSavePending.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnSavePending.Icon = null;
             this.btnSavePending.Location = new System.Drawing.Point(429, 28);
             this.btnSavePending.MouseState = MaterialSkin.MouseState.HOVER;
@@ -176,7 +176,7 @@
             // 
             this.btnSavePendingForAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSavePendingForAngle.Depth = 0;
-            this.btnSavePendingForAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSavePendingForAngle.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnSavePendingForAngle.Icon = null;
             this.btnSavePendingForAngle.Location = new System.Drawing.Point(429, 25);
             this.btnSavePendingForAngle.MouseState = MaterialSkin.MouseState.HOVER;
@@ -195,7 +195,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.AutoSize = true;
             this.groupBox5.Controls.Add(this.textBoxAngle);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox5.Font = new System.Drawing.Font("Roboto", 11F);
             this.groupBox5.Location = new System.Drawing.Point(580, 280);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(326, 122);
@@ -208,13 +208,13 @@
             this.textBoxAngle.BackColor = System.Drawing.Color.White;
             this.textBoxAngle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxAngle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxAngle.Location = new System.Drawing.Point(3, 19);
+            this.textBoxAngle.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxAngle.Location = new System.Drawing.Point(3, 21);
             this.textBoxAngle.Multiline = true;
             this.textBoxAngle.Name = "textBoxAngle";
             this.textBoxAngle.ReadOnly = true;
             this.textBoxAngle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxAngle.Size = new System.Drawing.Size(320, 100);
+            this.textBoxAngle.Size = new System.Drawing.Size(320, 98);
             this.textBoxAngle.TabIndex = 1;
             this.textBoxAngle.TextChanged += new System.EventHandler(this.textBoxAngle_TextChanged);
             // 
@@ -224,7 +224,7 @@
             this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnHelp.Depth = 0;
             this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHelp.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnHelp.Icon = null;
             this.btnHelp.Location = new System.Drawing.Point(819, 408);
             this.btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
@@ -240,7 +240,7 @@
             this.btnPlaceInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnPlaceInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPlaceInfo.Depth = 0;
-            this.btnPlaceInfo.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceInfo.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnPlaceInfo.Icon = null;
             this.btnPlaceInfo.Location = new System.Drawing.Point(429, 408);
             this.btnPlaceInfo.MouseState = MaterialSkin.MouseState.HOVER;
@@ -270,7 +270,7 @@
             this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPlaceImage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPlaceImage.Depth = 0;
-            this.btnPlaceImage.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPlaceImage.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnPlaceImage.Icon = null;
             this.btnPlaceImage.Location = new System.Drawing.Point(70, 408);
             this.btnPlaceImage.MouseState = MaterialSkin.MouseState.HOVER;
@@ -303,7 +303,7 @@
             this.groupBox3.Controls.Add(this.btnSavePendingForAngle);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Font = new System.Drawing.Font("Roboto", 11F);
             this.groupBox3.Location = new System.Drawing.Point(70, 280);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(504, 95);
@@ -317,7 +317,7 @@
             this.label6.Depth = 0;
             this.label6.Font = new System.Drawing.Font("Roboto", 11F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(10, 164);
+            this.label6.Location = new System.Drawing.Point(24, 164);
             this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 18);
@@ -327,7 +327,7 @@
             // comboBoxPosition
             // 
             this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPosition.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBoxPosition.Font = new System.Drawing.Font("Roboto", 11F);
             this.comboBoxPosition.FormattingEnabled = true;
             this.comboBoxPosition.Items.AddRange(new object[] {
             "敦煌",
@@ -340,14 +340,14 @@
             "和田"});
             this.comboBoxPosition.Location = new System.Drawing.Point(135, 98);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(278, 25);
+            this.comboBoxPosition.Size = new System.Drawing.Size(278, 26);
             this.comboBoxPosition.TabIndex = 9;
             // 
             // btnOpenRefer
             // 
             this.btnOpenRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenRefer.Depth = 0;
-            this.btnOpenRefer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOpenRefer.Font = new System.Drawing.Font("Roboto", 11F);
             this.btnOpenRefer.Icon = null;
             this.btnOpenRefer.Location = new System.Drawing.Point(429, 64);
             this.btnOpenRefer.MouseState = MaterialSkin.MouseState.HOVER;
@@ -361,11 +361,11 @@
             // 
             // textBoxRefer
             // 
-            this.textBoxRefer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxRefer.Font = new System.Drawing.Font("Roboto", 11F);
             this.textBoxRefer.Location = new System.Drawing.Point(135, 64);
             this.textBoxRefer.Name = "textBoxRefer";
             this.textBoxRefer.ReadOnly = true;
-            this.textBoxRefer.Size = new System.Drawing.Size(278, 23);
+            this.textBoxRefer.Size = new System.Drawing.Size(278, 25);
             this.textBoxRefer.TabIndex = 8;
             // 
             // label8
@@ -383,11 +383,11 @@
             // 
             // textBoxPending
             // 
-            this.textBoxPending.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxPending.Font = new System.Drawing.Font("Roboto", 11F);
             this.textBoxPending.Location = new System.Drawing.Point(135, 29);
             this.textBoxPending.Name = "textBoxPending";
             this.textBoxPending.ReadOnly = true;
-            this.textBoxPending.Size = new System.Drawing.Size(278, 23);
+            this.textBoxPending.Size = new System.Drawing.Size(278, 25);
             this.textBoxPending.TabIndex = 6;
             // 
             // groupBox1
@@ -401,7 +401,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 11F);
             this.groupBox1.Location = new System.Drawing.Point(70, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(504, 129);
@@ -466,7 +466,7 @@
             this.label1.Depth = 0;
             this.label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(10, 13);
+            this.label1.Location = new System.Drawing.Point(24, 13);
             this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 18);
@@ -494,7 +494,7 @@
             this.groupBox2.Controls.Add(this.btnSavePending);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Font = new System.Drawing.Font("Roboto", 11F);
             this.groupBox2.Location = new System.Drawing.Point(70, 164);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(504, 94);
@@ -508,7 +508,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelViewer.Controls.Add(this.imageViewer);
-            this.panelViewer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panelViewer.Font = new System.Drawing.Font("Roboto", 11F);
             this.panelViewer.Location = new System.Drawing.Point(584, 28);
             this.panelViewer.Name = "panelViewer";
             this.panelViewer.Size = new System.Drawing.Size(322, 246);
@@ -517,7 +517,7 @@
             // imageViewer
             // 
             this.imageViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageViewer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.imageViewer.Font = new System.Drawing.Font("Roboto", 11F);
             this.imageViewer.Location = new System.Drawing.Point(0, 0);
             this.imageViewer.Margin = new System.Windows.Forms.Padding(6);
             this.imageViewer.Name = "imageViewer";
