@@ -28,52 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxUsers = new System.Windows.Forms.ListBox();
-            this.账户 = new System.Windows.Forms.GroupBox();
+            this.listBoxUsers = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnRemove = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnAdd = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.groupBoxPrivilege = new System.Windows.Forms.GroupBox();
-            this.checkedListBoxPrivilege = new System.Windows.Forms.CheckedListBox();
-            this.账户.SuspendLayout();
-            this.groupBoxPrivilege.SuspendLayout();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.groupBoxPrivileges = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // listBoxUsers
             // 
-            this.listBoxUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBoxUsers.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listBoxUsers.FormattingEnabled = true;
-            this.listBoxUsers.ItemHeight = 17;
-            this.listBoxUsers.Location = new System.Drawing.Point(6, 16);
+            this.listBoxUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listBoxUsers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxUsers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listBoxUsers.Depth = 0;
+            this.listBoxUsers.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.listBoxUsers.FullRowSelect = true;
+            this.listBoxUsers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listBoxUsers.Location = new System.Drawing.Point(12, 13);
+            this.listBoxUsers.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.listBoxUsers.MouseState = MaterialSkin.MouseState.OUT;
+            this.listBoxUsers.MultiSelect = false;
             this.listBoxUsers.Name = "listBoxUsers";
-            this.listBoxUsers.Size = new System.Drawing.Size(223, 446);
-            this.listBoxUsers.TabIndex = 0;
+            this.listBoxUsers.OwnerDraw = true;
+            this.listBoxUsers.Scrollable = false;
+            this.listBoxUsers.Size = new System.Drawing.Size(223, 454);
+            this.listBoxUsers.TabIndex = 4;
+            this.listBoxUsers.UseCompatibleStateImageBehavior = false;
+            this.listBoxUsers.View = System.Windows.Forms.View.Details;
             this.listBoxUsers.SelectedIndexChanged += new System.EventHandler(this.listBoxUsers_SelectedIndexChanged);
             // 
-            // 账户
+            // columnHeader1
             // 
-            this.账户.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.账户.Controls.Add(this.btnRemove);
-            this.账户.Controls.Add(this.btnAdd);
-            this.账户.Controls.Add(this.listBoxUsers);
-            this.账户.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.账户.Location = new System.Drawing.Point(19, 3);
-            this.账户.Name = "账户";
-            this.账户.Size = new System.Drawing.Size(235, 520);
-            this.账户.TabIndex = 1;
-            this.账户.TabStop = false;
-            this.账户.Text = "账户";
+            this.columnHeader1.Text = "所有账户列表";
+            this.columnHeader1.Width = 221;
             // 
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRemove.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRemove.Depth = 0;
             this.btnRemove.Enabled = false;
-            this.btnRemove.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRemove.Location = new System.Drawing.Point(154, 475);
+            this.btnRemove.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRemove.Icon = null;
+            this.btnRemove.Location = new System.Drawing.Point(160, 478);
+            this.btnRemove.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Primary = true;
             this.btnRemove.Size = new System.Drawing.Size(75, 30);
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "删除";
@@ -83,65 +86,71 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd.Location = new System.Drawing.Point(6, 475);
+            this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdd.Depth = 0;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd.Icon = null;
+            this.btnAdd.Location = new System.Drawing.Point(12, 478);
+            this.btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Primary = true;
             this.btnAdd.Size = new System.Drawing.Size(75, 30);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // groupBoxPrivilege
+            // materialDivider1
             // 
-            this.groupBoxPrivilege.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(249, 11);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(2, 500);
+            this.materialDivider1.TabIndex = 6;
+            this.materialDivider1.Text = "materialDivider1";
+            this.materialDivider1.Click += new System.EventHandler(this.materialDivider1_Click);
+            // 
+            // groupBoxPrivileges
+            // 
+            this.groupBoxPrivileges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxPrivilege.Controls.Add(this.checkedListBoxPrivilege);
-            this.groupBoxPrivilege.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBoxPrivilege.Location = new System.Drawing.Point(260, 3);
-            this.groupBoxPrivilege.Name = "groupBoxPrivilege";
-            this.groupBoxPrivilege.Size = new System.Drawing.Size(353, 520);
-            this.groupBoxPrivilege.TabIndex = 2;
-            this.groupBoxPrivilege.TabStop = false;
-            this.groupBoxPrivilege.Text = "权限";
-            // 
-            // checkedListBoxPrivilege
-            // 
-            this.checkedListBoxPrivilege.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBoxPrivilege.CheckOnClick = true;
-            this.checkedListBoxPrivilege.FormattingEnabled = true;
-            this.checkedListBoxPrivilege.Location = new System.Drawing.Point(21, 15);
-            this.checkedListBoxPrivilege.Name = "checkedListBoxPrivilege";
-            this.checkedListBoxPrivilege.Size = new System.Drawing.Size(316, 490);
-            this.checkedListBoxPrivilege.TabIndex = 0;
-            this.checkedListBoxPrivilege.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxPrivilege_ItemCheck);
+            this.groupBoxPrivileges.Font = new System.Drawing.Font("Roboto", 11F);
+            this.groupBoxPrivileges.Location = new System.Drawing.Point(272, 3);
+            this.groupBoxPrivileges.Name = "groupBoxPrivileges";
+            this.groupBoxPrivileges.Size = new System.Drawing.Size(317, 505);
+            this.groupBoxPrivileges.TabIndex = 7;
+            this.groupBoxPrivileges.TabStop = false;
+            this.groupBoxPrivileges.Text = "可访问功能模块";
             // 
             // SettingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.groupBoxPrivilege);
-            this.Controls.Add(this.账户);
+            this.Controls.Add(this.groupBoxPrivileges);
+            this.Controls.Add(this.materialDivider1);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.listBoxUsers);
             this.Name = "SettingPanel";
-            this.Size = new System.Drawing.Size(631, 526);
+            this.Size = new System.Drawing.Size(611, 526);
             this.Load += new System.EventHandler(this.SettingPanel_Load);
-            this.账户.ResumeLayout(false);
-            this.groupBoxPrivilege.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBoxUsers;
-        private System.Windows.Forms.GroupBox 账户;
         private MaterialSkin.Controls.MaterialRaisedButton btnRemove;
+        private MaterialSkin.Controls.MaterialListView listBoxUsers;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
         private MaterialSkin.Controls.MaterialRaisedButton btnAdd;
-        private System.Windows.Forms.GroupBox groupBoxPrivilege;
-        private System.Windows.Forms.CheckedListBox checkedListBoxPrivilege;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private System.Windows.Forms.GroupBox groupBoxPrivileges;
     }
 }

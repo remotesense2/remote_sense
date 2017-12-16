@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace phoenix.views
 {
@@ -41,17 +42,26 @@ namespace phoenix.views
                 privilege.Privileges = Privilege.ALL;
                 if (privilegeManager.AddUser(privilege))
                 {
-                    listBoxUsers.Items.Add(privilege);
+                    ListViewItem item = listBoxUsers.Items.Add(privilege.UserName);
+                    item.Tag = privilege;
                 }
             }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            UserPrivilege privilege = (UserPrivilege)listBoxUsers.SelectedItem;
+            ListViewItem selected_item = null;
+            foreach (ListViewItem item in this.listBoxUsers.SelectedItems)
+            {
+                selected_item = item;
+                break;
+            }
+
+            UserPrivilege privilege = selected_item.Tag as UserPrivilege;
+
             if (privilegeManager.DeleteUser(privilege.UserName))
             {
-                listBoxUsers.Items.Remove(privilege);
+                listBoxUsers.Items.Remove(selected_item);
             }
         }
 
@@ -61,13 +71,19 @@ namespace phoenix.views
             btnRemove.Enabled = (listBoxUsers.SelectedItems.Count > 0);
             if (listBoxUsers.SelectedItems.Count > 0)
             {
-                UserPrivilege privilege = (UserPrivilege)listBoxUsers.SelectedItem;
-                currentUserPrivilege = privilege;
-                foreach (PrivilegeData data in privilegeManager.Privileges)
+                ListViewItem selected_item = null;
+                foreach (ListViewItem item in this.listBoxUsers.SelectedItems)
                 {
-                    bool shouldChecked = ((privilege.Privileges & data.PrivilegeName) == data.PrivilegeName);
-                    int index = checkedListBoxPrivilege.Items.IndexOf(data);
-                    checkedListBoxPrivilege.SetItemChecked(index, shouldChecked);
+                    selected_item = item;
+                    break;
+                }
+
+                UserPrivilege privilege = selected_item.Tag as UserPrivilege;
+                currentUserPrivilege = privilege;
+                foreach (MaterialCheckBox checkedItem in groupBoxPrivileges.Controls)
+                {
+                    PrivilegeData data = checkedItem.Tag as PrivilegeData;
+                    checkedItem.Checked = ((privilege.Privileges & data.PrivilegeName) == data.PrivilegeName);
                 }
             }
             startMonitor = true;
@@ -76,16 +92,26 @@ namespace phoenix.views
         private void SettingPanel_Load(object sender, EventArgs e)
         {
             // 初始化权限界面
+            int topPos = 30;
+            int margin = 5;
             foreach (PrivilegeData data in privilegeManager.Privileges)
             {
-                checkedListBoxPrivilege.Items.Add(data);
+                MaterialCheckBox checkedItem = new MaterialCheckBox();
+                checkedItem.AutoSize = true;
+                checkedItem.Text = data.PrivilegeText;
+                checkedItem.Tag = data;
+                checkedItem.Location = new System.Drawing.Point(margin * 2, topPos);
+                groupBoxPrivileges.Controls.Add(checkedItem);
+
+                topPos += checkedItem.Size.Height + margin;
             }
 
             // 加载用户列表
             ArrayList users = privilegeManager.GetAllUsers();
             foreach (UserPrivilege privilege in users)
             {
-                listBoxUsers.Items.Add(privilege);
+                ListViewItem item = listBoxUsers.Items.Add(privilege.UserName);
+                item.Tag = privilege;
             }
         }
 
@@ -94,19 +120,23 @@ namespace phoenix.views
             if (startMonitor && (currentUserPrivilege != null))
             {
                 Privilege privilege = Privilege.NON;
-                foreach (PrivilegeData data in privilegeManager.Privileges)
+                foreach (MaterialCheckBox checkedItem in groupBoxPrivileges.Controls)
                 {
-                    int index = checkedListBoxPrivilege.Items.IndexOf(data);
-                    bool isChecked = (index == e.Index) ? (e.NewValue == CheckState.Checked)
-                                                        : checkedListBoxPrivilege.GetItemChecked(index);
-                    if (isChecked)
+                    if (checkedItem.Checked)
                     {
+                        PrivilegeData data = checkedItem.Tag as PrivilegeData;
                         privilege |= data.PrivilegeName;
                     }
                 }
+
                 currentUserPrivilege.Privileges = privilege;
                 privilegeManager.UpdateUser(currentUserPrivilege);
             }
+        }
+
+        private void materialDivider1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
