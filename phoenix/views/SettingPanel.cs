@@ -25,7 +25,7 @@ namespace phoenix.views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddAccountPanel addPanel = new AddAccountPanel();
+            AddAccountPanel addPanel = new AddAccountPanel(privilegeManager);
             addPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 
             TemplateForm addForm = new TemplateForm(@"添加账户", addPanel.Size);
@@ -38,7 +38,7 @@ namespace phoenix.views
             {
                 UserPrivilege privilege = new UserPrivilege();
                 privilege.UserName = addPanel.UserName;
-                privilege.UserPwd = addPanel.UserPwd;
+                privilege.UserPwd = UserPrivilege.CreateMD5Hash(addPanel.UserPwd);
                 privilege.Privileges = Privilege.ALL;
                 if (privilegeManager.AddUser(privilege))
                 {
@@ -101,6 +101,7 @@ namespace phoenix.views
                 checkedItem.Text = data.PrivilegeText;
                 checkedItem.Tag = data;
                 checkedItem.Location = new System.Drawing.Point(margin * 2, topPos);
+                checkedItem.CheckedChanged += new System.EventHandler(this.privilege_CheckedChanged);
                 groupBoxPrivileges.Controls.Add(checkedItem);
 
                 topPos += checkedItem.Size.Height + margin;
@@ -113,9 +114,15 @@ namespace phoenix.views
                 ListViewItem item = listBoxUsers.Items.Add(privilege.UserName);
                 item.Tag = privilege;
             }
+
+            if (listBoxUsers.Items.Count > 0)
+            {
+                listBoxUsers.Items[0].Selected = true;
+                listBoxUsers.Select();
+            }
         }
 
-        private void checkedListBoxPrivilege_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void privilege_CheckedChanged(object sender, EventArgs e)
         {
             if (startMonitor && (currentUserPrivilege != null))
             {
@@ -132,11 +139,6 @@ namespace phoenix.views
                 currentUserPrivilege.Privileges = privilege;
                 privilegeManager.UpdateUser(currentUserPrivilege);
             }
-        }
-
-        private void materialDivider1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

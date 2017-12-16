@@ -196,21 +196,32 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBox1.Depth = 0;
+            this.checkBox1.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBox1.Location = new System.Drawing.Point(73, 199);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkBox1.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(70, 24);
+            this.checkBox1.Ripple = true;
+            this.checkBox1.Size = new System.Drawing.Size(75, 30);
             this.checkBox1.TabIndex = 20;
             this.checkBox1.Text = "蓝波段";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBox2.Depth = 0;
+            this.checkBox2.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBox2.Location = new System.Drawing.Point(73, 229);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkBox2.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(70, 24);
+            this.checkBox2.Ripple = true;
+            this.checkBox2.Size = new System.Drawing.Size(75, 30);
             this.checkBox2.TabIndex = 21;
             this.checkBox2.Text = "绿波段";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -218,10 +229,15 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBox3.Depth = 0;
+            this.checkBox3.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBox3.Location = new System.Drawing.Point(73, 259);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkBox3.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(70, 24);
+            this.checkBox3.Ripple = true;
+            this.checkBox3.Size = new System.Drawing.Size(75, 30);
             this.checkBox3.TabIndex = 22;
             this.checkBox3.Text = "红波段";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -229,10 +245,15 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBox4.Depth = 0;
+            this.checkBox4.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBox4.Location = new System.Drawing.Point(73, 289);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkBox4.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(98, 24);
+            this.checkBox4.Ripple = true;
+            this.checkBox4.Size = new System.Drawing.Size(105, 30);
             this.checkBox4.TabIndex = 23;
             this.checkBox4.Text = "近红外波段";
             this.checkBox4.UseVisualStyleBackColor = true;

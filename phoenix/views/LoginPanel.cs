@@ -19,8 +19,8 @@ namespace phoenix.views
         {
             InitializeComponent();
             privilegeManager = privilege;
-            textBoxUserName.Text = "admin";
-            textBoxPassword.Text = "qaz123";
+            // textBoxUserName.Text = "admin";
+            // textBoxPassword.Text = "qaz123";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -39,9 +39,12 @@ namespace phoenix.views
             {
                 // 需要数据库验证
                 IsAdmin = false;
-                UserPrivilege privilege = privilegeManager.GetUser(userName, userPwd);
-                valid = (privilege != null);
-                Privileges = privilege.Privileges;
+                UserPrivilege privilege = privilegeManager.GetUser(userName, UserPrivilege.CreateMD5Hash(userPwd));
+                if (privilege != null)
+                {
+                    valid = true;
+                    Privileges = privilege.Privileges;
+                }
             }
 
             if (valid)

@@ -13,15 +13,19 @@ namespace phoenix.views
     {
         public string UserName;
         public string UserPwd;
+        private PrivilegeManager privilegeManager = null;
 
-        public AddAccountPanel()
+        public AddAccountPanel(PrivilegeManager mgr)
         {
+            privilegeManager = mgr;
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxUserName.Text.Length == 0)
+            UserName = textBoxUserName.Text.Trim();
+            UserPwd = textBoxPassword.Text;
+            if (UserName.Length == 0)
             {
                 MessageBox.Show(@"用户名不能为空");
                 return;
@@ -36,6 +40,12 @@ namespace phoenix.views
             if (textBoxPassword.Text != textBoxPwdAgain.Text)
             {
                 MessageBox.Show(@"密码不一致");
+                return;
+            }
+
+            if (privilegeManager.IsUserExisted(UserName))
+            {
+                MessageBox.Show(@"该账户已经存在");
                 return;
             }
 

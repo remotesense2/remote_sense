@@ -112,7 +112,6 @@
             this.materialDivider1.Size = new System.Drawing.Size(2, 500);
             this.materialDivider1.TabIndex = 6;
             this.materialDivider1.Text = "materialDivider1";
-            this.materialDivider1.Click += new System.EventHandler(this.materialDivider1_Click);
             // 
             // groupBoxPrivileges
             // 

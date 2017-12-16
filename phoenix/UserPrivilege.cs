@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
@@ -49,6 +50,22 @@ namespace phoenix
 
     public class UserPrivilege
     {
+        public static string CreateMD5Hash(string input)
+        {
+            // Use input string to calculate MD5 hash
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+            // Convert the byte array to hexadecimal string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
+                sb.Append(hashBytes[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
+
         public string UserName;
         public string UserPwd; // MD5
         public Privilege Privileges = Privilege.ALL;
@@ -100,6 +117,13 @@ namespace phoenix
         {
             string sql = String.Format("INSERT INTO user(name, pwd, privileges) VALUES('{0}','{1}',{2})", privilege.UserName, privilege.UserPwd, (int)privilege.Privileges);
             return dbExecutor.ExecuteSQL(sql);
+        }
+
+        public bool IsUserExisted(string userName)
+        {
+            string sql = String.Format("SELECT privileges FROM user WHERE name='{0}'", userName);
+            SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
+            return reader.Read();
         }
 
         public UserPrivilege GetUser(string userName, string userPwd)
