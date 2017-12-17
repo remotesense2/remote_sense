@@ -19,8 +19,8 @@ namespace phoenix.views
         {
             InitializeComponent();
             privilegeManager = privilege;
-            // textBoxUserName.Text = "admin";
-            // textBoxPassword.Text = "qaz123";
+            textBoxUserName.Text = "admin";
+            textBoxPassword.Text = "qaz123";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Timers;
+using phoenix.views;
 
 namespace phoenix
 {
@@ -169,9 +170,8 @@ namespace phoenix
             GeometryPanel geometryPanel = new GeometryPanel();
             geometryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 
-            Form popupForm = new Form();
-            popupForm.Text = @"交叉定标观测几何校正";
-            popupForm.Controls.Add(geometryPanel);
+            TemplateForm popupForm = new TemplateForm(@"交叉定标观测几何校正", geometryPanel.Size);
+            popupForm.AddContent(geometryPanel);
             popupForm.Size = new System.Drawing.Size(728, 451);
             popupForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             popupForm.Show(this);

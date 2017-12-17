@@ -18,6 +18,7 @@ namespace phoenix
         private PrivilegeManager privilegeManager = new PrivilegeManager();
         private readonly MaterialSkinManager materialSkinManager;
         private MaterialRaisedButton btnSwitch;
+        private Control settingPanel = null;
 
         public MainForm()
         {
@@ -77,6 +78,7 @@ namespace phoenix
 
             if (loginPanel.IsAdmin)
             {
+                settingPanel = new SettingPanel(privilegeManager);
                 MaterialRaisedButton btnSetting = new MaterialRaisedButton();
                 btnSetting.Text = @"设置";
                 btnSetting.Dock = DockStyle.Right;
@@ -91,11 +93,10 @@ namespace phoenix
             this.Refresh();
 
             panelContext.Controls.Clear();
-            Control ctrl = new SettingPanel(privilegeManager);
-            this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + ctrl.Size.Height);
-            ctrl.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            ctrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            panelContext.Controls.Add(ctrl);
+            this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + settingPanel.Size.Height);
+            settingPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            settingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelContext.Controls.Add(settingPanel);
         }
 
         private void btnSwitchModuel_Click(object sender, EventArgs e)
