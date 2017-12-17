@@ -22,7 +22,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
+            dialog.Filter = "所有文件(*.*)|*.*";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBoxPending.Text = dialog.FileName;
@@ -33,7 +33,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.txt)|*.txt";
+            dialog.Filter = "所有文件(*.*)|*.*";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBox2.Text = dialog.FileName;
@@ -111,23 +111,14 @@ namespace phoenix
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n参考传感器      ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n待定标传感器     ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
-                        if ((line = sr.ReadLine()) != null)
-                        {
-                            //textBoxResult.AppendText("\r\n四波段BRDF校正系数 ");
-                            textBoxResult.AppendText(line.ToString());
-                            textBoxResult.AppendText("\r\n");
-                        }
-                        //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
                     }
