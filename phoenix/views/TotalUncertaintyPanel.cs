@@ -118,6 +118,12 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxTotalUncertainty.Text, Encoding.Default);
                         String line;
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxResult.AppendText(line.ToString());
+                            textBoxResult.AppendText("\r\n");
+                        }
+                        /*
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText(line.ToString());
@@ -127,12 +133,7 @@ namespace phoenix
                         {
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
-                        }
-                        if ((line = sr.ReadLine()) != null)
-                        {
-                            textBoxResult.AppendText(line.ToString());
-                            textBoxResult.AppendText("\r\n");
-                        }
+                        }*/
                         //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();

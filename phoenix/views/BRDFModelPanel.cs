@@ -120,19 +120,21 @@ namespace phoenix
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n参考传感器      ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n待定标传感器     ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n四波段BRDF校正系数 ");
+                            textBoxResult.AppendText(line.ToString());
+                            textBoxResult.AppendText("\r\n");
+                        }
+                        if ((line = sr.ReadLine()) != null)
+                        {
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }

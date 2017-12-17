@@ -88,6 +88,8 @@ namespace phoenix
             fs.Write(data, 0, data.Length);
             data = System.Text.Encoding.Default.GetBytes(textBoxBRDFNew.Text + "\r\n");
             fs.Write(data, 0, data.Length);
+            data = System.Text.Encoding.Default.GetBytes(textBox1.Text + "\r\n");
+            fs.Write(data, 0, data.Length);
             data = System.Text.Encoding.Default.GetBytes(progresspath + "\r\n");
             fs.Write(data, 0, data.Length);
             fs.Flush();
@@ -136,7 +138,6 @@ namespace phoenix
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
-                        //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
                     }
@@ -157,6 +158,17 @@ namespace phoenix
             string idlsavpath = strPath + @"\BRDFUncertainty.sav";
             GenerateIdlPath(idlsavpath, idlsavinputpath, @"BRDFUncertainty", @"BRDFUncertainty_input");
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBox1.Text = dialog.FileName;
+            }
         }
 
     }

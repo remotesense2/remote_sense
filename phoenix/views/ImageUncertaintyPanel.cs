@@ -29,6 +29,7 @@ namespace phoenix
             }
         }
 
+         /*
         private void btnOpenRefer_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -38,7 +39,7 @@ namespace phoenix
             {
                 textBoxRefer.Text = dialog.FileName;
             }
-        }
+        }*/
 
         private void btnSaveImageUncertainty_Click(object sender, EventArgs e)
         {
@@ -70,8 +71,6 @@ namespace phoenix
             DeleteFile(IDLProgress);
             FileStream fs = new FileStream(idlsavinputpath, FileMode.Create);
             byte[] data = System.Text.Encoding.Default.GetBytes(textBoxPending.Text + "\r\n");
-            fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(textBoxRefer.Text + "\r\n");
             fs.Write(data, 0, data.Length);
             data = System.Text.Encoding.Default.GetBytes(textBoxImageUncertainty.Text + "\r\n");
             fs.Write(data, 0, data.Length);
@@ -113,17 +112,19 @@ namespace phoenix
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n待定标传感器     ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n四波段BRDF校正系数 ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
-                        //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxResult.AppendText(line.ToString());
+                            textBoxResult.AppendText("\r\n");
+                        }
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
                     }
