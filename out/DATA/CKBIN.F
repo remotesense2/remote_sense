@@ -1,0 +1,212 @@
+      PROGRAM CKBIN
+C
+C     ROUTINE TO CREATE CORRELATED-K DISTRIBUTION DATA BINARY FILE.
+C
+C     LIST PARAMETERS:
+C       MXKSUB   DIMENSION OF K-DISTRIBUTION SUB-INTERVAL ARRAY.
+C       MXGAML   DIMENSION OF LORENTZ HALF-WIDTH ARRAY.
+C       MXGAMD   DIMENSION OF DOPPLER HALF-WIDTH ARRAY.
+C       MXNUML   DIMENSION OF EFFECTIVE NUMBER OF LINES ARRAY.
+      INCLUDE 'PARAM.LST'
+C
+C     LIST COMMONS
+C
+C     COMMON /CORKDT/
+C       WTKSUB   SPECTRAL BIN SUB-INTERVAL FRACTIONAL WIDTHS.
+C       DEPLAY   INCREMENTAL OPTICAL DEPTHS
+C       TRNLAY   INCREMENTAL TRANSMITTANCES
+C       TRNCUM   CUMULATIVE TRANSMITTANCES
+      REAL WTKSUB,DEPLAY,TRNLAY,TRNCUM
+      COMMON/CORKDT/WTKSUB(MXKSUB),DEPLAY(MXKSUB),
+     1  TRNLAY(MXKSUB),TRNCUM(MXKSUB)
+      SAVE /CORKDT/
+C
+C     COMMON /CORKTB/
+C       GAMLIN   LORENTZ HALF-WIDTH BOUNDARY VALUES [CM-1].
+C       GAMDIN   DOPPLER HALF-WIDTH BOUNDARY VALUES [CM-1].
+C       RLININ   EFFECTIVE NUMBER OF LINES BOUNDARY VALUES.
+C       VAL      ABSORPTION COEFFICIENT TABLE [ATM-1 CM-1].
+      INTEGER NGAML,NGAMD,NNUML
+      REAL GAMLIN,GAMDIN,RLININ,VAL
+      COMMON/CORKTB/NGAML,NGAMD,NNUML,GAMLIN(MXGAML),GAMDIN(MXGAMD),
+     1  RLININ(MXNUML),VAL(1:MXGAML,1:MXGAMD,1:MXNUML,0:MXKSUB)
+      SAVE /CORKTB/
+C
+C     DECLARE LOCAL VARIABLES
+      CHARACTER FILNAM*130,YESNO*1
+      INTEGER IKSUB,IFILE,ITEST,IKSBM1,IGAML,IGAMD,INUML,I
+      LOGICAL LTEST
+      REAL WTKSB0,GAML,GAMD,RLIN,VALOLD,VALNEW
+C
+C     LIST DATA
+      DATA IFILE/9/
+C
+C     READ ASCII FILE NAME
+   10 WRITE(*,'(/A)')' Enter name of Correlated-K ASCII data file'
+      READ(*,'(A)')FILNAM
+C
+C     TEST FOR EXISTENCE OF FILE
+      INQUIRE(FILE=FILNAM,EXIST=LTEST)
+      IF(.NOT.LTEST)THEN
+          WRITE(*,'(/(A))')
+     1      'No file named',FILNAM,'was found.','Please try again.'
+          GOTO10
+      ENDIF
+C
+C     OPEN CORRELATED-K DATA FILE
+      OPEN(IFILE,FILE=FILNAM,STATUS='OLD')
+      WRITE(*,'(/(A))')' Reading file',FILNAM
+C
+C     READ IN K-DISTRIBUTION WEIGHTS
+      READ(IFILE,'(//I10,7F10.7:,/(10X,7F10.7:))')
+     1  NKSUB,WTKSB0,(WTKSUB(IKSUB),IKSUB=1,NKSUB-1)
+      NKSUB=NKSUB-1
+      IF(NKSUB.GT.MXKSUB)THEN
+          WRITE(*,'(/2A,I3,A,/A)')
+     1      ' ERROR:  Parameter MXKSUB (in PARAM.LST) must',
+     2      ' equal or exceed',NKSUB,' to use file',FILNAM
+          STOP
+      ELSEIF(WTKSB0.NE.0. .AND. WTKSUB(NKSUB).NE.1.)THEN
+         STOP ' ERROR:  Incorrect cumulative distribution values'
+      ENDIF
+      IKSUB=NKSUB
+      DO 20 IKSBM1=NKSUB-1,1,-1
+          WTKSUB(IKSUB)=WTKSUB(IKSUB)-WTKSUB(IKSBM1)
+          IF(WTKSUB(IKSUB).LE.0.)STOP
+     1      ' ERROR:  Incorrect cumulative distribution values'
+   20 IKSUB=IKSBM1
+C
+C     READ IN LORENTZ HALF-WIDTHS [CM-1]
+      READ(IFILE,'(/I5,5X,6E12.6:,/(10X,6E12.6:))')
+     1  NGAML,(GAMLIN(IGAML),IGAML=1,NGAML)
+      IF(NGAML.GT.MXGAML)THEN
+          WRITE(*,'(/2A,I3,A,/A)')
+     1      ' ERROR:  Parameter MXGAML (in PARAM.LST) must',
+     2      ' equal or exceed',NGAML,' to use file',FILNAM
+          STOP
+      ENDIF
+      I=1
+      DO 30 IGAML=2,NGAML
+          IF(GAMLIN(IGAML).GE.GAMLIN(I))STOP
+     1      ' ERROR:  LORENTZ HALF-WIDTHS NOT IN DECREASING ORDER'
+   30 I=IGAML
+C
+C     READ IN DOPPLER HALF-WIDTHS [CM-1]
+      READ(IFILE,'(/I5,5X,6E12.6:,/(10X,6E12.6:))')
+     1  NGAMD,(GAMDIN(IGAMD),IGAMD=1,NGAMD)
+      IF(NGAMD.GT.MXGAMD)THEN
+          WRITE(*,'(/2A,I3,A,/A)')
+     1      ' ERROR:  Parameter MXGAMD (in PARAM.LST) must',
+     2      ' equal or exceed',NGAMD,' to use file',FILNAM
+          STOP
+      ENDIF
+      I=1
+      DO 40 IGAMD=2,NGAMD
+          IF(GAMDIN(IGAMD).GE.GAMDIN(I))STOP
+     1      ' ERROR:  DOPPLER HALF-WIDTHS NOT IN DECREASING ORDER'
+   40 I=IGAMD
+C
+C     READ IN EFFECTIVE NUMBER OF LINES.
+      READ(IFILE,'(/I10,7F10.2:,/(10X,7F10.2:))')
+     1  NNUML,(RLININ(INUML),INUML=1,NNUML)
+      IF(NNUML.GT.MXNUML)THEN
+          WRITE(*,'(/2A,I3,A,/A)')
+     1      ' ERROR:  Parameter MXNUML (in PARAM.LST) must',
+     2      ' equal or exceed',NNUML,' to use file',FILNAM
+          STOP
+      ENDIF
+      I=1
+      DO 50 INUML=2,NNUML
+          IF(RLININ(INUML).LE.RLININ(I))STOP 'ERROR:
+     1      EFFECTIVE NUMBER OF LINES NOT IN INCREASING ORDER'
+   50 I=INUML
+C
+C     SKIP TWO LINES
+      READ(IFILE,'(/20X,I10)')ITEST
+C
+C     LOOP OVER LORENTZ HALF-WIDTHS
+      DO 90 IGAML=1,NGAML
+C
+C         LOOP OVER DOPPLER HALF-WIDTHS
+          DO 80 IGAMD=1,NGAMD
+              READ(IFILE,'(2E12.6)')GAML,GAMD
+              IF(GAML.NE.GAMLIN(IGAML) .OR. GAMD.NE.GAMDIN(IGAMD))THEN
+                  WRITE(*,'(/A,/(8X,A,I2,A,2(E12.6,A)))')
+     1              ' ERROR:  HALF-WIDTH MISMATCH.',
+     2              ' GAMLIN(',IGAML,') = ',GAMLIN(IGAML),
+     3              ' CM-1     GAML = ',GAML,' CM-1',
+     4              ' GAMDIN(',IGAMD,') = ',GAMDIN(IGAMD),
+     5              ' CM-1     GAMD = ',GAMD,' CM-1'
+                  STOP
+              ENDIF
+C
+C             LOOP OVER EFFECTIVE NUMBER OF LINES
+              DO 70 INUML=1,NNUML
+C
+C                 READ IN NORMALIZED ABSORPTION COEFFIECIENTS
+                  READ(IFILE,'(F10.2,7E10.4:,/(10X,7E10.4))')
+     1              RLIN,(VAL(IGAML,IGAMD,INUML,IKSUB),IKSUB=0,NKSUB)
+                  IF(RLIN.NE.RLININ(INUML))THEN
+                      WRITE(*,'(/A,/8X,A,I2,2(A,F8.2))')
+     1                  ' ERROR:  EFFECTIVE NUMBER OF LINES MISMATCH.',
+     2                  ' RLININ(',INUML,') = ',RLININ(INUML),
+     3                  '      RLIN = ',RLIN
+                      STOP
+                  ENDIF
+C
+C                 CHECK MONOTONICITY OF ABSORPTION COEFFICIENTS
+                  VALOLD=VAL(IGAML,IGAMD,INUML,0)
+                  DO 60 IKSUB=1,NKSUB
+                      VALNEW=VAL(IGAML,IGAMD,INUML,IKSUB)
+                      IF(VALNEW.LT.VALOLD)THEN
+                          WRITE(*,'(/2A,2(/8X,A,E10.4),
+     1                      /8X,A,F10.4,//8X,A,/(14X,6(1X,E9.4)))')
+     2                      ' ERROR:  DECREASING',
+     3                      ' ABSORPTION COEFFICIENTS AT',
+     4                      ' LORENTZ HALF-WIDTH [CM-1] =',GAML,
+     5                      ' DOPPLER HALF-WIDTH [CM-1] =',GAMD,
+     6                      ' EFFECTIVE NUMBER OF LINES =',RLIN,
+     7                      ' NORMALIZED ABSORPTION COEFFICIENTS:',
+     8                      (VAL(IGAML,IGAMD,INUML,I),I=0,NKSUB)
+                          STOP
+                      ENDIF
+   60             VALOLD=VALNEW
+   70         CONTINUE
+   80     CONTINUE
+   90 CONTINUE
+C
+C     CLOSE CORRELATED-K DATA FILE
+      CLOSE(IFILE)
+      WRITE(*  ,'(/(A))')'Successfully read file',FILNAM
+C
+C     READ BINARY FILE NAME
+  100 WRITE(*,'(/A)')' Enter name of Correlated-K BINARY data file'
+      READ(*,'(A)')FILNAM
+C
+C     TEST FOR EXISTENCE OF FILE
+      INQUIRE(FILE=FILNAM,EXIST=LTEST)
+      IF(LTEST)THEN
+          WRITE(*,'(/(A))')'A file named',FILNAM,'already exists.',
+     1      'Do you wish to overwrite it (Y/N).'
+          READ(*,'(A)')YESNO
+          IF(YESNO.NE.'Y' .AND. YESNO.NE.'y')GOTO100
+          OPEN(IFILE,FILE=FILNAM,STATUS='OLD')
+          CLOSE(IFILE,STATUS='DELETE')
+      ENDIF
+C
+C     OPEN BINARY FILE
+      OPEN(IFILE,FILE=FILNAM,STATUS='NEW',FORM='UNFORMATTED')
+C
+C     WRITE DATA TO BINARY FILE
+      WRITE(IFILE)NKSUB,NGAML,NGAMD,NNUML
+      WRITE(IFILE)
+     1  (WTKSUB(IKSUB),IKSUB=1,NKSUB),(GAMLIN(IGAML),IGAML=1,NGAML),
+     2  (GAMDIN(IGAMD),IGAMD=1,NGAMD),(RLININ(INUML),INUML=1,NNUML)
+      DO 110 IKSUB=0,NKSUB
+          WRITE(IFILE)(((VAL(IGAML,IGAMD,INUML,IKSUB),
+     1      IGAML=1,NGAML),IGAMD=1,NGAMD),INUML=1,NNUML)
+  110 CONTINUE
+C
+C     STOP
+      STOP 'SUCCESSFUL BINARY WRITE'
+      END
