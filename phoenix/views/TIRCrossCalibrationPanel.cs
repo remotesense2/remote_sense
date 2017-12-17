@@ -26,7 +26,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.TIF)|*.TIF";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBoxPendingAngle.Text = dialog.FileName;
@@ -149,7 +149,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.hdf)|*.hdf";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBox1.Text = dialog.FileName;
@@ -160,7 +160,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.TIF)|*.TIF";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBox2.Text = dialog.FileName;
@@ -171,7 +171,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.hdf)|*.hdf";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBox3.Text = dialog.FileName;

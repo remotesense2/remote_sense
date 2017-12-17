@@ -47,16 +47,14 @@
             this.label6 = new MaterialSkin.Controls.MaterialLabel();
             this.label7 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.btnHelp = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCompute = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnPlaceInfo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // textBoxReferGeometry
             // 
             this.textBoxReferGeometry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxReferGeometry.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxReferGeometry.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxReferGeometry.Location = new System.Drawing.Point(183, 63);
             this.textBoxReferGeometry.Name = "textBoxReferGeometry";
             this.textBoxReferGeometry.ReadOnly = true;
@@ -68,7 +66,7 @@
             this.btnOpenRefer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenRefer.Depth = 0;
-            this.btnOpenRefer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOpenRefer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnOpenRefer.Icon = null;
             this.btnOpenRefer.Location = new System.Drawing.Point(632, 60);
             this.btnOpenRefer.MouseState = MaterialSkin.MouseState.HOVER;
@@ -84,7 +82,7 @@
             // 
             this.textBoxTargetGeometry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTargetGeometry.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxTargetGeometry.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxTargetGeometry.Location = new System.Drawing.Point(183, 28);
             this.textBoxTargetGeometry.Name = "textBoxTargetGeometry";
             this.textBoxTargetGeometry.ReadOnly = true;
@@ -96,7 +94,7 @@
             this.btnOpenTarget.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenTarget.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenTarget.Depth = 0;
-            this.btnOpenTarget.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOpenTarget.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnOpenTarget.Icon = null;
             this.btnOpenTarget.Location = new System.Drawing.Point(632, 25);
             this.btnOpenTarget.MouseState = MaterialSkin.MouseState.HOVER;
@@ -117,7 +115,7 @@
             this.label4.Location = new System.Drawing.Point(9, 67);
             this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 18);
+            this.label4.Size = new System.Drawing.Size(169, 19);
             this.label4.TabIndex = 19;
             this.label4.Text = "参考卫星影像观测几何";
             // 
@@ -130,7 +128,7 @@
             this.label3.Location = new System.Drawing.Point(9, 28);
             this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 18);
+            this.label3.Size = new System.Drawing.Size(169, 19);
             this.label3.TabIndex = 18;
             this.label3.Text = "目标卫星影像观测几何";
             // 
@@ -143,14 +141,14 @@
             this.label2.Location = new System.Drawing.Point(92, 28);
             this.label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 18);
+            this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 17;
             // 
             // textBoxCorrectParams
             // 
             this.textBoxCorrectParams.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCorrectParams.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxCorrectParams.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxCorrectParams.Location = new System.Drawing.Point(183, 140);
             this.textBoxCorrectParams.Name = "textBoxCorrectParams";
             this.textBoxCorrectParams.ReadOnly = true;
@@ -162,7 +160,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSave.Depth = 0;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSave.Icon = null;
             this.btnSave.Location = new System.Drawing.Point(632, 136);
             this.btnSave.MouseState = MaterialSkin.MouseState.HOVER;
@@ -178,7 +176,7 @@
             // 
             this.textBoxModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxModel.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxModel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxModel.Location = new System.Drawing.Point(183, 101);
             this.textBoxModel.Name = "textBoxModel";
             this.textBoxModel.ReadOnly = true;
@@ -190,7 +188,7 @@
             this.btnModel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnModel.Depth = 0;
-            this.btnModel.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnModel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnModel.Icon = null;
             this.btnModel.Location = new System.Drawing.Point(632, 98);
             this.btnModel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -211,7 +209,7 @@
             this.label1.Location = new System.Drawing.Point(41, 145);
             this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 18);
+            this.label1.Size = new System.Drawing.Size(137, 19);
             this.label1.TabIndex = 26;
             this.label1.Text = "观测几何校正因子";
             // 
@@ -224,7 +222,7 @@
             this.label5.Location = new System.Drawing.Point(25, 103);
             this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 18);
+            this.label5.Size = new System.Drawing.Size(153, 19);
             this.label5.TabIndex = 25;
             this.label5.Text = "场地方向归一化模型";
             // 
@@ -237,7 +235,7 @@
             this.label6.Location = new System.Drawing.Point(92, 105);
             this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 18);
+            this.label6.Size = new System.Drawing.Size(0, 19);
             this.label6.TabIndex = 24;
             // 
             // label7
@@ -260,7 +258,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxResult.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxResult.Location = new System.Drawing.Point(183, 181);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
@@ -269,31 +267,14 @@
             this.textBoxResult.Size = new System.Drawing.Size(502, 134);
             this.textBoxResult.TabIndex = 31;
             // 
-            // btnHelp
-            // 
-            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHelp.Depth = 0;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHelp.Icon = null;
-            this.btnHelp.Location = new System.Drawing.Point(604, 321);
-            this.btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Primary = true;
-            this.btnHelp.Size = new System.Drawing.Size(81, 32);
-            this.btnHelp.TabIndex = 33;
-            this.btnHelp.Text = "帮助";
-            this.btnHelp.UseVisualStyleBackColor = true;
-            // 
             // btnCompute
             // 
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCompute.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCompute.Depth = 0;
-            this.btnCompute.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCompute.Icon = null;
-            this.btnCompute.Location = new System.Drawing.Point(183, 321);
+            this.btnCompute.Location = new System.Drawing.Point(592, 321);
             this.btnCompute.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Primary = true;
@@ -303,30 +284,11 @@
             this.btnCompute.UseVisualStyleBackColor = true;
             this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
             // 
-            // btnPlaceInfo
-            // 
-            this.btnPlaceInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnPlaceInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPlaceInfo.Depth = 0;
-            this.btnPlaceInfo.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPlaceInfo.Icon = null;
-            this.btnPlaceInfo.Location = new System.Drawing.Point(385, 321);
-            this.btnPlaceInfo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnPlaceInfo.Name = "btnPlaceInfo";
-            this.btnPlaceInfo.Primary = true;
-            this.btnPlaceInfo.Size = new System.Drawing.Size(106, 32);
-            this.btnPlaceInfo.TabIndex = 35;
-            this.btnPlaceInfo.Text = "场地模型计算";
-            this.btnPlaceInfo.UseVisualStyleBackColor = true;
-            this.btnPlaceInfo.Click += new System.EventHandler(this.btnPlaceInfo_Click);
-            // 
             // BRDFPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.btnPlaceInfo);
-            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnCompute);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.label7);
@@ -369,8 +331,6 @@
         private MaterialSkin.Controls.MaterialLabel label6;
         private MaterialSkin.Controls.MaterialLabel label7;
         private System.Windows.Forms.TextBox textBoxResult;
-        private MaterialSkin.Controls.MaterialRaisedButton btnHelp;
         private MaterialSkin.Controls.MaterialRaisedButton btnCompute;
-        private MaterialSkin.Controls.MaterialRaisedButton btnPlaceInfo;
     }
 }

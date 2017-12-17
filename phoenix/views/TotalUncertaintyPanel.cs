@@ -151,9 +151,9 @@ namespace phoenix
         {
             string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
             strPath = Directory.GetParent(strPath).FullName;
-            string idlsavinputpath = strPath + @"\TIRCrossCalibration_input.txt";
-            string idlsavpath = strPath + @"\TIRCrossCalibration.sav";
-            GenerateIdlPath(idlsavpath, idlsavinputpath, @"TIRCrossCalibration", @"TIRCrossCalibration_input");
+            string idlsavinputpath = strPath + @"\TotalUncertainty_input.txt";
+            string idlsavpath = strPath + @"\TotalUncertainty.sav";
+            GenerateIdlPath(idlsavpath, idlsavinputpath, @"TotalUncertainty", @"TotalUncertainty_input");
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 

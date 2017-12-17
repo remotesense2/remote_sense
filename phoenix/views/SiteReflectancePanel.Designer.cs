@@ -43,10 +43,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.savebtn1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label2 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxResult = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -223,17 +221,6 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "光谱滤波后反射率";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(410, 200);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 210);
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -245,7 +232,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 40;
-            this.label3.Text = "光谱曲线";
+            this.label3.Text = "计算结果";
             // 
             // textBoxResult
             // 
@@ -255,12 +242,12 @@
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxResult.Location = new System.Drawing.Point(73, 222);
+            this.textBoxResult.Location = new System.Drawing.Point(151, 200);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(331, 188);
+            this.textBoxResult.Size = new System.Drawing.Size(605, 188);
             this.textBoxResult.TabIndex = 54;
             // 
             // SiteReflectancePanel
@@ -270,7 +257,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.savebtn1);
             this.Controls.Add(this.label2);
@@ -286,7 +272,6 @@
             this.Name = "SiteReflectancePanel";
             this.Size = new System.Drawing.Size(782, 460);
             this.Load += new System.EventHandler(this.SiteReflectancePanel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +291,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private MaterialSkin.Controls.MaterialRaisedButton savebtn1;
         private MaterialSkin.Controls.MaterialLabel label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel label3;
         private System.Windows.Forms.TextBox textBoxResult;
     }

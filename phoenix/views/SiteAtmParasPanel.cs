@@ -22,7 +22,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.hdf)|*.hdf";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBoxPending.Text = dialog.FileName;
@@ -33,7 +33,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.hdf)|*.hdf";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBox2.Text = dialog.FileName;

@@ -53,7 +53,7 @@
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "热带大气",
@@ -72,7 +72,7 @@
             this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "乡村型气溶胶",
@@ -89,7 +89,7 @@
             this.comboBoxSiteName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxSiteName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSiteName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBoxSiteName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBoxSiteName.FormattingEnabled = true;
             this.comboBoxSiteName.Items.AddRange(new object[] {
             "敦煌",
@@ -110,11 +110,11 @@
             // 
             this.textBoxPendingAngle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPendingAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxPendingAngle.Location = new System.Drawing.Point(107, 19);
+            this.textBoxPendingAngle.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxPendingAngle.Location = new System.Drawing.Point(135, 19);
             this.textBoxPendingAngle.Name = "textBoxPendingAngle";
             this.textBoxPendingAngle.ReadOnly = true;
-            this.textBoxPendingAngle.Size = new System.Drawing.Size(481, 23);
+            this.textBoxPendingAngle.Size = new System.Drawing.Size(453, 23);
             this.textBoxPendingAngle.TabIndex = 38;
             // 
             // btnOpenPendingAngle
@@ -122,7 +122,7 @@
             this.btnOpenPendingAngle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenPendingAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenPendingAngle.Depth = 0;
-            this.btnOpenPendingAngle.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOpenPendingAngle.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnOpenPendingAngle.Icon = null;
             this.btnOpenPendingAngle.Location = new System.Drawing.Point(597, 16);
             this.btnOpenPendingAngle.MouseState = MaterialSkin.MouseState.HOVER;
@@ -142,9 +142,9 @@
             this.label10.Location = new System.Drawing.Point(14, 21);
             this.label10.MouseState = MaterialSkin.MouseState.HOVER;
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 23);
+            this.label10.Size = new System.Drawing.Size(125, 23);
             this.label10.TabIndex = 37;
-            this.label10.Text = "待定标传感器图像";
+            this.label10.Text = "待定标卫星影像";
             // 
             // label6
             // 
@@ -155,7 +155,7 @@
             this.label6.Location = new System.Drawing.Point(350, 94);
             this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 18);
+            this.label6.Size = new System.Drawing.Size(89, 19);
             this.label6.TabIndex = 34;
             this.label6.Text = "气溶胶类型";
             // 
@@ -168,7 +168,7 @@
             this.label9.Location = new System.Drawing.Point(29, 92);
             this.label9.MouseState = MaterialSkin.MouseState.HOVER;
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 18);
+            this.label9.Size = new System.Drawing.Size(73, 19);
             this.label9.TabIndex = 33;
             this.label9.Text = "大气类型";
             // 
@@ -181,7 +181,7 @@
             this.label3.Location = new System.Drawing.Point(29, 57);
             this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 27;
             this.label3.Text = "选择场地";
             // 
@@ -194,14 +194,14 @@
             this.label2.Location = new System.Drawing.Point(48, 52);
             this.label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 18);
+            this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 26;
             // 
             // textBoxOutput
             // 
             this.textBoxOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOutput.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxOutput.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxOutput.Location = new System.Drawing.Point(107, 127);
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
@@ -213,7 +213,7 @@
             this.btnSaveOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveOutput.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSaveOutput.Depth = 0;
-            this.btnSaveOutput.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveOutput.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSaveOutput.Icon = null;
             this.btnSaveOutput.Location = new System.Drawing.Point(594, 124);
             this.btnSaveOutput.MouseState = MaterialSkin.MouseState.HOVER;
@@ -234,7 +234,7 @@
             this.label8.Location = new System.Drawing.Point(29, 127);
             this.label8.MouseState = MaterialSkin.MouseState.HOVER;
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 18);
+            this.label8.Size = new System.Drawing.Size(73, 19);
             this.label8.TabIndex = 46;
             this.label8.Text = "输出结果";
             // 
@@ -245,7 +245,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxResult.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxResult.Location = new System.Drawing.Point(107, 163);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
@@ -263,7 +263,7 @@
             this.label7.Location = new System.Drawing.Point(29, 163);
             this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 18);
+            this.label7.Size = new System.Drawing.Size(73, 19);
             this.label7.TabIndex = 48;
             this.label7.Text = "计算结果";
             // 
@@ -272,7 +272,7 @@
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCompute.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCompute.Depth = 0;
-            this.btnCompute.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCompute.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCompute.Icon = null;
             this.btnCompute.Location = new System.Drawing.Point(559, 337);
             this.btnCompute.MouseState = MaterialSkin.MouseState.HOVER;

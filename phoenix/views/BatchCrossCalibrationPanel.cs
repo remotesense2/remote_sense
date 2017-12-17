@@ -30,7 +30,7 @@ namespace phoenix
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "请选择文件夹";
-            dialog.Filter = "所有文件(*.*)|*.*";
+            dialog.Filter = "所有文件(*.xml)|*.xml";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBoxPendingAngle.Text = dialog.FileName;

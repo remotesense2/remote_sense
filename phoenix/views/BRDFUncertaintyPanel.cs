@@ -118,7 +118,7 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        StreamReader sr = new StreamReader(textBoxBRDFNew.Text, Encoding.Default);
+                        StreamReader sr = new StreamReader(textBox1.Text, Encoding.Default);
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {

@@ -25,7 +25,7 @@ namespace phoenix
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                btnOpenPending.Text = dialog.FileName;
+                textBoxPending.Text = dialog.FileName;
             }
         }
 
@@ -36,7 +36,7 @@ namespace phoenix
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                btnOpenRefer.Text = dialog.FileName;
+                textBoxRefer.Text = dialog.FileName;
             }
         }
 
@@ -47,7 +47,7 @@ namespace phoenix
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                buttonsave1.Text = dialog.FileName;
+                textBox2.Text = dialog.FileName;
             }
         }
 
@@ -58,7 +58,7 @@ namespace phoenix
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                buttonsave2.Text = dialog.FileName;
+                textBox1.Text = dialog.FileName;
             }
         }
 
