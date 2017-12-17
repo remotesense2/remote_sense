@@ -87,7 +87,7 @@
             this.groupBox3.Controls.Add(this.btnOpenTargetImage);
             this.groupBox3.Controls.Add(this.btnOpenReferImage);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.groupBox3.Location = new System.Drawing.Point(5, 252);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
@@ -100,11 +100,11 @@
             // 
             this.textBoxTargetImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTargetImage.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxTargetImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxTargetImage.Location = new System.Drawing.Point(80, 19);
             this.textBoxTargetImage.Name = "textBoxTargetImage";
             this.textBoxTargetImage.ReadOnly = true;
-            this.textBoxTargetImage.Size = new System.Drawing.Size(658, 25);
+            this.textBoxTargetImage.Size = new System.Drawing.Size(658, 24);
             this.textBoxTargetImage.TabIndex = 24;
             // 
             // label10
@@ -123,11 +123,11 @@
             // 
             this.textBoxReferImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxReferImage.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxReferImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxReferImage.Location = new System.Drawing.Point(80, 56);
             this.textBoxReferImage.Name = "textBoxReferImage";
             this.textBoxReferImage.ReadOnly = true;
-            this.textBoxReferImage.Size = new System.Drawing.Size(658, 25);
+            this.textBoxReferImage.Size = new System.Drawing.Size(658, 24);
             this.textBoxReferImage.TabIndex = 27;
             // 
             // btnOpenTargetImage
@@ -135,7 +135,7 @@
             this.btnOpenTargetImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenTargetImage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenTargetImage.Depth = 0;
-            this.btnOpenTargetImage.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btnOpenTargetImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOpenTargetImage.Icon = null;
             this.btnOpenTargetImage.Location = new System.Drawing.Point(758, 19);
             this.btnOpenTargetImage.MouseState = MaterialSkin.MouseState.HOVER;
@@ -145,13 +145,14 @@
             this.btnOpenTargetImage.TabIndex = 22;
             this.btnOpenTargetImage.Text = "打开";
             this.btnOpenTargetImage.UseVisualStyleBackColor = true;
+            this.btnOpenTargetImage.Click += new System.EventHandler(this.btnOpenTargetImage_Click_1);
             // 
             // btnOpenReferImage
             // 
             this.btnOpenReferImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenReferImage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenReferImage.Depth = 0;
-            this.btnOpenReferImage.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btnOpenReferImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOpenReferImage.Icon = null;
             this.btnOpenReferImage.Location = new System.Drawing.Point(758, 56);
             this.btnOpenReferImage.MouseState = MaterialSkin.MouseState.HOVER;
@@ -161,6 +162,7 @@
             this.btnOpenReferImage.TabIndex = 25;
             this.btnOpenReferImage.Text = "打开";
             this.btnOpenReferImage.UseVisualStyleBackColor = true;
+            this.btnOpenReferImage.Click += new System.EventHandler(this.btnOpenReferImage_Click_1);
             // 
             // label11
             // 
@@ -179,7 +181,7 @@
             this.btnSaveOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveOutput.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSaveOutput.Depth = 0;
-            this.btnSaveOutput.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btnSaveOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnSaveOutput.Icon = null;
             this.btnSaveOutput.Location = new System.Drawing.Point(764, 350);
             this.btnSaveOutput.MouseState = MaterialSkin.MouseState.HOVER;
@@ -189,16 +191,17 @@
             this.btnSaveOutput.TabIndex = 142;
             this.btnSaveOutput.Text = "保存";
             this.btnSaveOutput.UseVisualStyleBackColor = true;
+            this.btnSaveOutput.Click += new System.EventHandler(this.btnSaveOutput_Click_1);
             // 
             // textBoxOutput
             // 
             this.textBoxOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOutput.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxOutput.Location = new System.Drawing.Point(85, 352);
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
-            this.textBoxOutput.Size = new System.Drawing.Size(659, 25);
+            this.textBoxOutput.Size = new System.Drawing.Size(659, 24);
             this.textBoxOutput.TabIndex = 141;
             // 
             // label15
@@ -219,7 +222,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxResult.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxResult.Location = new System.Drawing.Point(83, 386);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
@@ -235,7 +238,7 @@
             this.label17.Location = new System.Drawing.Point(4, 353);
             this.label17.MouseState = MaterialSkin.MouseState.HOVER;
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 18);
+            this.label17.Size = new System.Drawing.Size(73, 19);
             this.label17.TabIndex = 138;
             this.label17.Text = "输出结果";
             // 
@@ -257,7 +260,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.groupBox1.Location = new System.Drawing.Point(5, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(831, 136);
@@ -268,7 +271,7 @@
             // comboBoxAtmModel
             // 
             this.comboBoxAtmModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAtmModel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.comboBoxAtmModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxAtmModel.FormattingEnabled = true;
             this.comboBoxAtmModel.Items.AddRange(new object[] {
             "热带大气",
@@ -287,7 +290,7 @@
             this.comboBoxAeroModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxAeroModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAeroModel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.comboBoxAeroModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxAeroModel.FormattingEnabled = true;
             this.comboBoxAeroModel.Items.AddRange(new object[] {
             "乡村型气溶胶",
@@ -304,7 +307,7 @@
             this.comboBoxSiteName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxSiteName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSiteName.Font = new System.Drawing.Font("Roboto", 11F);
+            this.comboBoxSiteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxSiteName.FormattingEnabled = true;
             this.comboBoxSiteName.Items.AddRange(new object[] {
             "敦煌",
@@ -325,11 +328,11 @@
             // 
             this.textBoxSpectra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSpectra.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxSpectra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxSpectra.Location = new System.Drawing.Point(80, 110);
             this.textBoxSpectra.Name = "textBoxSpectra";
             this.textBoxSpectra.ReadOnly = true;
-            this.textBoxSpectra.Size = new System.Drawing.Size(658, 25);
+            this.textBoxSpectra.Size = new System.Drawing.Size(658, 24);
             this.textBoxSpectra.TabIndex = 15;
             // 
             // label6
@@ -341,7 +344,7 @@
             this.label6.Location = new System.Drawing.Point(357, 84);
             this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 18);
+            this.label6.Size = new System.Drawing.Size(89, 19);
             this.label6.TabIndex = 13;
             this.label6.Text = "气溶胶类型";
             // 
@@ -350,7 +353,7 @@
             this.btnOpenSpectra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenSpectra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenSpectra.Depth = 0;
-            this.btnOpenSpectra.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btnOpenSpectra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOpenSpectra.Icon = null;
             this.btnOpenSpectra.Location = new System.Drawing.Point(758, 109);
             this.btnOpenSpectra.MouseState = MaterialSkin.MouseState.HOVER;
@@ -360,6 +363,7 @@
             this.btnOpenSpectra.TabIndex = 0;
             this.btnOpenSpectra.Text = "打开";
             this.btnOpenSpectra.UseVisualStyleBackColor = true;
+            this.btnOpenSpectra.Click += new System.EventHandler(this.btnOpenSpectra_Click_1);
             // 
             // label9
             // 
@@ -370,7 +374,7 @@
             this.label9.Location = new System.Drawing.Point(9, 78);
             this.label9.MouseState = MaterialSkin.MouseState.HOVER;
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 18);
+            this.label9.Size = new System.Drawing.Size(73, 19);
             this.label9.TabIndex = 11;
             this.label9.Text = "大气类型";
             // 
@@ -378,10 +382,10 @@
             // 
             this.textBoxVapor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxVapor.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxVapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxVapor.Location = new System.Drawing.Point(447, 50);
             this.textBoxVapor.Name = "textBoxVapor";
-            this.textBoxVapor.Size = new System.Drawing.Size(365, 25);
+            this.textBoxVapor.Size = new System.Drawing.Size(365, 24);
             this.textBoxVapor.TabIndex = 10;
             // 
             // label1
@@ -393,16 +397,16 @@
             this.label1.Location = new System.Drawing.Point(369, 54);
             this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 18);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 9;
             this.label1.Text = "水汽含量";
             // 
             // textBoxThickness
             // 
-            this.textBoxThickness.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxThickness.Location = new System.Drawing.Point(80, 50);
             this.textBoxThickness.Name = "textBoxThickness";
-            this.textBoxThickness.Size = new System.Drawing.Size(268, 25);
+            this.textBoxThickness.Size = new System.Drawing.Size(268, 24);
             this.textBoxThickness.TabIndex = 8;
             // 
             // label5
@@ -414,7 +418,7 @@
             this.label5.Location = new System.Drawing.Point(9, 110);
             this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 18);
+            this.label5.Size = new System.Drawing.Size(73, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "场地光谱";
             // 
@@ -427,7 +431,7 @@
             this.label4.Location = new System.Drawing.Point(9, 50);
             this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 18);
+            this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "光学厚度";
             // 
@@ -440,7 +444,7 @@
             this.label3.Location = new System.Drawing.Point(9, 22);
             this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "选择场地";
             // 
@@ -453,7 +457,7 @@
             this.label2.Location = new System.Drawing.Point(21, 10);
             this.label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 18);
+            this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 2;
             // 
             // groupBox2
@@ -472,7 +476,7 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.groupBox2.Location = new System.Drawing.Point(5, 139);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(831, 112);
@@ -483,7 +487,7 @@
             // comboBoxNewAtmModel
             // 
             this.comboBoxNewAtmModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNewAtmModel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.comboBoxNewAtmModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxNewAtmModel.FormattingEnabled = true;
             this.comboBoxNewAtmModel.Items.AddRange(new object[] {
             "热带大气",
@@ -502,7 +506,7 @@
             this.comboBoxNewAeroModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxNewAeroModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNewAeroModel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.comboBoxNewAeroModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxNewAeroModel.FormattingEnabled = true;
             this.comboBoxNewAeroModel.Items.AddRange(new object[] {
             "乡村型气溶胶",
@@ -518,11 +522,11 @@
             // 
             this.textBoxNewSpectra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNewSpectra.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxNewSpectra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxNewSpectra.Location = new System.Drawing.Point(80, 86);
             this.textBoxNewSpectra.Name = "textBoxNewSpectra";
             this.textBoxNewSpectra.ReadOnly = true;
-            this.textBoxNewSpectra.Size = new System.Drawing.Size(658, 25);
+            this.textBoxNewSpectra.Size = new System.Drawing.Size(658, 24);
             this.textBoxNewSpectra.TabIndex = 15;
             // 
             // label7
@@ -534,7 +538,7 @@
             this.label7.Location = new System.Drawing.Point(357, 54);
             this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 18);
+            this.label7.Size = new System.Drawing.Size(89, 19);
             this.label7.TabIndex = 13;
             this.label7.Text = "气溶胶类型";
             // 
@@ -543,7 +547,7 @@
             this.btnOpenNewSpectra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenNewSpectra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOpenNewSpectra.Depth = 0;
-            this.btnOpenNewSpectra.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btnOpenNewSpectra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOpenNewSpectra.Icon = null;
             this.btnOpenNewSpectra.Location = new System.Drawing.Point(758, 84);
             this.btnOpenNewSpectra.MouseState = MaterialSkin.MouseState.HOVER;
@@ -563,7 +567,7 @@
             this.label8.Location = new System.Drawing.Point(9, 51);
             this.label8.MouseState = MaterialSkin.MouseState.HOVER;
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 18);
+            this.label8.Size = new System.Drawing.Size(73, 19);
             this.label8.TabIndex = 11;
             this.label8.Text = "大气类型";
             // 
@@ -571,10 +575,10 @@
             // 
             this.textBoxNewVapor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNewVapor.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxNewVapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxNewVapor.Location = new System.Drawing.Point(451, 22);
             this.textBoxNewVapor.Name = "textBoxNewVapor";
-            this.textBoxNewVapor.Size = new System.Drawing.Size(360, 25);
+            this.textBoxNewVapor.Size = new System.Drawing.Size(360, 24);
             this.textBoxNewVapor.TabIndex = 10;
             // 
             // label12
@@ -586,16 +590,16 @@
             this.label12.Location = new System.Drawing.Point(369, 26);
             this.label12.MouseState = MaterialSkin.MouseState.HOVER;
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 18);
+            this.label12.Size = new System.Drawing.Size(73, 19);
             this.label12.TabIndex = 9;
             this.label12.Text = "水汽含量";
             // 
             // textBoxNewThickness
             // 
-            this.textBoxNewThickness.Font = new System.Drawing.Font("Roboto", 11F);
+            this.textBoxNewThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxNewThickness.Location = new System.Drawing.Point(80, 22);
             this.textBoxNewThickness.Name = "textBoxNewThickness";
-            this.textBoxNewThickness.Size = new System.Drawing.Size(268, 25);
+            this.textBoxNewThickness.Size = new System.Drawing.Size(268, 24);
             this.textBoxNewThickness.TabIndex = 8;
             // 
             // label13
@@ -607,7 +611,7 @@
             this.label13.Location = new System.Drawing.Point(9, 86);
             this.label13.MouseState = MaterialSkin.MouseState.HOVER;
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 18);
+            this.label13.Size = new System.Drawing.Size(73, 19);
             this.label13.TabIndex = 5;
             this.label13.Text = "场地光谱";
             // 
@@ -620,7 +624,7 @@
             this.label14.Location = new System.Drawing.Point(9, 22);
             this.label14.MouseState = MaterialSkin.MouseState.HOVER;
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 18);
+            this.label14.Size = new System.Drawing.Size(73, 19);
             this.label14.TabIndex = 4;
             this.label14.Text = "光学厚度";
             // 
@@ -633,7 +637,7 @@
             this.label16.Location = new System.Drawing.Point(21, 17);
             this.label16.MouseState = MaterialSkin.MouseState.HOVER;
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 18);
+            this.label16.Size = new System.Drawing.Size(0, 19);
             this.label16.TabIndex = 2;
             // 
             // btnCompute
@@ -641,7 +645,7 @@
             this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCompute.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCompute.Depth = 0;
-            this.btnCompute.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btnCompute.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnCompute.Icon = null;
             this.btnCompute.Location = new System.Drawing.Point(734, 572);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(6);

@@ -202,5 +202,49 @@ namespace phoenix
             System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 
+        private void btnOpenSpectra_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBoxNewSpectra.Text = dialog.FileName;
+            }
+        }
+
+        private void btnOpenTargetImage_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBoxTargetImage.Text = dialog.FileName;
+            }
+        }
+
+        private void btnOpenReferImage_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBoxReferImage.Text = dialog.FileName;
+            }
+        }
+
+        private void btnSaveOutput_Click_1(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBoxOutput.Text = dialog.FileName;
+            }
+        }
+
     }
 }
