@@ -41,7 +41,7 @@ namespace phoenix
 
         private void openbtn2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
+            SaveFileDialog dialog = new SaveFileDialog();
             dialog.Title = "请选择文件夹";
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)

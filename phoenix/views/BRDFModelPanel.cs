@@ -80,13 +80,13 @@ namespace phoenix
             IDLProgress = progresspath;
             DeleteFile(IDLProgress);
             FileStream fs = new FileStream(idlsavinputpath, FileMode.Create);
-            byte[] data = System.Text.Encoding.Default.GetBytes(btnOpenPending.Text + "\r\n");
+            byte[] data = System.Text.Encoding.Default.GetBytes(textBoxPending.Text + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(btnOpenRefer.Text + "\r\n");
+            data = System.Text.Encoding.Default.GetBytes(textBoxRefer.Text + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(buttonsave1.Text + "\r\n");
+            data = System.Text.Encoding.Default.GetBytes(textBox2.Text + "\r\n");
             fs.Write(data, 0, data.Length);
-            data = System.Text.Encoding.Default.GetBytes(buttonsave2.Text + "\r\n");
+            data = System.Text.Encoding.Default.GetBytes(textBox1.Text + "\r\n");
             fs.Write(data, 0, data.Length);
             data = System.Text.Encoding.Default.GetBytes(progresspath + "\r\n");
             fs.Write(data, 0, data.Length);
@@ -116,7 +116,7 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        StreamReader sr = new StreamReader(buttonsave2.Text, Encoding.Default);
+                        StreamReader sr = new StreamReader(textBox1.Text, Encoding.Default);
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {
