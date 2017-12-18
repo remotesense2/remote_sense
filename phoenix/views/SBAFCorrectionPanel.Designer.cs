@@ -340,9 +340,9 @@
             this.label4.Location = new System.Drawing.Point(10, 55);
             this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 4;
-            this.label4.Text = "光学厚度";
+            this.label4.Text = "能见度";
             // 
             // label3
             // 

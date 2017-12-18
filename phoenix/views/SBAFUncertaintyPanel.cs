@@ -248,5 +248,16 @@ namespace phoenix
             }
         }
 
+        private void btnOpenNewSpectra_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.txt)|*.txt";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBoxNewSpectra.Text = dialog.FileName;
+            }
+        }
+
     }
 }
