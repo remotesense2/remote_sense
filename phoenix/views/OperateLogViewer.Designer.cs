@@ -57,6 +57,8 @@
             this.listViewLog.TabIndex = 0;
             this.listViewLog.UseCompatibleStateImageBehavior = false;
             this.listViewLog.View = System.Windows.Forms.View.Details;
+            this.listViewLog.DoubleClick += new System.EventHandler(this.listViewLog_DoubleClick);
+            this.listViewLog.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewLog_MouseDoubleClick);
             // 
             // columnHeaderDate
             // 

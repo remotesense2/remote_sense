@@ -85,11 +85,15 @@ namespace phoenix
         public string Outfile;
     }
 
+    public delegate void NewOpLogArrivedEventHandler(OpLog log);
+
     public class PrivilegeManager
     {
         private DBExecutor dbExecutor;
         public ArrayList Privileges = new ArrayList();
         public string LoggedUser;
+
+        public event NewOpLogArrivedEventHandler NewOpLogArrived = null;
 
         public PrivilegeManager()
         {
@@ -129,14 +133,25 @@ namespace phoenix
 
         public bool AppendLog(string func, string outfile)
         {
-            string sql = String.Format("INSERT INTO log(user, date, func, outfile) VALUES('{0}','{1}','{2}','{3}')", this.LoggedUser, DateTime.Now.ToString("s"), func, outfile);
-            return dbExecutor.ExecuteSQL(sql);
+            string date = DateTime.Now.ToString("s");
+            string sql = String.Format("INSERT INTO log(user, date, func, outfile) VALUES('{0}','{1}','{2}','{3}')", this.LoggedUser,date, func, outfile);
+            bool success = dbExecutor.ExecuteSQL(sql);
+            if (success && (NewOpLogArrived != null))
+            {
+                OpLog log = new OpLog();
+                log.User = this.LoggedUser;
+                log.OpDate = date;
+                log.FuncName = func;
+                log.Outfile = outfile;
+                NewOpLogArrived(log);
+            }
+            return success;
         }
 
         public ArrayList GetOperatorLog()
         {
             ArrayList opLogs = new ArrayList();
-            string sql = String.Format("SELECT user, date, func, outfile FROM log order by date desc limit 100");
+            string sql = String.Format("SELECT user, date, func, outfile FROM log order by date desc limit 2000");
             SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
             if (reader != null)
             {
@@ -151,10 +166,10 @@ namespace phoenix
                 }
             }
 
-            if (opLogs.Count >= 100)
+            if (opLogs.Count >= 2000)
             {
                 // 删除旧记录
-                string date = (opLogs[100] as OpLog).OpDate;
+                string date = (opLogs[2000] as OpLog).OpDate;
                 sql = String.Format("DELETE FROM log where date<'{0}'", date);
                 dbExecutor.ExecuteSQL(sql);
             }

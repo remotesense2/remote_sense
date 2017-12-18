@@ -17,7 +17,15 @@ namespace phoenix.views
         public OperateLogViewer(PrivilegeManager privilege)
         {
             privilegeManager = privilege;
+            privilegeManager.NewOpLogArrived += privilegeManager_NewOpLogArrived;
+
             InitializeComponent();
+        }
+
+        void privilegeManager_NewOpLogArrived(OpLog log)
+        {
+            string[] item = new string[] { log.OpDate, log.User, log.FuncName, log.Outfile };
+            listViewLog.Items.Insert(0, new ListViewItem(item));
         }
 
         private void OperateLogViewer_Load(object sender, EventArgs e)
@@ -29,6 +37,21 @@ namespace phoenix.views
             {
                 string[] item = new string[] { log.OpDate, log.User, log.FuncName, log.Outfile };
                 listViewLog.Items.Add(new ListViewItem(item));
+            }
+        }
+
+        private void listViewLog_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewLog_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = listViewLog.HitTest(e.X, e.Y);
+            if (info != null)
+            {
+                string path = info.Item.SubItems[3].Text;
+                System.Diagnostics.Process.Start("explorer", "/select," + path);
             }
         }
     }
