@@ -116,11 +116,12 @@ namespace phoenix
                 RUtimer.Stop();
                 UpdateTextDelegate updateProcess = delegate()
                 {
+                    /*
                     try
                     {
                         //显示计算出来的结果，通过调用IDL的画图来显示
 
-
+                        
                         
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBox2.Text, Encoding.Default);
@@ -136,7 +137,7 @@ namespace phoenix
                     }
                     catch (System.IO.FileNotFoundException)
                     {
-                    }
+                    }*/
                 };
 
                 //textBoxResult.Invoke(updateProcess);

@@ -92,11 +92,11 @@
     <Compile Include="views\BatchCrossCalibrationPanel.Designer.cs">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\BRDFPanel.cs">
+    <Compile Include="views\BRDFCorrectionPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="views\BRDFPanel.Designer.cs">
-      <DependentUpon>BRDFPanel.cs</DependentUpon>
+    <Compile Include="views\BRDFCorrectionPanel.Designer.cs">
+      <DependentUpon>BRDFCorrectionPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="views\BRDFUncertaintyPanel.cs">
       <SubType>UserControl</SubType>
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="views\BatchCrossCalibrationPanel.resx">
       <DependentUpon>BatchCrossCalibrationPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\BRDFPanel.resx">
-      <DependentUpon>BRDFPanel.cs</DependentUpon>
+    <EmbeddedResource Include="views\BRDFCorrectionPanel.resx">
+      <DependentUpon>BRDFCorrectionPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\BRDFUncertaintyPanel.resx">
       <DependentUpon>BRDFUncertaintyPanel.cs</DependentUpon>

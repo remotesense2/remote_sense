@@ -557,6 +557,7 @@
             this.btnOpenNewSpectra.TabIndex = 0;
             this.btnOpenNewSpectra.Text = "打开";
             this.btnOpenNewSpectra.UseVisualStyleBackColor = true;
+            this.btnOpenNewSpectra.Click += new System.EventHandler(this.btnOpenNewSpectra_Click_1);
             // 
             // label8
             // 
