@@ -48,19 +48,19 @@ namespace phoenix
                 return;
             }
 
-            //------------------------------
-            privilegeManager.AppendLog(@"交叉定标数据预处理", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"定标场地BRDF模型", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"观测几何校正因子计算", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"场地光谱信息提取", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"场地大气参数提取", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"光谱匹配校正因子计算", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"交叉定标", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"可见近红外全过程交叉定标", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"热红外全过程交叉定标", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"图像噪声不确定性分析", @"C:\\myfiles\\myresult.txt");
-            privilegeManager.AppendLog(@"观测几何不确定性分析", @"C:\\myfiles\\myresult.txt");
-            //-----------------------------
+            ////---------------For test--------------------------------------------------------
+            //privilegeManager.AppendLog(@"交叉定标数据预处理", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"定标场地BRDF模型", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"观测几何校正因子计算", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"场地光谱信息提取", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"场地大气参数提取", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"光谱匹配校正因子计算", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"交叉定标", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"可见近红外全过程交叉定标", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"热红外全过程交叉定标", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"图像噪声不确定性分析", @"C:\\myfiles\\myresult.txt");
+            //privilegeManager.AppendLog(@"观测几何不确定性分析", @"C:\\myfiles\\myresult.txt");
+            ////----------------------------------------------------------------------------------
 
             baseHeight = 64;
 
