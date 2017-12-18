@@ -129,23 +129,26 @@ namespace phoenix
 
         public bool AppendLog(string func, string outfile)
         {
-            string sql = String.Format("INSERT INTO log(user, date, func, outfile) VALUES('{0}','{1}','{2}','{3}')", this.LoggedUser, DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"), func, outfile);
+            string sql = String.Format("INSERT INTO log(user, date, func, outfile) VALUES('{0}','{1}','{2}','{3}')", this.LoggedUser, DateTime.Now.ToString("s"), func, outfile);
             return dbExecutor.ExecuteSQL(sql);
         }
 
         public ArrayList GetOperatorLog()
         {
             ArrayList opLogs = new ArrayList();
-            string sql = String.Format("SELECT user, date, func, outfile FROM log order by date limit 100");
+            string sql = String.Format("SELECT user, date, func, outfile FROM log order by date desc limit 100");
             SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
-            while (reader.Read())
+            if (reader != null)
             {
-                OpLog log = new OpLog();
-                log.User = reader["user"] as string;
-                log.OpDate = reader["date"] as string;
-                log.FuncName = reader["func"] as string;
-                log.Outfile = reader["outfile"] as string;
-                opLogs.Add(log);
+                while (reader.Read())
+                {
+                    OpLog log = new OpLog();
+                    log.User = reader["user"] as string;
+                    log.OpDate = reader["date"].ToString();
+                    log.FuncName = reader["func"] as string;
+                    log.Outfile = reader["outfile"] as string;
+                    opLogs.Add(log);
+                }
             }
 
             if (opLogs.Count >= 100)
@@ -169,7 +172,7 @@ namespace phoenix
         {
             string sql = String.Format("SELECT privileges FROM user WHERE name='{0}'", userName);
             SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
-            return reader.Read();
+            return (reader != null) && reader.Read();
         }
 
         public UserPrivilege GetUser(string userName, string userPwd)
@@ -177,12 +180,15 @@ namespace phoenix
             UserPrivilege privilege = null;
             string sql = String.Format("SELECT privileges FROM user WHERE name='{0}' and pwd = '{1}'", userName, userPwd);
             SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
-            while (reader.Read())
+            if (reader != null)
             {
-                privilege = new UserPrivilege();
-                privilege.UserName = userName;
-                privilege.UserPwd = userPwd;
-                privilege.Privileges = (Privilege)reader["privileges"];
+                while (reader.Read())
+                {
+                    privilege = new UserPrivilege();
+                    privilege.UserName = userName;
+                    privilege.UserPwd = userPwd;
+                    privilege.Privileges = (Privilege)reader["privileges"];
+                }
             }
             return privilege;
         }
@@ -205,13 +211,16 @@ namespace phoenix
 
             string sql = "SELECT name,pwd,privileges FROM user";
             SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
-            while (reader.Read())
+            if (reader != null)
             {
-                UserPrivilege privilege = new UserPrivilege();
-                privilege.UserName = reader["name"].ToString();
-                privilege.UserPwd = reader["pwd"].ToString();
-                privilege.Privileges = (Privilege)reader["privileges"];
-                results.Add(privilege);
+                while (reader.Read())
+                {
+                    UserPrivilege privilege = new UserPrivilege();
+                    privilege.UserName = reader["name"].ToString();
+                    privilege.UserPwd = reader["pwd"].ToString();
+                    privilege.Privileges = (Privilege)reader["privileges"];
+                    results.Add(privilege);
+                }
             }
             return results;
         }

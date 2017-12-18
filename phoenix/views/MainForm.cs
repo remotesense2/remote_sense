@@ -19,6 +19,7 @@ namespace phoenix
         private readonly MaterialSkinManager materialSkinManager;
         private MaterialRaisedButton btnSwitch;
         private Control settingPanel = null;
+        private Control logViewerPanel = null;
 
         public MainForm()
         {
@@ -46,6 +47,20 @@ namespace phoenix
                 this.Close();
                 return;
             }
+
+            //------------------------------
+            privilegeManager.AppendLog(@"交叉定标数据预处理", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"定标场地BRDF模型", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"观测几何校正因子计算", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"场地光谱信息提取", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"场地大气参数提取", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"光谱匹配校正因子计算", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"交叉定标", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"可见近红外全过程交叉定标", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"热红外全过程交叉定标", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"图像噪声不确定性分析", @"C:\\myfiles\\myresult.txt");
+            privilegeManager.AppendLog(@"观测几何不确定性分析", @"C:\\myfiles\\myresult.txt");
+            //-----------------------------
 
             baseHeight = 64;
 
@@ -78,6 +93,14 @@ namespace phoenix
 
             if (loginPanel.IsAdmin)
             {
+                // 添加日志显示panel
+                logViewerPanel = new OperateLogViewer(privilegeManager);
+                ToolStripMenuItem menuItem = new ToolStripMenuItem();
+                menuItem.Text = @"操作日志";
+                menuItem.Click += new EventHandler(contextMenuStrip_ShowLog);
+                contextMenuStripModules.Items.Add(menuItem);
+
+                // 添加设置界面
                 settingPanel = new SettingPanel(privilegeManager);
                 MaterialRaisedButton btnSetting = new MaterialRaisedButton();
                 btnSetting.Text = @"设置";
@@ -125,7 +148,22 @@ namespace phoenix
             ToolStripMenuItem menu = sender as ToolStripMenuItem;
 
             PrivilegeData data = menu.Tag as PrivilegeData;
-            SwitchPanel(data);
+            if (data != null)
+            {
+                SwitchPanel(data);
+            }
+        }
+
+        private void contextMenuStrip_ShowLog(object sender, EventArgs e)
+        {
+            this.Text = @"定标系统  -  操作日志";
+            this.Refresh();
+
+            panelContext.Controls.Clear();
+            this.Size = new System.Drawing.Size(this.Size.Width, baseHeight + logViewerPanel.Size.Height);
+            logViewerPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            logViewerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelContext.Controls.Add(logViewerPanel);
         }
     }
 }

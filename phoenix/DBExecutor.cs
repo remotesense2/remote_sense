@@ -40,8 +40,16 @@ namespace phoenix
 
         public SQLiteDataReader QuerySQL(string sql)
         {
+            SQLiteDataReader reader = null;
+            try
+            {
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-            return command.ExecuteReader();
+            reader = command.ExecuteReader();
+            }
+            catch (System.Exception)
+            {
+            }
+            return reader;
         }
     }
 }

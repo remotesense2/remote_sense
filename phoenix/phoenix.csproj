@@ -80,6 +80,12 @@
     <Compile Include="views\AddAccountPanel.Designer.cs">
       <DependentUpon>AddAccountPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\OperateLogViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\OperateLogViewer.Designer.cs">
+      <DependentUpon>OperateLogViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\TemplateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </Compile>
     <EmbeddedResource Include="views\AddAccountPanel.resx">
       <DependentUpon>AddAccountPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\OperateLogViewer.resx">
+      <DependentUpon>OperateLogViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\TemplateForm.resx">
       <DependentUpon>TemplateForm.cs</DependentUpon>
