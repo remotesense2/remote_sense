@@ -143,30 +143,31 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        //textBoxResult.AppendText("                       观测天顶角 / 观测方位角 / 太阳天顶角 / 太阳方位角");
+                        textBoxResult.AppendText("    波段1    波段2    波段3    波段4\r\n");
                         StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n参考传感器      ");
+                            textBoxResult.AppendText("待定标卫星模拟反射率    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n待定标传感器     ");
+                            textBoxResult.AppendText("参考卫星模拟反射率   ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n四波段BRDF校正系数 ");
+                            textBoxResult.AppendText("光谱匹配校正系数    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxOutput.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {

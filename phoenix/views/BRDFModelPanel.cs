@@ -120,29 +120,36 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBox1.Text, Encoding.Default);
                         String line;
+                        textBoxResult.AppendText("              核驱动模型校正系数\r\n");
+                        textBoxResult.AppendText("        系数fiso     系数fgeo     系数fvol\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("波段1    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("波段2    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("波段3    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("波段4    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBox1.Text);
 
                         //显示散点图，需要调用IDL的显示程序
 

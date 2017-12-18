@@ -112,11 +112,13 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxsave.Text, Encoding.Default);
                         String line;
+                        textBoxResult.AppendText("场地光学厚度（单位:1）：");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
+                        textBoxResult.AppendText("场地水汽含量（单位:g/cm2）:");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText(line.ToString());
@@ -124,6 +126,7 @@ namespace phoenix
                         }
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxsave.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {

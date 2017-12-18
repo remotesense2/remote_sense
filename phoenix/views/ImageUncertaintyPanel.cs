@@ -106,29 +106,34 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxImageUncertainty.Text, Encoding.Default);
                         String line;
+                        textBoxResult.AppendText("    波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n参考传感器      ");
+                            textBoxResult.AppendText("图像定位误差%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("图像临近效应%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("图像信噪比%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("图像总的不确定度%   ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxImageUncertainty.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {

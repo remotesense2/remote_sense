@@ -166,24 +166,29 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
+                        textBoxResult.AppendText("        波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("原始光谱匹配校正系数  ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("新的光谱匹配校正系数  ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("光谱匹配不确定度%  ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxOutput.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {

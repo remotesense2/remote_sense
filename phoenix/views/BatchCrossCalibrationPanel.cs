@@ -111,26 +111,28 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
+                        textBoxResult.AppendText("        波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n参考传感器      ");
+                            textBoxResult.AppendText("待定标卫星图像灰度值    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n待定标传感器     ");
+                            textBoxResult.AppendText("待定标卫星表观辐亮度     ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            //textBoxResult.AppendText("\r\n四波段BRDF校正系数 ");
+                            textBoxResult.AppendText("待定标卫星定标系数    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxOutput.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {
