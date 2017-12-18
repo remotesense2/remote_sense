@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class ImageUncertaintyPanel : UserControl
     {
-        public ImageUncertaintyPanel()
+        private PrivilegeManager privilegeManager = null;
+        public ImageUncertaintyPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

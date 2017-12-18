@@ -13,8 +13,11 @@ namespace phoenix
 {
     public partial class SiteReflectancePanel : UserControl
     {
-        public SiteReflectancePanel()
+        private PrivilegeManager privilegeManager = null;
+
+        public SiteReflectancePanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

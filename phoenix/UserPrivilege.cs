@@ -40,6 +40,7 @@ namespace phoenix
             PrivilegeName = name;
             PrivilegeText = text;
             Container = container;
+            Container.Text = PrivilegeText;
         }
 
         public override string ToString()
@@ -76,26 +77,35 @@ namespace phoenix
         }
     }
 
+    public class OpLog
+    {
+        public string User;
+        public string OpDate;
+        public string FuncName;
+        public string Outfile;
+    }
+
     public class PrivilegeManager
     {
         private DBExecutor dbExecutor;
         public ArrayList Privileges = new ArrayList();
+        public string LoggedUser;
 
         public PrivilegeManager()
         {
-            Privileges.Add(new PrivilegeData(Privilege.PREPROCESS, @"交叉定标数据预处理", new PreprocessPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.BRDFMODEL, @"定标场地BRDF模型", new BRDFModelPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.BRDF, @"观测几何校正因子计算", new BRDFPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.SITEREFLECTANCE, @"场地光谱信息提取", new SiteReflectancePanel()));
-            Privileges.Add(new PrivilegeData(Privilege.SITEATMPARAS, @"场地大气参数提取", new SiteAtmParasPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.SBAFCORRECTION, @"光谱匹配校正因子计算", new SBAFCorrectionPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.CROSSCALIBRATION, @"交叉定标", new CrossCalibrationPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.BATCHCROSSCALIBRATION, @"可见近红外全过程交叉定标", new BatchCrossCalibrationPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.TIRCROSSCALIBRATION, @"热红外全过程交叉定标", new TIRCrossCalibrationPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.IMAGEUNCERTAINTY, @"图像噪声不确定性分析", new ImageUncertaintyPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.BRDFUNCERTAINTY, @"观测几何不确定性分析", new BRDFUncertaintyPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.SBAFUNCERTAINTY, @"光谱匹配不确定性分析", new SBAFUncertaintyPanel()));
-            Privileges.Add(new PrivilegeData(Privilege.TOTALUNCERTAINTY, @"总的不确定性分析", new TotalUncertaintyPanel()));
+            Privileges.Add(new PrivilegeData(Privilege.PREPROCESS, @"交叉定标数据预处理", new PreprocessPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.BRDFMODEL, @"定标场地BRDF模型", new BRDFModelPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.BRDF, @"观测几何校正因子计算", new BRDFPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.SITEREFLECTANCE, @"场地光谱信息提取", new SiteReflectancePanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.SITEATMPARAS, @"场地大气参数提取", new SiteAtmParasPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.SBAFCORRECTION, @"光谱匹配校正因子计算", new SBAFCorrectionPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.CROSSCALIBRATION, @"交叉定标", new CrossCalibrationPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.BATCHCROSSCALIBRATION, @"可见近红外全过程交叉定标", new BatchCrossCalibrationPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.TIRCROSSCALIBRATION, @"热红外全过程交叉定标", new TIRCrossCalibrationPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.IMAGEUNCERTAINTY, @"图像噪声不确定性分析", new ImageUncertaintyPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.BRDFUNCERTAINTY, @"观测几何不确定性分析", new BRDFUncertaintyPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.SBAFUNCERTAINTY, @"光谱匹配不确定性分析", new SBAFUncertaintyPanel(this)));
+            Privileges.Add(new PrivilegeData(Privilege.TOTALUNCERTAINTY, @"总的不确定性分析", new TotalUncertaintyPanel(this)));
 
             Initialize();
         }
@@ -107,10 +117,46 @@ namespace phoenix
             dbExecutor = new DBExecutor(strPath);
             if (dbExecutor.NewCreated)
             {
-                // 创建表
+                // 创建用户表
                 string sql = "CREATE TABLE user(name varchar(20), pwd varchar(32), privileges int)";
                 dbExecutor.ExecuteSQL(sql);
+
+                // 创建日志表
+                sql = "CREATE TABLE log(user varchar(20), date datetime, func varchar(32), outfile varchar(256))";
+                dbExecutor.ExecuteSQL(sql);
             }
+        }
+
+        public bool AppendLog(string func, string outfile)
+        {
+            string sql = String.Format("INSERT INTO log(user, date, func, outfile) VALUES('{0}','{1}','{2}','{3}')", this.LoggedUser, DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"), func, outfile);
+            return dbExecutor.ExecuteSQL(sql);
+        }
+
+        public ArrayList GetOperatorLog()
+        {
+            ArrayList opLogs = new ArrayList();
+            string sql = String.Format("SELECT user, date, func, outfile FROM log order by date limit 100");
+            SQLiteDataReader reader = dbExecutor.QuerySQL(sql);
+            while (reader.Read())
+            {
+                OpLog log = new OpLog();
+                log.User = reader["user"] as string;
+                log.OpDate = reader["date"] as string;
+                log.FuncName = reader["func"] as string;
+                log.Outfile = reader["outfile"] as string;
+                opLogs.Add(log);
+            }
+
+            if (opLogs.Count >= 100)
+            {
+                // 删除旧记录
+                string date = (opLogs[100] as OpLog).OpDate;
+                sql = String.Format("DELETE FROM log where date<'{0}'", date);
+                dbExecutor.ExecuteSQL(sql);
+            }
+
+            return opLogs;
         }
 
         public bool AddUser(UserPrivilege privilege)

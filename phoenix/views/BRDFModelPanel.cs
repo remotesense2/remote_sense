@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class BRDFModelPanel : UserControl
     {
-        public BRDFModelPanel()
+        private PrivilegeManager privilegeManager = null;
+        public BRDFModelPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

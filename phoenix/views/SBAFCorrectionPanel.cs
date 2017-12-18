@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class SBAFCorrectionPanel : UserControl
     {
-        public SBAFCorrectionPanel()
+        private PrivilegeManager privilegeManager = null;
+        public SBAFCorrectionPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

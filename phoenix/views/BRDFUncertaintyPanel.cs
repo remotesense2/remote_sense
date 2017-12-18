@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class BRDFUncertaintyPanel : UserControl
     {
-        public BRDFUncertaintyPanel()
+        private PrivilegeManager privilegeManager = null;
+        public BRDFUncertaintyPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

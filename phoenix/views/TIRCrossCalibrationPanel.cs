@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class TIRCrossCalibrationPanel : UserControl
     {
-        public TIRCrossCalibrationPanel()
+        private PrivilegeManager privilegeManager = null;
+        public TIRCrossCalibrationPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

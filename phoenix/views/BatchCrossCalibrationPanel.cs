@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class BatchCrossCalibrationPanel : UserControl
     {
-        public BatchCrossCalibrationPanel()
+        private PrivilegeManager privilegeManager = null;
+        public BatchCrossCalibrationPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

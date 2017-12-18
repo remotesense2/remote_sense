@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class TotalUncertaintyPanel : UserControl
     {
-        public TotalUncertaintyPanel()
+        private PrivilegeManager privilegeManager = null;
+        public TotalUncertaintyPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

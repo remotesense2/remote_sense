@@ -13,8 +13,10 @@ namespace phoenix
 {
     public partial class SBAFUncertaintyPanel : UserControl
     {
-        public SBAFUncertaintyPanel()
+        private PrivilegeManager privilegeManager = null;
+        public SBAFUncertaintyPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

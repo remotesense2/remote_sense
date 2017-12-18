@@ -49,6 +49,7 @@ namespace phoenix.views
 
             if (valid)
             {
+                privilegeManager.LoggedUser = userName;
                 this.ParentForm.DialogResult = DialogResult.OK;
             }
             else

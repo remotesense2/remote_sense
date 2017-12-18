@@ -14,9 +14,11 @@ namespace phoenix
     public partial class PreprocessPanel : UserControl
     {
         private Bitmap bmpViewer;
+        private PrivilegeManager privilegeManager = null;
 
-        public PreprocessPanel()
+        public PreprocessPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 

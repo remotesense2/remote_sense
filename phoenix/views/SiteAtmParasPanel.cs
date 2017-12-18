@@ -13,8 +13,11 @@ namespace phoenix
 {
     public partial class SiteAtmParasPanel : UserControl
     {
-        public SiteAtmParasPanel()
+        private PrivilegeManager privilegeManager = null;
+
+        public SiteAtmParasPanel(PrivilegeManager privilege)
         {
+            privilegeManager = privilege;
             InitializeComponent();
         }
 
