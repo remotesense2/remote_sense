@@ -161,11 +161,68 @@ namespace phoenix
                     try
                     {
                         this.textBoxAngle.Clear();
-                        textBoxAngle.AppendText(File.ReadAllText(textBoxSavePendingForAngle.Text));
-                        textBoxAngle.AppendText(Environment.NewLine);
-                        textBoxAngle.AppendText(File.ReadAllText(textBoxSaveReferForAngle.Text));
+                        textBoxAngle.AppendText("待定标卫星-待定标传感器\r\n");
+                        StreamReader sr = new StreamReader(textBoxSavePendingForAngle.Text, Encoding.Default);
+                        String line;
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText(line.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+                        textBoxAngle.AppendText("成像日期：年       月        日       时       分       秒\r\n");
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText("    ");
+                            textBoxAngle.AppendText(line.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+                        textBoxAngle.AppendText("      观测天顶角  观测方位角  太阳天顶角  太阳方位角\r\n");
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText(line.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+
+                        textBoxAngle.AppendText("灰度值：波段1      波段2      波段3      波段4\r\n");
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText(line.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+                        textBoxAngle.AppendText("参考卫星-参考传感器\r\n");
+                        StreamReader sr1 = new StreamReader(textBoxSaveReferForAngle.Text, Encoding.Default);
+                        String line1;
+                        if ((line1 = sr1.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText(line1.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+                        textBoxAngle.AppendText("成像日期：年       月        日       时       分       秒\r\n\r\n");
+                        if ((line1 = sr1.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText("    ");
+                            textBoxAngle.AppendText(line1.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+                        textBoxAngle.AppendText("      观测天顶角  观测方位角  太阳天顶角  太阳方位角\r\n");
+                        if ((line1 = sr1.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText(line1.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+
+                        textBoxAngle.AppendText("表观反射率：波段1      波段2      波段3      波段4\r\n");
+                        if ((line1 = sr1.ReadLine()) != null)
+                        {
+                            textBoxAngle.AppendText(line1.ToString());
+                            textBoxAngle.AppendText("\r\n");
+                        }
+                        //textBoxAngle.AppendText(File.ReadAllText(textBoxSavePendingForAngle.Text));
+                        //textBoxAngle.AppendText(Environment.NewLine);
+                        //textBoxAngle.AppendText(File.ReadAllText(textBoxSaveReferForAngle.Text));
                         textBoxAngle.Select(0, 1);
                         textBoxAngle.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxSavePendingForAngle.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {
