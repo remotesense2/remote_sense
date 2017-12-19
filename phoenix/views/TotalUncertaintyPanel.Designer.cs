@@ -90,11 +90,11 @@
             this.label7.Depth = 0;
             this.label7.Font = new System.Drawing.Font("Roboto", 11F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(20, 165);
+            this.label7.Location = new System.Drawing.Point(20, 161);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 28);
+            this.label7.Size = new System.Drawing.Size(140, 28);
             this.label7.TabIndex = 50;
             this.label7.Text = "不确定度计算结果";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,7 +165,7 @@
             this.label1.Depth = 0;
             this.label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(27, 128);
+            this.label1.Location = new System.Drawing.Point(36, 127);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";

@@ -118,6 +118,7 @@
             this.label4.Size = new System.Drawing.Size(168, 18);
             this.label4.TabIndex = 19;
             this.label4.Text = "参考卫星影像观测几何";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -131,6 +132,7 @@
             this.label3.Size = new System.Drawing.Size(168, 18);
             this.label3.TabIndex = 18;
             this.label3.Text = "目标卫星影像观测几何";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -143,6 +145,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 17;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxCorrectParams
             // 
@@ -212,6 +215,7 @@
             this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.TabIndex = 26;
             this.label1.Text = "观测几何校正因子";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
@@ -225,6 +229,7 @@
             this.label5.Size = new System.Drawing.Size(152, 18);
             this.label5.TabIndex = 25;
             this.label5.Text = "场地方向归一化模型";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -237,19 +242,20 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 18);
             this.label6.TabIndex = 24;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
             this.label7.Depth = 0;
             this.label7.Font = new System.Drawing.Font("Roboto", 11F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(16, 181);
+            this.label7.Location = new System.Drawing.Point(65, 174);
             this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 51);
+            this.label7.Size = new System.Drawing.Size(112, 43);
             this.label7.TabIndex = 30;
             this.label7.Text = "观测几何校正因子计算结果";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxResult
             // 
@@ -259,7 +265,7 @@
             this.textBoxResult.BackColor = System.Drawing.Color.White;
             this.textBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResult.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxResult.Location = new System.Drawing.Point(183, 181);
+            this.textBoxResult.Location = new System.Drawing.Point(183, 174);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;

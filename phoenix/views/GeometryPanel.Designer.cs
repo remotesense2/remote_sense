@@ -108,7 +108,7 @@
             this.label4.Depth = 0;
             this.label4.Font = new System.Drawing.Font("Roboto", 11F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(8, 61);
+            this.label4.Location = new System.Drawing.Point(19, 61);
             this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 18);
@@ -121,7 +121,7 @@
             this.label3.Depth = 0;
             this.label3.Font = new System.Drawing.Font("Roboto", 11F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(8, 24);
+            this.label3.Location = new System.Drawing.Point(3, 24);
             this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 18);
@@ -146,7 +146,7 @@
             this.label1.Depth = 0;
             this.label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(8, 105);
+            this.label1.Location = new System.Drawing.Point(19, 105);
             this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 18);
@@ -159,7 +159,7 @@
             this.label5.Depth = 0;
             this.label5.Font = new System.Drawing.Font("Roboto", 11F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(8, 156);
+            this.label5.Location = new System.Drawing.Point(19, 156);
             this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 18);

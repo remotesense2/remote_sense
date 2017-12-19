@@ -240,10 +240,10 @@
             this.label10.Depth = 0;
             this.label10.Font = new System.Drawing.Font("Roboto", 11F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(9, 60);
+            this.label10.Location = new System.Drawing.Point(25, 60);
             this.label10.MouseState = MaterialSkin.MouseState.HOVER;
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 19);
+            this.label10.Size = new System.Drawing.Size(104, 18);
             this.label10.TabIndex = 4;
             this.label10.Text = "参考卫星图像";
             // 
@@ -273,7 +273,7 @@
             this.label11.Location = new System.Drawing.Point(9, 28);
             this.label11.MouseState = MaterialSkin.MouseState.HOVER;
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 19);
+            this.label11.Size = new System.Drawing.Size(120, 18);
             this.label11.TabIndex = 3;
             this.label11.Text = "待定标卫星图像";
             // 
@@ -302,7 +302,7 @@
             this.label6.Location = new System.Drawing.Point(24, 164);
             this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 19);
+            this.label6.Size = new System.Drawing.Size(40, 18);
             this.label6.TabIndex = 16;
             this.label6.Text = "输出";
             // 
@@ -359,7 +359,7 @@
             this.label8.Location = new System.Drawing.Point(9, 28);
             this.label8.MouseState = MaterialSkin.MouseState.HOVER;
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 19);
+            this.label8.Size = new System.Drawing.Size(120, 18);
             this.label8.TabIndex = 3;
             this.label8.Text = "待定标卫星图像";
             // 
@@ -397,10 +397,10 @@
             this.label5.Depth = 0;
             this.label5.Font = new System.Drawing.Font("Roboto", 11F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(9, 98);
+            this.label5.Location = new System.Drawing.Point(57, 98);
             this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 19);
+            this.label5.Size = new System.Drawing.Size(72, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "场地位置";
             // 
@@ -410,10 +410,10 @@
             this.label4.Depth = 0;
             this.label4.Font = new System.Drawing.Font("Roboto", 11F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(9, 64);
+            this.label4.Location = new System.Drawing.Point(25, 64);
             this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 19);
+            this.label4.Size = new System.Drawing.Size(104, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "参考卫星图像";
             // 
@@ -426,7 +426,7 @@
             this.label3.Location = new System.Drawing.Point(9, 29);
             this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 19);
+            this.label3.Size = new System.Drawing.Size(120, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "待定标卫星图像";
             // 
@@ -439,7 +439,7 @@
             this.label2.Location = new System.Drawing.Point(21, 17);
             this.label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 19);
+            this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 2;
             // 
             // label1
@@ -451,7 +451,7 @@
             this.label1.Location = new System.Drawing.Point(24, 13);
             this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 19);
+            this.label1.Size = new System.Drawing.Size(40, 18);
             this.label1.TabIndex = 13;
             this.label1.Text = "输入";
             // 
@@ -461,10 +461,10 @@
             this.label7.Depth = 0;
             this.label7.Font = new System.Drawing.Font("Roboto", 11F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(9, 62);
+            this.label7.Location = new System.Drawing.Point(25, 62);
             this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 19);
+            this.label7.Size = new System.Drawing.Size(104, 18);
             this.label7.TabIndex = 4;
             this.label7.Text = "参考卫星图像";
             // 
@@ -517,7 +517,7 @@
             this.labelViewer.Location = new System.Drawing.Point(581, 8);
             this.labelViewer.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelViewer.Name = "labelViewer";
-            this.labelViewer.Size = new System.Drawing.Size(57, 19);
+            this.labelViewer.Size = new System.Drawing.Size(56, 18);
             this.labelViewer.TabIndex = 24;
             this.labelViewer.Text = "快视图";
             // 
