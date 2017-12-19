@@ -40,7 +40,7 @@
             this.textBoxPending = new System.Windows.Forms.TextBox();
             this.btnOpen1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label5 = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
+            this.comboBoxPosition = new MaterialSkin.Controls.MaterialComboBox();
             this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.label7 = new MaterialSkin.Controls.MaterialLabel();
@@ -288,7 +288,7 @@
         private System.Windows.Forms.TextBox textBoxPending;
         private MaterialSkin.Controls.MaterialRaisedButton btnOpen1;
         private MaterialSkin.Controls.MaterialLabel label5;
-        private System.Windows.Forms.ComboBox comboBoxPosition;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxPosition;
         private MaterialSkin.Controls.MaterialLabel label2;
         private System.Windows.Forms.TextBox textBoxResult;
         private MaterialSkin.Controls.MaterialLabel label7;

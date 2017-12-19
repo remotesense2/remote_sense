@@ -33,7 +33,7 @@
         {
             this.label4 = new MaterialSkin.Controls.MaterialLabel();
             this.btnPlaceImage = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
+            this.comboBoxPosition = new MaterialSkin.Controls.MaterialComboBox();
             this.textBoxPending = new System.Windows.Forms.TextBox();
             this.openbtn1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label5 = new MaterialSkin.Controls.MaterialLabel();
@@ -248,7 +248,7 @@
 
         private MaterialSkin.Controls.MaterialLabel label4;
         private MaterialSkin.Controls.MaterialRaisedButton btnPlaceImage;
-        private System.Windows.Forms.ComboBox comboBoxPosition;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxPosition;
         private System.Windows.Forms.TextBox textBoxPending;
         private MaterialSkin.Controls.MaterialRaisedButton openbtn1;
         private MaterialSkin.Controls.MaterialLabel label5;

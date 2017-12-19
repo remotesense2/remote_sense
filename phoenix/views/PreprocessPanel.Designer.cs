@@ -31,77 +31,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSaveReferForAngle = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnOpenPending = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBoxSaveRefer = new System.Windows.Forms.TextBox();
             this.textBoxSavePendingForAngle = new System.Windows.Forms.TextBox();
-            this.btnSaveRefer = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBoxSaveReferForAngle = new System.Windows.Forms.TextBox();
             this.textBoxSavePending = new System.Windows.Forms.TextBox();
-            this.btnSavePending = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnSavePendingForAngle = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxAngle = new System.Windows.Forms.TextBox();
-            this.btnHelp = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label10 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnPlaceImage = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label11 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label6 = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
-            this.btnOpenRefer = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSaveReferForAngle = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSavePendingForAngle = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label10 = new MaterialSkin.Controls.MaterialLabel();
+            this.label11 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxRefer = new System.Windows.Forms.TextBox();
-            this.label8 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxPending = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxPosition = new MaterialSkin.Controls.MaterialComboBox();
+            this.btnOpenRefer = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label5 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnOpenPending = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label4 = new MaterialSkin.Controls.MaterialLabel();
             this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.label2 = new MaterialSkin.Controls.MaterialLabel();
-            this.label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.label7 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSaveRefer = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSavePending = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label7 = new MaterialSkin.Controls.MaterialLabel();
+            this.label8 = new MaterialSkin.Controls.MaterialLabel();
             this.panelViewer = new System.Windows.Forms.Panel();
             this.imageViewer = new phoenix.ImageViewer();
             this.labelViewer = new MaterialSkin.Controls.MaterialLabel();
+            this.btnHelp = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnPlaceImage = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label6 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelViewer.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSaveReferForAngle
-            // 
-            this.btnSaveReferForAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSaveReferForAngle.Depth = 0;
-            this.btnSaveReferForAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSaveReferForAngle.Icon = null;
-            this.btnSaveReferForAngle.Location = new System.Drawing.Point(429, 60);
-            this.btnSaveReferForAngle.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSaveReferForAngle.Name = "btnSaveReferForAngle";
-            this.btnSaveReferForAngle.Primary = true;
-            this.btnSaveReferForAngle.Size = new System.Drawing.Size(53, 23);
-            this.btnSaveReferForAngle.TabIndex = 7;
-            this.btnSaveReferForAngle.Text = "保存";
-            this.btnSaveReferForAngle.UseVisualStyleBackColor = true;
-            this.btnSaveReferForAngle.Click += new System.EventHandler(this.btnSaveReferForAngle_Click);
-            // 
-            // btnOpenPending
-            // 
-            this.btnOpenPending.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnOpenPending.Depth = 0;
-            this.btnOpenPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnOpenPending.Icon = null;
-            this.btnOpenPending.Location = new System.Drawing.Point(429, 29);
-            this.btnOpenPending.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnOpenPending.Name = "btnOpenPending";
-            this.btnOpenPending.Primary = true;
-            this.btnOpenPending.Size = new System.Drawing.Size(53, 23);
-            this.btnOpenPending.TabIndex = 0;
-            this.btnOpenPending.Text = "打开";
-            this.btnOpenPending.UseVisualStyleBackColor = true;
-            this.btnOpenPending.Click += new System.EventHandler(this.btnOpenPending_Click);
             // 
             // textBoxSaveRefer
             // 
@@ -121,22 +89,6 @@
             this.textBoxSavePendingForAngle.Size = new System.Drawing.Size(278, 24);
             this.textBoxSavePendingForAngle.TabIndex = 6;
             // 
-            // btnSaveRefer
-            // 
-            this.btnSaveRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSaveRefer.Depth = 0;
-            this.btnSaveRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSaveRefer.Icon = null;
-            this.btnSaveRefer.Location = new System.Drawing.Point(429, 60);
-            this.btnSaveRefer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSaveRefer.Name = "btnSaveRefer";
-            this.btnSaveRefer.Primary = true;
-            this.btnSaveRefer.Size = new System.Drawing.Size(53, 23);
-            this.btnSaveRefer.TabIndex = 7;
-            this.btnSaveRefer.Text = "保存";
-            this.btnSaveRefer.UseVisualStyleBackColor = true;
-            this.btnSaveRefer.Click += new System.EventHandler(this.btnSaveRefer_Click);
-            // 
             // textBoxSaveReferForAngle
             // 
             this.textBoxSaveReferForAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -154,38 +106,6 @@
             this.textBoxSavePending.ReadOnly = true;
             this.textBoxSavePending.Size = new System.Drawing.Size(278, 24);
             this.textBoxSavePending.TabIndex = 6;
-            // 
-            // btnSavePending
-            // 
-            this.btnSavePending.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSavePending.Depth = 0;
-            this.btnSavePending.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSavePending.Icon = null;
-            this.btnSavePending.Location = new System.Drawing.Point(429, 28);
-            this.btnSavePending.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSavePending.Name = "btnSavePending";
-            this.btnSavePending.Primary = true;
-            this.btnSavePending.Size = new System.Drawing.Size(53, 23);
-            this.btnSavePending.TabIndex = 0;
-            this.btnSavePending.Text = "保存";
-            this.btnSavePending.UseVisualStyleBackColor = true;
-            this.btnSavePending.Click += new System.EventHandler(this.btnSavePending_Click);
-            // 
-            // btnSavePendingForAngle
-            // 
-            this.btnSavePendingForAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSavePendingForAngle.Depth = 0;
-            this.btnSavePendingForAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSavePendingForAngle.Icon = null;
-            this.btnSavePendingForAngle.Location = new System.Drawing.Point(429, 25);
-            this.btnSavePendingForAngle.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSavePendingForAngle.Name = "btnSavePendingForAngle";
-            this.btnSavePendingForAngle.Primary = true;
-            this.btnSavePendingForAngle.Size = new System.Drawing.Size(53, 23);
-            this.btnSavePendingForAngle.TabIndex = 0;
-            this.btnSavePendingForAngle.Text = "保存";
-            this.btnSavePendingForAngle.UseVisualStyleBackColor = true;
-            this.btnSavePendingForAngle.Click += new System.EventHandler(this.btnSavePendingForAngle_Click);
             // 
             // groupBox5
             // 
@@ -217,66 +137,6 @@
             this.textBoxAngle.TabIndex = 1;
             this.textBoxAngle.TextChanged += new System.EventHandler(this.textBoxAngle_TextChanged);
             // 
-            // btnHelp
-            // 
-            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHelp.Depth = 0;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnHelp.Icon = null;
-            this.btnHelp.Location = new System.Drawing.Point(819, 408);
-            this.btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Primary = true;
-            this.btnHelp.Size = new System.Drawing.Size(70, 42);
-            this.btnHelp.TabIndex = 20;
-            this.btnHelp.Text = "帮助";
-            this.btnHelp.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Depth = 0;
-            this.label10.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(25, 60);
-            this.label10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 18);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "参考卫星图像";
-            // 
-            // btnPlaceImage
-            // 
-            this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPlaceImage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPlaceImage.Depth = 0;
-            this.btnPlaceImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnPlaceImage.Icon = null;
-            this.btnPlaceImage.Location = new System.Drawing.Point(580, 408);
-            this.btnPlaceImage.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnPlaceImage.Name = "btnPlaceImage";
-            this.btnPlaceImage.Primary = true;
-            this.btnPlaceImage.Size = new System.Drawing.Size(101, 42);
-            this.btnPlaceImage.TabIndex = 18;
-            this.btnPlaceImage.Text = "场地图像";
-            this.btnPlaceImage.UseVisualStyleBackColor = true;
-            this.btnPlaceImage.Click += new System.EventHandler(this.btnPlaceImage_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Depth = 0;
-            this.label11.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(9, 28);
-            this.label11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 18);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "待定标卫星图像";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBoxSaveReferForAngle);
@@ -293,53 +153,63 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "角度信息";
             // 
-            // label6
+            // btnSaveReferForAngle
             // 
-            this.label6.AutoSize = true;
-            this.label6.Depth = 0;
-            this.label6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(24, 164);
-            this.label6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 18);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "输出";
+            this.btnSaveReferForAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSaveReferForAngle.Depth = 0;
+            this.btnSaveReferForAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnSaveReferForAngle.Icon = null;
+            this.btnSaveReferForAngle.Location = new System.Drawing.Point(429, 60);
+            this.btnSaveReferForAngle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSaveReferForAngle.Name = "btnSaveReferForAngle";
+            this.btnSaveReferForAngle.Primary = true;
+            this.btnSaveReferForAngle.Size = new System.Drawing.Size(53, 23);
+            this.btnSaveReferForAngle.TabIndex = 7;
+            this.btnSaveReferForAngle.Text = "保存";
+            this.btnSaveReferForAngle.UseVisualStyleBackColor = true;
+            this.btnSaveReferForAngle.Click += new System.EventHandler(this.btnSaveReferForAngle_Click);
             // 
-            // comboBoxPosition
+            // btnSavePendingForAngle
             // 
-            this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBoxPosition.FormattingEnabled = true;
-            this.comboBoxPosition.Items.AddRange(new object[] {
-            "敦煌",
-            "酒泉",
-            "格尔木",
-            "二连浩特",
-            "民勤",
-            "民丰",
-            "若羌",
-            "和田"});
-            this.comboBoxPosition.Location = new System.Drawing.Point(135, 98);
-            this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(278, 26);
-            this.comboBoxPosition.TabIndex = 9;
+            this.btnSavePendingForAngle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSavePendingForAngle.Depth = 0;
+            this.btnSavePendingForAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnSavePendingForAngle.Icon = null;
+            this.btnSavePendingForAngle.Location = new System.Drawing.Point(429, 25);
+            this.btnSavePendingForAngle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSavePendingForAngle.Name = "btnSavePendingForAngle";
+            this.btnSavePendingForAngle.Primary = true;
+            this.btnSavePendingForAngle.Size = new System.Drawing.Size(53, 23);
+            this.btnSavePendingForAngle.TabIndex = 0;
+            this.btnSavePendingForAngle.Text = "保存";
+            this.btnSavePendingForAngle.UseVisualStyleBackColor = true;
+            this.btnSavePendingForAngle.Click += new System.EventHandler(this.btnSavePendingForAngle_Click);
             // 
-            // btnOpenRefer
+            // label10
             // 
-            this.btnOpenRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnOpenRefer.Depth = 0;
-            this.btnOpenRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnOpenRefer.Icon = null;
-            this.btnOpenRefer.Location = new System.Drawing.Point(429, 64);
-            this.btnOpenRefer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnOpenRefer.Name = "btnOpenRefer";
-            this.btnOpenRefer.Primary = true;
-            this.btnOpenRefer.Size = new System.Drawing.Size(53, 23);
-            this.btnOpenRefer.TabIndex = 7;
-            this.btnOpenRefer.Text = "打开";
-            this.btnOpenRefer.UseVisualStyleBackColor = true;
-            this.btnOpenRefer.Click += new System.EventHandler(this.btnOpenRefer_Click);
+            this.label10.AutoSize = true;
+            this.label10.Depth = 0;
+            this.label10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label10.Location = new System.Drawing.Point(25, 60);
+            this.label10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 18);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "参考卫星图像";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Depth = 0;
+            this.label11.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label11.Location = new System.Drawing.Point(9, 28);
+            this.label11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 18);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "待定标卫星图像";
             // 
             // textBoxRefer
             // 
@@ -349,19 +219,6 @@
             this.textBoxRefer.ReadOnly = true;
             this.textBoxRefer.Size = new System.Drawing.Size(278, 24);
             this.textBoxRefer.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Depth = 0;
-            this.label8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(9, 28);
-            this.label8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "待定标卫星图像";
             // 
             // textBoxPending
             // 
@@ -386,10 +243,52 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.groupBox1.Location = new System.Drawing.Point(70, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(504, 129);
+            this.groupBox1.Size = new System.Drawing.Size(504, 135);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "原始影像";
+            // 
+            // comboBoxPosition
+            // 
+            this.comboBoxPosition.Depth = 0;
+            this.comboBoxPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxPosition.DropDownHeight = 2000;
+            this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPosition.Font = new System.Drawing.Font("Roboto", 10F);
+            this.comboBoxPosition.FormattingEnabled = true;
+            this.comboBoxPosition.IntegralHeight = false;
+            this.comboBoxPosition.ItemHeight = 19;
+            this.comboBoxPosition.Items.AddRange(new object[] {
+            "敦煌",
+            "酒泉",
+            "格尔木",
+            "二连浩特",
+            "民勤",
+            "民丰",
+            "若羌",
+            "和田"});
+            this.comboBoxPosition.Location = new System.Drawing.Point(135, 98);
+            this.comboBoxPosition.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.comboBoxPosition.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboBoxPosition.Name = "comboBoxPosition";
+            this.comboBoxPosition.Size = new System.Drawing.Size(278, 25);
+            this.comboBoxPosition.TabIndex = 9;
+            // 
+            // btnOpenRefer
+            // 
+            this.btnOpenRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOpenRefer.Depth = 0;
+            this.btnOpenRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnOpenRefer.Icon = null;
+            this.btnOpenRefer.Location = new System.Drawing.Point(429, 64);
+            this.btnOpenRefer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOpenRefer.Name = "btnOpenRefer";
+            this.btnOpenRefer.Primary = true;
+            this.btnOpenRefer.Size = new System.Drawing.Size(53, 23);
+            this.btnOpenRefer.TabIndex = 7;
+            this.btnOpenRefer.Text = "打开";
+            this.btnOpenRefer.UseVisualStyleBackColor = true;
+            this.btnOpenRefer.Click += new System.EventHandler(this.btnOpenRefer_Click);
             // 
             // label5
             // 
@@ -403,6 +302,22 @@
             this.label5.Size = new System.Drawing.Size(72, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "场地位置";
+            // 
+            // btnOpenPending
+            // 
+            this.btnOpenPending.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOpenPending.Depth = 0;
+            this.btnOpenPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnOpenPending.Icon = null;
+            this.btnOpenPending.Location = new System.Drawing.Point(429, 29);
+            this.btnOpenPending.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOpenPending.Name = "btnOpenPending";
+            this.btnOpenPending.Primary = true;
+            this.btnOpenPending.Size = new System.Drawing.Size(53, 23);
+            this.btnOpenPending.TabIndex = 0;
+            this.btnOpenPending.Text = "打开";
+            this.btnOpenPending.UseVisualStyleBackColor = true;
+            this.btnOpenPending.Click += new System.EventHandler(this.btnOpenPending_Click);
             // 
             // label4
             // 
@@ -442,32 +357,6 @@
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Depth = 0;
-            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(24, 13);
-            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 18);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "输入";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Depth = 0;
-            this.label7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(25, 62);
-            this.label7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 18);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "参考卫星图像";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBoxSaveRefer);
@@ -483,6 +372,64 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "场地影像";
+            // 
+            // btnSaveRefer
+            // 
+            this.btnSaveRefer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSaveRefer.Depth = 0;
+            this.btnSaveRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnSaveRefer.Icon = null;
+            this.btnSaveRefer.Location = new System.Drawing.Point(429, 60);
+            this.btnSaveRefer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSaveRefer.Name = "btnSaveRefer";
+            this.btnSaveRefer.Primary = true;
+            this.btnSaveRefer.Size = new System.Drawing.Size(53, 23);
+            this.btnSaveRefer.TabIndex = 7;
+            this.btnSaveRefer.Text = "保存";
+            this.btnSaveRefer.UseVisualStyleBackColor = true;
+            this.btnSaveRefer.Click += new System.EventHandler(this.btnSaveRefer_Click);
+            // 
+            // btnSavePending
+            // 
+            this.btnSavePending.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSavePending.Depth = 0;
+            this.btnSavePending.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnSavePending.Icon = null;
+            this.btnSavePending.Location = new System.Drawing.Point(429, 28);
+            this.btnSavePending.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSavePending.Name = "btnSavePending";
+            this.btnSavePending.Primary = true;
+            this.btnSavePending.Size = new System.Drawing.Size(53, 23);
+            this.btnSavePending.TabIndex = 0;
+            this.btnSavePending.Text = "保存";
+            this.btnSavePending.UseVisualStyleBackColor = true;
+            this.btnSavePending.Click += new System.EventHandler(this.btnSavePending_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Depth = 0;
+            this.label7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(25, 62);
+            this.label7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 18);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "参考卫星图像";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Depth = 0;
+            this.label8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(9, 28);
+            this.label8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 18);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "待定标卫星图像";
             // 
             // panelViewer
             // 
@@ -520,6 +467,66 @@
             this.labelViewer.Size = new System.Drawing.Size(56, 18);
             this.labelViewer.TabIndex = 24;
             this.labelViewer.Text = "快视图";
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHelp.Depth = 0;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnHelp.Icon = null;
+            this.btnHelp.Location = new System.Drawing.Point(819, 408);
+            this.btnHelp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Primary = true;
+            this.btnHelp.Size = new System.Drawing.Size(70, 42);
+            this.btnHelp.TabIndex = 20;
+            this.btnHelp.Text = "帮助";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            // 
+            // btnPlaceImage
+            // 
+            this.btnPlaceImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPlaceImage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPlaceImage.Depth = 0;
+            this.btnPlaceImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnPlaceImage.Icon = null;
+            this.btnPlaceImage.Location = new System.Drawing.Point(580, 408);
+            this.btnPlaceImage.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPlaceImage.Name = "btnPlaceImage";
+            this.btnPlaceImage.Primary = true;
+            this.btnPlaceImage.Size = new System.Drawing.Size(101, 42);
+            this.btnPlaceImage.TabIndex = 18;
+            this.btnPlaceImage.Text = "场地图像";
+            this.btnPlaceImage.UseVisualStyleBackColor = true;
+            this.btnPlaceImage.Click += new System.EventHandler(this.btnPlaceImage_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Depth = 0;
+            this.label6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(24, 164);
+            this.label6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 18);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "输出";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(24, 13);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "输入";
             // 
             // PreprocessPanel
             // 
@@ -572,7 +579,7 @@
         private MaterialSkin.Controls.MaterialLabel label11;
         private System.Windows.Forms.GroupBox groupBox3;
         private MaterialSkin.Controls.MaterialLabel label6;
-        private System.Windows.Forms.ComboBox comboBoxPosition;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxPosition;
         private MaterialSkin.Controls.MaterialRaisedButton btnOpenRefer;
         private System.Windows.Forms.TextBox textBoxRefer;
         private MaterialSkin.Controls.MaterialLabel label8;

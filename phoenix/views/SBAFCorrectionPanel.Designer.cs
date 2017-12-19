@@ -33,9 +33,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxAtmModel = new System.Windows.Forms.ComboBox();
-            this.comboBoxAeroModel = new System.Windows.Forms.ComboBox();
-            this.comboBoxSiteName = new System.Windows.Forms.ComboBox();
+            this.comboBoxAtmModel = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxAeroModel = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxSiteName = new MaterialSkin.Controls.MaterialComboBox();
             this.textBoxReferAngle = new System.Windows.Forms.TextBox();
             this.btnOpenReferAngle = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label11 = new MaterialSkin.Controls.MaterialLabel();
@@ -522,8 +522,8 @@
         private MaterialSkin.Controls.MaterialLabel label10;
         private System.Windows.Forms.TextBox textBoxResult;
         private MaterialSkin.Controls.MaterialRaisedButton btnCompute;
-        private System.Windows.Forms.ComboBox comboBoxSiteName;
-        private System.Windows.Forms.ComboBox comboBoxAtmModel;
-        private System.Windows.Forms.ComboBox comboBoxAeroModel;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxSiteName;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxAtmModel;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxAeroModel;
     }
 }

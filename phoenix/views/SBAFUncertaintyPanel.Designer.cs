@@ -44,9 +44,9 @@
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.label17 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxAtmModel = new System.Windows.Forms.ComboBox();
-            this.comboBoxAeroModel = new System.Windows.Forms.ComboBox();
-            this.comboBoxSiteName = new System.Windows.Forms.ComboBox();
+            this.comboBoxAtmModel = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxAeroModel = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxSiteName = new MaterialSkin.Controls.MaterialComboBox();
             this.textBoxSpectra = new System.Windows.Forms.TextBox();
             this.label6 = new MaterialSkin.Controls.MaterialLabel();
             this.btnOpenSpectra = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -59,8 +59,8 @@
             this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBoxNewAtmModel = new System.Windows.Forms.ComboBox();
-            this.comboBoxNewAeroModel = new System.Windows.Forms.ComboBox();
+            this.comboBoxNewAtmModel = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxNewAeroModel = new MaterialSkin.Controls.MaterialComboBox();
             this.textBoxNewSpectra = new System.Windows.Forms.TextBox();
             this.label7 = new MaterialSkin.Controls.MaterialLabel();
             this.btnOpenNewSpectra = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -703,9 +703,9 @@
         private System.Windows.Forms.TextBox textBoxResult;
         private MaterialSkin.Controls.MaterialLabel label17;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBoxAtmModel;
-        private System.Windows.Forms.ComboBox comboBoxAeroModel;
-        private System.Windows.Forms.ComboBox comboBoxSiteName;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxAtmModel;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxAeroModel;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxSiteName;
         private System.Windows.Forms.TextBox textBoxSpectra;
         private MaterialSkin.Controls.MaterialLabel label6;
         private MaterialSkin.Controls.MaterialRaisedButton btnOpenSpectra;
@@ -718,8 +718,8 @@
         private MaterialSkin.Controls.MaterialLabel label3;
         private MaterialSkin.Controls.MaterialLabel label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBoxNewAtmModel;
-        private System.Windows.Forms.ComboBox comboBoxNewAeroModel;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxNewAtmModel;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxNewAeroModel;
         private System.Windows.Forms.TextBox textBoxNewSpectra;
         private MaterialSkin.Controls.MaterialLabel label7;
         private MaterialSkin.Controls.MaterialRaisedButton btnOpenNewSpectra;

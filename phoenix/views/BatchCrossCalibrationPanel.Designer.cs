@@ -32,9 +32,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBoxSiteName = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBox3 = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxSiteName = new MaterialSkin.Controls.MaterialComboBox();
             this.textBoxPendingAngle = new System.Windows.Forms.TextBox();
             this.btnOpenPendingAngle = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label10 = new MaterialSkin.Controls.MaterialLabel();
@@ -320,9 +320,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBoxSiteName;
+        private MaterialSkin.Controls.MaterialComboBox comboBox2;
+        private MaterialSkin.Controls.MaterialComboBox comboBox3;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxSiteName;
         private System.Windows.Forms.TextBox textBoxPendingAngle;
         private MaterialSkin.Controls.MaterialRaisedButton btnOpenPendingAngle;
         private MaterialSkin.Controls.MaterialLabel label10;
