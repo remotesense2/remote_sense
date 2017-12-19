@@ -143,7 +143,7 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        textBoxResult.AppendText("    波段1    波段2    波段3    波段4\r\n");
+                        textBoxResult.AppendText("                                       波段1    波段2    波段3    波段4\r\n");
                         StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
                         if ((line = sr.ReadLine()) != null)

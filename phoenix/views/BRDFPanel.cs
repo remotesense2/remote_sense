@@ -124,7 +124,7 @@ namespace phoenix
                     try
                     {
                         this.textBoxResult.Clear();
-                        textBoxResult.AppendText("          待定标卫星角度信息\r\n");
+                        textBoxResult.AppendText("                待定标卫星角度信息\r\n");
                         textBoxResult.AppendText("  观测天顶角  观测方位角  太阳天顶角  太阳方位角\r\n");
                         StreamReader sr = new StreamReader(textBoxCorrectParams.Text, Encoding.Default);
                         String line;
@@ -132,13 +132,13 @@ namespace phoenix
                         {
                             textBoxResult.AppendText(line.ToString());
                         }
-                        textBoxResult.AppendText("          参考卫星卫星角度信息\r\n");
+                        textBoxResult.AppendText("                参考卫星卫星角度信息\r\n");
                         textBoxResult.AppendText("  观测天顶角  观测方位角  太阳天顶角  太阳方位角\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText(line.ToString());
                         }
-                        textBoxResult.AppendText("          观测几何校正系数\r\n");
+                        textBoxResult.AppendText("                               观测几何校正系数\r\n");
                         textBoxResult.AppendText("  波段1         波段2          波段3         波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {

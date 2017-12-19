@@ -166,7 +166,7 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
-                        textBoxResult.AppendText("        波段1          波段2           波段3           波段4\r\n");
+                        textBoxResult.AppendText("                                        波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText("原始光谱匹配校正系数  ");
@@ -216,7 +216,7 @@ namespace phoenix
             dialog.Filter = "所有文件(*.txt)|*.txt";
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBoxNewSpectra.Text = dialog.FileName;
+                textBoxSpectra.Text = dialog.FileName;
             }
         }
 
@@ -262,6 +262,16 @@ namespace phoenix
             {
                 textBoxNewSpectra.Text = dialog.FileName;
             }
+        }
+
+        private void btnCompute_Click_1(object sender, EventArgs e)
+        {
+            string strPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+            strPath = Directory.GetParent(strPath).FullName;
+            string idlsavinputpath = strPath + @"\SBAFUncertainty_input.txt";
+            string idlsavpath = strPath + @"\SBAFUncertainty.sav";
+            GenerateIdlPath(idlsavpath, idlsavinputpath, @"SBAFUncertainty", @"SBAFUncertainty_input");
+            System.Diagnostics.Process.Start(idlsavpath, idlsavinputpath);
         }
 
     }

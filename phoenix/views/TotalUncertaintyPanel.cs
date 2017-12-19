@@ -120,25 +120,36 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxTotalUncertainty.Text, Encoding.Default);
                         String line;
-                        while ((line = sr.ReadLine()) != null)
+                        textBoxResult.AppendText("                                        波段1          波段2           波段3           波段4\r\n");
+                        if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("图像噪声不确定度%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
-                        /*
+                        
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("观测几何不确定度%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
+                            textBoxResult.AppendText("光谱匹配不确定度%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
-                        }*/
+                        }
+                        if ((line = sr.ReadLine()) != null)
+                        {
+                            textBoxResult.AppendText("交叉定标总的不确定度%    ");
+                            textBoxResult.AppendText(line.ToString());
+                            textBoxResult.AppendText("\r\n");
+                        }
                         //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxTotalUncertainty.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {
