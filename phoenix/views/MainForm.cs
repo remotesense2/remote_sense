@@ -49,8 +49,8 @@ namespace phoenix
             }
 
             ////---------------For test--------------------------------------------------------
-            privilegeManager.AppendLog(@"交叉定标数据预处理", @"D:\1.txt");
-            privilegeManager.AppendLog(@"定标场地BRDF模型", @"D:\2.txt");
+            //privilegeManager.AppendLog(@"交叉定标数据预处理", @"D:\1.txt");
+            //privilegeManager.AppendLog(@"定标场地BRDF模型", @"D:\2.txt");
             //privilegeManager.AppendLog(@"观测几何校正因子计算", @"C:\\myfiles\\myresult.txt");
             //privilegeManager.AppendLog(@"场地光谱信息提取", @"C:\\myfiles\\myresult.txt");
             //privilegeManager.AppendLog(@"场地大气参数提取", @"C:\\myfiles\\myresult.txt");
