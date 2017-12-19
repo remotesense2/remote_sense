@@ -116,6 +116,7 @@ namespace phoenix
                 RUtimer.Stop();
                 UpdateTextDelegate updateProcess = delegate()
                 {
+                    privilegeManager.AppendLog(this.Text, textBox2.Text);
                     /*
                     try
                     {

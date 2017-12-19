@@ -111,7 +111,7 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxOutput.Text, Encoding.Default);
                         String line;
-                        textBoxResult.AppendText("        波段1          波段2           波段3           波段4\r\n");
+                        textBoxResult.AppendText("                                       波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText("待定标卫星图像灰度值    ");

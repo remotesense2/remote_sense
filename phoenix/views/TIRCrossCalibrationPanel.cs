@@ -127,6 +127,7 @@ namespace phoenix
                         //textBoxResult.AppendText(File.ReadAllText(textBoxCorrectParams.Text));
                         textBoxResult.Select(0, 1);
                         textBoxResult.ScrollToCaret();
+                        privilegeManager.AppendLog(this.Text, textBoxOutput.Text);
                     }
                     catch (System.IO.FileNotFoundException)
                     {

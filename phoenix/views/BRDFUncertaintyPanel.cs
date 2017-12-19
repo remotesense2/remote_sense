@@ -122,7 +122,7 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBox1.Text, Encoding.Default);
                         String line;
-                        textBoxResult.AppendText("        波段1          波段2           波段3           波段4\r\n");
+                        textBoxResult.AppendText("                                        波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText("旧模型BRDF校正系数    ");
@@ -137,7 +137,7 @@ namespace phoenix
                         }
                         if ((line = sr.ReadLine()) != null)
                         {
-                            textBoxResult.AppendText("观测几何校正不确定度    ");
+                            textBoxResult.AppendText("观测几何校正不确定度%    ");
                             textBoxResult.AppendText(line.ToString());
                             textBoxResult.AppendText("\r\n");
                         }

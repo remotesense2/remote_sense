@@ -101,10 +101,10 @@
             this.textBoxTargetImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTargetImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxTargetImage.Location = new System.Drawing.Point(80, 19);
+            this.textBoxTargetImage.Location = new System.Drawing.Point(147, 19);
             this.textBoxTargetImage.Name = "textBoxTargetImage";
             this.textBoxTargetImage.ReadOnly = true;
-            this.textBoxTargetImage.Size = new System.Drawing.Size(658, 24);
+            this.textBoxTargetImage.Size = new System.Drawing.Size(591, 24);
             this.textBoxTargetImage.TabIndex = 24;
             // 
             // label10
@@ -112,10 +112,10 @@
             this.label10.Depth = 0;
             this.label10.Font = new System.Drawing.Font("Roboto", 11F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(9, 10);
+            this.label10.Location = new System.Drawing.Point(9, 19);
             this.label10.MouseState = MaterialSkin.MouseState.HOVER;
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 36);
+            this.label10.Size = new System.Drawing.Size(142, 21);
             this.label10.TabIndex = 23;
             this.label10.Text = "目标卫星图像信息";
             // 
@@ -124,10 +124,10 @@
             this.textBoxReferImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxReferImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxReferImage.Location = new System.Drawing.Point(80, 56);
+            this.textBoxReferImage.Location = new System.Drawing.Point(147, 56);
             this.textBoxReferImage.Name = "textBoxReferImage";
             this.textBoxReferImage.ReadOnly = true;
-            this.textBoxReferImage.Size = new System.Drawing.Size(658, 24);
+            this.textBoxReferImage.Size = new System.Drawing.Size(591, 24);
             this.textBoxReferImage.TabIndex = 27;
             // 
             // btnOpenTargetImage
@@ -169,10 +169,10 @@
             this.label11.Depth = 0;
             this.label11.Font = new System.Drawing.Font("Roboto", 11F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(9, 46);
+            this.label11.Location = new System.Drawing.Point(9, 56);
             this.label11.MouseState = MaterialSkin.MouseState.HOVER;
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 36);
+            this.label11.Size = new System.Drawing.Size(142, 23);
             this.label11.TabIndex = 26;
             this.label11.Text = "参考卫星图像信息";
             // 
@@ -431,9 +431,9 @@
             this.label4.Location = new System.Drawing.Point(9, 50);
             this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 4;
-            this.label4.Text = "光学厚度";
+            this.label4.Text = "能见度";
             // 
             // label3
             // 
@@ -648,15 +648,16 @@
             this.btnCompute.Depth = 0;
             this.btnCompute.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnCompute.Icon = null;
-            this.btnCompute.Location = new System.Drawing.Point(734, 572);
+            this.btnCompute.Location = new System.Drawing.Point(745, 572);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(6);
             this.btnCompute.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Primary = true;
-            this.btnCompute.Size = new System.Drawing.Size(105, 34);
+            this.btnCompute.Size = new System.Drawing.Size(94, 34);
             this.btnCompute.TabIndex = 144;
             this.btnCompute.Text = "计算";
             this.btnCompute.UseVisualStyleBackColor = true;
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click_1);
             // 
             // SBAFUncertaintyPanel
             // 

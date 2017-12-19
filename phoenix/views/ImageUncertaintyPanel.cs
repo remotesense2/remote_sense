@@ -106,7 +106,7 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBoxImageUncertainty.Text, Encoding.Default);
                         String line;
-                        textBoxResult.AppendText("    波段1          波段2           波段3           波段4\r\n");
+                        textBoxResult.AppendText("                                       波段1          波段2           波段3           波段4\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
                             textBoxResult.AppendText("图像定位误差%    ");

@@ -65,11 +65,11 @@
             this.btnPlaceImage.Depth = 0;
             this.btnPlaceImage.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPlaceImage.Icon = null;
-            this.btnPlaceImage.Location = new System.Drawing.Point(667, 399);
+            this.btnPlaceImage.Location = new System.Drawing.Point(682, 399);
             this.btnPlaceImage.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPlaceImage.Name = "btnPlaceImage";
             this.btnPlaceImage.Primary = true;
-            this.btnPlaceImage.Size = new System.Drawing.Size(91, 35);
+            this.btnPlaceImage.Size = new System.Drawing.Size(76, 35);
             this.btnPlaceImage.TabIndex = 25;
             this.btnPlaceImage.Text = "计算处理";
             this.btnPlaceImage.UseVisualStyleBackColor = true;

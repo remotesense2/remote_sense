@@ -120,7 +120,7 @@ namespace phoenix
                         this.textBoxResult.Clear();
                         StreamReader sr = new StreamReader(textBox1.Text, Encoding.Default);
                         String line;
-                        textBoxResult.AppendText("              核驱动模型校正系数\r\n");
+                        textBoxResult.AppendText("                             核驱动模型校正系数\r\n");
                         textBoxResult.AppendText("        系数fiso     系数fgeo     系数fvol\r\n");
                         if ((line = sr.ReadLine()) != null)
                         {
